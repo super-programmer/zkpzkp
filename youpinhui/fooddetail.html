@@ -1,0 +1,981 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>优品慧-食品-详情</title>
+		<link rel="stylesheet" href="css/sidebar.css" />
+		<link rel="stylesheet" type="text/css" href="css/index.css" />
+		<link rel="stylesheet" type="text/css" href="css/fooddetail.css" />
+		<script type="text/javascript" src="js/jquery-1.11.3.js">
+		</script>
+		<script type="text/javascript" src="js/land.js">
+		</script>
+		<script type="text/javascript" src="js/public.js">
+		</script>
+		<script type="text/javascript" src="js/fooddetail.js">
+		</script>
+	</head>
+	<body>
+		<!--模态窗口-->
+		<div id="cover">
+		</div>
+		<div class="cover-main">
+				<p><span>√</span>商品已成功加入购物车</p>
+				<a href="index.html" class="cover-main-a"><<继续购物</a>
+				<a href="goodscar.html" class="cover-main-b">去结算</a>
+		</div>
+		<!--右侧快捷入口-->
+		<div id="sidebar">
+			<ul id="sidebar-link">
+				<li class="side-uers">
+					<a href=""></a>
+					<div id="user-login">
+						<p id="closethis">
+							<a></a>
+						</p>
+						<p id="user-login-content">
+							<a href=""><img src="img/top.JPG" /></a>
+						</p>
+						<p id="user-login-loginon">
+							<strong>
+							你好！请
+							<a href="land.html" class="login">登录</a>|
+							<a href="login.html" class="login">注册</a>
+							</strong>
+						</p>
+						<p id="user-login-link">
+							<a class="indent">我的订单</a>
+							<a class="indent">优惠券</a>
+						</p>
+					</div>
+				</li>
+				<li class="side-cart">
+					<a href=""></a>
+					<p class="_p">购物车</p>
+					<!--购物车内商品数量-->
+					<span class="side-cart-pro">0</span>
+				</li>
+				<li class="side-care">
+					<a href=""></a>
+					<p class="_p">我的关注</p>
+				</li>
+				<li class="side-ser">
+					<a href=""></a>
+					<p class="_p">在线客服</p>
+				</li>
+			</ul>
+			<ul id="sidebar-code">
+				<li class="side-code">
+					<div class="side-code-tit">
+					</div>
+					<a href=""></a>
+				</li>
+				<li class="side-site">
+					<a href=""></a>
+					<p class="_p">调查问卷</p>
+				</li>
+				<li class="side-totop">
+					<a href=""></a>
+					<p class="_p">回到顶部</p>
+				</li>
+			</ul>
+		</div>
+		</div>
+		<!--头部图片-->
+		<div id="header">
+			<div id="header-pic">
+				<a href="">
+					<img src="img/header-pic.png" id="header-pic-pic" />
+				</a>
+			</div>
+		</div>
+		<!--头部导航-->
+		<div id="main-nav">
+			<div id="main-nav-child">
+				<ul id="main-nav-ul-1">
+				</ul>
+				<ul id="main-nav-ul">
+					<li><span><a href="login.html">注册</a></span>|</li>
+					<li><span><a href="land.html">登录</a></span>|</li>
+					<li><span><a href="">我的订单</a></span>|</li>
+					<li><span><a href="">物流查询</a></span>|</li>
+					<li><span><a href="">我的关注</a></span>|</li>
+					<li><span><a href="">咨询</a></span>|</li>
+					<li><span><a href="">品牌馆</a></span>|</li>
+					<li id="lastphone">
+						<span><img src="img/phone.png"/><a href="">手机优品慧</a></span>
+						<p id="homeofphone">
+							<a href=""><img src="img/ewm90X90[1].JPG" /></a>
+							<span>扫一扫呦~</span>
+						</p>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!--banner及搜索框区域-->
+		<div id="logo">
+			<a href="index.html" id="logotohome"></a>
+			<form action="" method="post" id="nav-sea">
+				<input type="text" placeholder="厨电" />
+				<a href="">搜索</a>
+			</form>
+			<span id="logo-goodcar">
+				<img src="img/goodcar.png"/>
+				我的购物车
+				<!--购物车内商品数量-->
+				<h6>0</h6>
+				<span id="the-car-of-goods">
+					<p>购物车还没有商品快去逛逛吧！</p>
+				</span>
+			</span>
+			<ul id="nav-nav">
+				<li><a href="">双立人</a>|</li>
+				<li><a href="">品牌橱具</a>|</li>
+				<li><a href="">惠人</a>|</li>
+				<li><a href="">海参</a>|</li>
+				<li><a href="">韩束</a></li>
+			</ul>
+		</div>
+		<!--导航与在售商品-->
+		<div id="nav">
+			<div id="nav-center">
+				<ul id="nav-rec">
+					<li><a href="index.html">推荐</a></li>
+					<li><a href="food.html">食品</a></li>
+					<li><a href="">家居</a></li>
+					<li><a href="">美妆</a></li>
+					<li><a href="">服饰</a></li>
+					<li><a href="">视屏</a></li>
+					<li><a href="">预告</a></li>
+				</ul>
+				<div id="onsell-class">
+					<!--在售商品详情-->
+					<div id="onsell-detail">
+						<ul id="onsell-detail-ul">
+							<h3 id="onsell-detail-ul-h3">品质厨房</h3>
+							<li><a href="">电视热售</a></li>
+							<li><a href="">品质厨具</a></li>
+							<li><a href="">厨房电器</a></li>
+							<li><a href="">厨房用具</a></li>
+						</ul>
+						<ul id="onsell-detail-ul">
+							<h3 id="onsell-detail-ul-h3">美食·民生</h3>
+							<li><a href="">电视热售</a></li>
+							<li><a href="">进口食品</a></li>
+							<li><a href="">营养保健</a></li>
+							<li><a href="">特产零食</a></li>
+							<li><a href="">粮油干货</a></li>
+							<li><a href="">酒水茶饮</a></li>
+						</ul>
+						<ul id="onsell-detail-ul">
+							<h3 id="onsell-detail-ul-h3">健康生活</h3>
+							<li><a href="">电视热售</a></li>
+							<li><a href="">优质睡眠</a></li>
+							<li><a href="">家居装饰</a></li>
+							<li><a href="">清洁收纳</a></li>
+							<li><a href="">家庭健身</a></li>
+							<li><a href="">生活电器</a></li>
+							<li><a href="">日用配件</a></li>
+						</ul>
+						<ul id="onsell-detail-ul">
+							<h3 id="onsell-detail-ul-h3">美丽穿戴</h3>
+							<li><a href="">电视热售</a></li>
+							<li><a href="">服装内衣</a></li>
+							<li><a href="">鞋包配饰</a></li>
+							<li><a href="">旅游户外</a></li>
+						</ul>
+						<ul id="onsell-detail-ul">
+							<h3 id="onsell-detail-ul-h3">珠宝收藏</h3>
+							<li><a href="">电视热售</a></li>
+							<li><a href="">珍珠财宝</a></li>
+							<li><a href="">翡翠玉石</a></li>
+							<li><a href="">天然木饰</a></li>
+						</ul>
+						<ul id="onsell-detail-ul">
+							<h3 id="onsell-detail-ul-h3">美肤靓装</h3>
+							<li><a href="">电视热售</a></li>
+							<li><a href="">品牌护肤</a></li>
+							<li><a href="">洗护护理</a></li>
+							<li><a href="">彩妆香水</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--商品详情-->
+		<div id="main">
+			<div id="nowlocation">
+				当前位置:
+				<a href="index.html">首页</a>
+				<code>></code>
+				<a href="food.html">食品</a>
+				<code>></code>
+				<a href="/">进口食品</a>
+				<code>></code>
+				<a href="/">滋补调养</a>
+				<code>></code>
+				<a href="/">swisse护肝宝澳洲进口120粒&nbsp;解酒排毒养肝</a>
+				<code>></code>
+			</div>
+			<!--商品副导航-->
+			<ul id="goodsnav">
+				<li>
+					<a href=""><img src='img/detail/ba.jpg' /></a><span></span></li>
+				<li>
+					<a href=""><img src='img/detail/jiu.jpg' /></a><span></span></li>
+				<li>
+					<a href=""><img src='img/detail/hai.jpg' /></a>
+				</li>
+			</ul>
+			<!--商品详情主要内容-->
+			<div id="goodsmain">
+				<!--左侧主要内容-->
+				<div class="goodsmainmag">
+					<!--放大镜-->
+					<div id="picchenge">
+						<span id="mark">
+						</span>
+						<!--移动小视窗-->
+						<span id="float">
+						</span>
+						<!--小图片-->
+						<img src="img/detail/big1.jpg" />
+					</div>
+					<!--大图片外围框架-->
+					<div id="big">
+						<img src="img/detail/big1.jpg" />
+					</div>
+					<div id="picchengebtn">
+						<div class="btnpic btnpicleft">
+							< </div>
+								<ul id="picchengemain">
+									<li>
+										<a href=""><img src="img/detail/samll1.jpg" /></a>
+									</li>
+									<li>
+										<a href=""><img src="img/detail/samll2.jpg" /></a>
+									</li>
+								</ul>
+								<div class="btnpic btnpicright">
+									>
+								</div>
+						</div>
+
+					</div>
+					<!--右侧详细信息-->
+					<form action="" method="" class="goodsform">
+						<div class="goodsformmain ">
+							<dl class="whichcounty ">
+								<dt>
+								<img src="img/detail/601.png "/>
+							</dt>
+								<dd>
+									<p class="whichcounty-first ">
+										<span>
+									进口国
+								</span>
+										<span>
+									澳大利亚
+								</span>
+									</p>
+									<p class="whichcounty-second ">
+										<span>
+									品&nbsp;&nbsp;牌
+								</span>
+										<span>
+									Swisse
+								</span>
+										<span>
+									8888
+								</span>
+										<span>
+									商品货号：
+								</span>
+									</p>
+								</dd>
+							</dl>
+							<dl class="baseinformation ">
+								<dt>4折</dt>
+								<dd>
+									<h3>swisse护肝宝澳洲进口120粒 解酒排毒保肝</h3>
+								</dd>
+							</dl>
+							<!--优惠价-->
+							<div class="favroable ">
+								<div class="favroable-left ">
+									优惠品价
+								</div>
+								<div class="favroable-left1 ">
+									￥149
+								</div>
+								<div class="favroable-center ">
+									<span>国内参考价:</span>
+									<span>￥369</span>
+								</div>
+								<div class="favroable-right ">
+									保税区发货
+								</div>
+							</div>
+							<!--送货地址-->
+							<div class="goodsaddress ">
+								<dl class="toaddress ">
+									<dt>送&nbsp;&nbsp;至</dt>
+									<dd>
+										<div class="addresssea ">
+											<p class="pcontent ">北京北京大兴区</p>
+											<span>▼</span>
+											<!--地址导航省市县（区）-->
+											<div class="alladdress ">
+												<p class="_p ">×</p>
+												<ul class="alladdresstit ">
+													<li>
+														<p>请选择</p><span>▼</span></li>
+													<li>
+														<p>请选择</p><span>▼</span></li>
+													<li>
+														<p>请选择</p><span>▼</span></li>
+												</ul>
+												<ul class="alladdressprovince ">
+												</ul>
+												<ul class="alladdresscity ">
+												</ul>
+												<ul class="alladdressarea ">
+												</ul>
+											</div>
+										</div>
+										<div class="addressseaafter ">
+											<span>有货</span> ,下单后可立即发货。
+										</div>
+									</dd>
+								</dl>
+								<!--规格-->
+								<dl class="goodssize">
+									<dt>规&nbsp;&nbsp;格</dt>
+									<dd>
+										<ul>
+											<li>共同</li>
+										</ul>
+									</dd>
+								</dl>
+								<!--颜色-->
+								<dl class="goodscolor ">
+									<dt>颜&nbsp;&nbsp;色</dt>
+									<dd>
+										<ul>
+											<li>共同</li>
+										</ul>
+									</dd>
+								</dl>
+								<!--数量-->
+								<dl class="goodscount ">
+									<dt>数&nbsp;&nbsp;量</dt>
+									<dd>
+										<ul>
+											<li>-</li>
+											<li>1</li>
+											<li>+</li>
+										</ul>
+										<span>至少选择一件！</span>
+									</dd>
+								</dl>
+								<div class="buyorno ">
+									<a href=" "><img src="img/detail/buy_03.jpg "></a>
+									<a href=" "><img src="img/detail/buy_05.jpg "></a>
+									<span>已有<i>6</i>人评价</span>
+								</div>
+								<div class="service ">
+									<p><img src="img/detail/call.png "></p>
+									<span>400-707-0707</span>
+								</div>
+							</div>
+						</div>
+					</form>
+				</div>
+				<!--推荐商品-->
+				<div id="goodsadvertisement">
+					<ul id="goodsadvertisementnav">
+						<li>此分类热卖商品</li>
+						<li>看过该商品的用户最终购买了</li>
+						<li>推荐商品</li>
+					</ul>
+					<div class="goodsadvertisementmain">
+						<dl>
+							<dt><a href=""><img src="img/detail/1445793792936015220.jpg"/></a></dt>
+							<dd>澳佳宝氨糖维骨力180粒&nbsp;强壮</dd>
+							<dd>
+								<strong>￥1980</strong>
+								<span>￥8930</span>
+							</dd>
+						</dl>
+						<dl>
+							<dt><a href=""><img src="img/detail/1445795148936483429.jpg"/></a></dt>
+							<dd>澳佳宝氨糖维骨力180粒&nbsp;强壮</dd>
+							<dd>
+								<strong>￥1980</strong>
+								<span>￥8930</span>
+							</dd>
+						</dl>
+						<dl>
+							<dt><a href=""><img src="img/detail/1445799117663498198.jpg"/></a></dt>
+							<dd>澳佳宝氨糖维骨力180粒&nbsp;强壮</dd>
+							<dd>
+								<strong>￥1980</strong>
+								<span>￥8930</span>
+							</dd>
+						</dl>
+						<dl>
+							<dt><a href=""><img src="img/detail/1445799693403493295.jpg"/></a></dt>
+							<dd>澳佳宝氨糖维骨力180粒&nbsp;强壮</dd>
+							<dd>
+								<strong>￥1980</strong>
+								<span>￥8930</span>
+							</dd>
+						</dl>
+					</div>
+					<div class="goodsadvertisementmain">
+						<dl>
+							<dt><a href=""><img src="img/detail/1445800010470481855.jpg"/></a></dt>
+							<dd>swisse胶原蛋白口服液天然血</dd>
+							<dd>
+								<strong>￥139</strong>
+								<span>￥390</span>
+							</dd>
+						</dl>
+						<dl>
+							<dt><a href=""><img src="img/detail/1445799832225939212.jpg"/></a></dt>
+							<dd>澳洲进口swisse叶绿素液</dd>
+							<dd>
+								<strong>￥99</strong>
+								<span>￥399</span>
+							</dd>
+						</dl>
+						<dl>
+							<dt><a href=""><img src="img/detail/1445800514692884081.jpg"/></a></dt>
+							<dd>澳佳宝氨糖维骨力180粒&nbsp;强壮</dd>
+							<dd>
+								<strong>￥1980</strong>
+								<span>￥8930</span>
+							</dd>
+						</dl>
+						<dl>
+							<dt><a href=""><img src="img/detail/1445800672647670354.jpg"/></a></dt>
+							<dd>澳佳宝氨糖维骨力180粒&nbsp;强壮</dd>
+							<dd>
+								<strong>￥1980</strong>
+								<span>￥8930</span>
+							</dd>
+						</dl>
+					</div>
+					<div class="goodsadvertisementmain">
+						<dl>
+							<dt><a href=""><img src="img/detail/1449798365138135471.jpg"/></a></dt>
+							<dd>一品红和田红枣六星组</dd>
+							<dd>
+								<strong>￥299</strong>
+								<span>￥499</span>
+							</dd>
+						</dl>
+						<dl>
+							<dt><a href=""><img src="img/detail/1450034340425286914.jpg"/></a></dt>
+							<dd>天玛生态酱香牦牛肉超值组</dd>
+							<dd>
+								<strong>￥299</strong>
+								<span>￥499</span>
+							</dd>
+						</dl>
+						<dl>
+							<dt><a href=""><img src="img/detail/1450898509864425800.jpg"/></a></dt>
+							<dd>海晏堂海参营养搭配组（海参）</dd>
+							<dd>
+								<strong>￥1980</strong>
+								<span>￥8930</span>
+							</dd>
+						</dl>
+						<dl>
+							<dt><a href=""><img src="img/detail/1452119499813381351.jpg"/></a></dt>
+							<dd>海燕堂即海参尊贵品质组</dd>
+							<dd>
+								<strong>￥1980</strong>
+								<span>￥8930</span>
+							</dd>
+						</dl>
+					</div>
+				</div>
+				<!--商品详情-->
+				<div id="goodsinformation">
+					<!--商品详情左半部分-->
+					<div id="goodsinformationleft">
+						<ul id="goodsinformationleft-nav">
+							<li>商品信息</li>
+							<li>评价</li>
+							<li>规格参数</li>
+							<li>包装清单</li>
+							<li>支付/配送</li>
+							<li>售后服务</li>
+							<li>品牌说明</li>
+							<li>实用指南</li>
+						</ul>
+						<ul id="goodsinformationleft-main">
+							<!--商品信息-->
+							<li class="goodsinformationleft-main-cont">
+								<!--列表信息-->
+								<ul id="goodsinformationleft-main-ul">
+									<li>
+										商品名称:swisse护肝宝澳洲进口120粒&nbsp;解酒排毒养肝
+									</li>
+									<li>
+										<p>品牌:</p>
+										<span>Swisse</span>
+									</li>
+									<li>
+										<p>上架时间:</p>
+										<span>2015-10-09</span>
+									</li>
+									<li>
+										<p>包装清单:</p>
+										<span>海外购澳大利亚swisse保肝护肝宝奶蓟草改善脂肪肝宁120粒*1*个</span>
+									</li>
+									<li>
+										<p>毛重:</p>
+										<span>-</span>
+									</li>
+								</ul>
+								<!--具体图片信息-->
+								<div class="firstpic">
+									<img src="img/detail/xiadan.jpg" />
+									<img src="img/detail/z.jpeg" />
+								</div>
+								<div class="secondpic">
+									<img src="img/detail/4.jpg" />
+									<img src="img/detail/5.jpg" />
+									<img src="img/detail/6.jpg" />
+									<img src="img/detail/7.jpg" />
+									<img src="img/detail/8.jpg" />
+									<img src="img/detail/9.jpg" />
+									<img src="img/detail/10.jpg" />
+									<img src="img/detail/11.jpg" />
+									<img src="img/detail/12.jpg" />
+									<img src="img/detail/13.jpg" />
+									<img src="img/detail/14.jpg" />
+									<img src="img/detail/15.jpg" />
+									<img src="img/detail/16.jpg" />
+									<img src="img/detail/17.jpg" />
+									<img src="img/detail/18.jpg" />
+									<img src="img/detail/19.jpg" />
+									<img src="img/detail/20.jpg" />
+									<img src="img/detail/21.jpg" />
+									<img src="img/detail/22.jpg" />
+									<img src="img/detail/23.jpg" />
+									<img src="img/detail/24.jpg" />
+									<img src="img/detail/25.jpg" />
+									<img src="img/detail/26.jpg" />
+									<img src="img/detail/27.jpg" />
+									<img src="img/detail/28.jpg" />
+									<img src="img/detail/29.jpg" />
+									<img src="img/detail/30.jpg" />
+									<img src="img/detail/31.jpg" />
+									<img src="img/detail/32.jpg" />
+									<img src="img/detail/33.jpg" />
+									<img src="img/detail/34.jpeg" />
+								</div>
+							</li>
+							<!--评价-->
+							<li class="goodsinformationleft-main-cont">
+								<img src="img/detail/35.jpeg" />
+							</li>
+							<!--规格参数-->
+							<li class="goodsinformationleft-main-cont">
+								<p class="litit">品牌:swisee&nbsp;规格:120粒</p>
+								<img src="img/detail/35.jpeg" />
+							</li>
+							<!--包装清单-->
+							<li class="goodsinformationleft-main-cont">
+								<p class="litit">本商品实际经营主体为优购物，由其提供配送和售后服务</p>
+								<p class="litit">海外购澳大利亚swisse保肝护肝宝奶蓟草改善脂肪肝宁120粒*1*个</p>
+								<img src="img/detail/35.jpeg" />
+							</li>
+							<!--快递-->
+							<li class="goodsinformationleft-main-cont">
+								<img src="img/detail/34.jpg" />
+								<div class="hwsrp"> <strong class="jcu">配送快递公司</strong>
+									<img src="http://img.ugoshop.com/images/topic/pro_hw/hwg_kd.jpg" width="632" height="78">
+									<p class="jcu3">特殊说明： 港、澳、台及海外暂不支持配送。</p>
+									<p class="jcu2">【发货时间】</p>
+									<p class="zwz">1、优购物发货订单，一般情况下自您下单后，我们会在2-3天为您安排发货；</p>
+									<p class="zwz">2、郑州跨境购仓库发货，由于要向海关、商检进行订单信息申报和备案，因此发货时间略长，一般自您下单后3个工作日发货，如遇所在地重大节日或活动，发货时间会略有延误；</p>
+									<p class="zwz">3、保税区商品一般情况下自下单后3个工作日发货，如遇所在地重大节日或活动，发货时间会略有延误；</p>
+									<p class="zwz">4、如遇大型活动（如店庆等）、节假日及其它不可抗力因素（如遇交通管制、大雨雪、洪涝、冰灾、地震等）导致的意外情况，将会影响订单发货速度。无论何种原因，优购物都会尽全力为您配送，如遇特殊情况，我们会在页面提醒预计送达时间。</p>
+									<p class="jcu2">【物流信息查询】</p>
+									<p class="zwz">登录到"我的优购物"中，实时查看您订单的生产及配送情况。部分快递公司物流信息系统显示会略有延迟，如订单已显示为发货状态，但无物流信息显示，请您稍等约24小时左右，即可查询到。</p>
+									<p class="jcu2">【验货签收】</p>
+									<p class="zwz">快递员送货上门时，请您务必当面对照发货单核对商品，主要检查如下内容：</p>
+									<p class="zwz">1、外包装是否破损；</p>
+									<p class="zwz">2、商品是否缺少、配送错误。</p>
+									<p class="zwz">如在检查的过程中出现问题，请您不要签收商品，并及时电话联系优购物客服中心（400-707-0707），我们会第一时间处理您的问题。签收后优购物视为您已经认可并接受本公司商品，出现上述问题将不再进行处理。非订货人本人签收的产品，优购物视代收人等同于订购人进行验货。</p>
+								</div>
+								<img src="img/detail/35.jpeg" />
+							</li>
+							<!--售后服务-->
+							<li class="goodsinformationleft-main-cont">
+								<div class="zfdiv">
+									<p class="srp">
+										<strong class="jcu">一、退换货服务规则：</strong>
+									</p>
+									<p class="srp">1、优购物支持7天内退货政策。自您收到商品之日起（以签收日期为准），可在7日内提出退货申请。</p>
+									<p class="srp">2、商品质量问题可申请退货。</p>
+									<p class="srp">3、由于主观原因（如颜色尺码不对、不喜欢等）需要退货时，商品及商品本身包装保持优购物出售时原装且配件赠品资料齐全，不影响二次销售的，可申请退货。</p>
+									<p class="srp">4、由于主观原因（如颜色尺码不对、不喜欢等）需要退货时，可在收到商品后的7天内与我们联系退货。双方达成一致后，客户自行承担退货产生的国际运费（首重220元，续重60元），并且自行承担行邮税，我们会为您办理退货相关事宜。</p>
+									<p class="srp">
+										<strong class="jcu">以下情况将不提供退货服务：</strong>
+									</p>
+									<p class="srp">1、任何非优购物出售的商品；</p>
+									<p class="srp">2、任何已使用或已穿着的商品（三包认定的质量问题除外）；</p>
+									<p class="srp">3、任何因非三包认定的非质量问题商品（包括但不限于：非正常使用及保管；非正常清洁等情况而出现质量问题的商品）；</p>
+									<p class="srp">4、外包装破损或配件不齐全的商品（包括但不限于：吊牌丢失或已被从商品中剪下；商品附件说明书、商品标签、商品保修单丢失或破损，商品外包装破损等；</p>
+									<p class="srp">5、购买时有赠品的商品，未将赠品退回；</p>
+									<p class="srp">6、已经标明不提供退货服务的特殊商品；</p>
+									<p class="srp">7、因涉及食品安全问题，食品类商品不支持无理由退货；</p>
+
+									<p class="srp">8、出于安全和卫生考虑，贴身用品如：内裤、内衣套装（文胸+内裤）、塑身衣（塑身裤、塑身套装、束腹带）、泳装、袜子（包括丝袜、连裤袜、运动袜、打底裤），一经签收，非质量问题不予退货，请您谅解。</p>
+
+									<p class="srp">9、优购物暂时不保证无条件退换货物。</p>
+									<p class="srp">10、消费者个人定作类商品；</p>
+									<p class="srp">11、鲜活易腐类商品；</p>
+									<p class="srp">12、在线下载或者消费者已拆封的音像制品，计算机软件等数字化商品；</p>
+									<p class="srp">13、交付的报纸期刊类商品；</p>
+									<p class="srp">14、其他根据商品性质且经您在购买时确认不宜退换货的商品。</p>
+
+									<p class="srp">
+										<strong class="jcu">二、退换货服务条款：</strong>
+									</p>
+									<p class="srp">1、因商品质量问题产生的退货，退货运费由优购物承担；</p>
+									<p class="srp">2、因您个人原因产生的退货，退货运费由您个人承担。</p>
+									<p class="srp">
+										<strong class="jcu">三、退款说明</strong>
+									</p>
+									<p class="srp">1、如您的退货已经办理完毕，我们会及时将商品款项退还给您。</p>
+									<p class="srp">&nbsp;2、如您使用银行卡支付，将把相应金额退还到对应的银行卡账户。</p>
+								</div>
+								<img src="img/detail/35.jpeg" />
+							</li>
+							<!--品牌说明-->
+							<li class="goodsinformationleft-main-cont">
+								<div id="trademark">
+									<a href=""><img src="img/detail/36.jpg" /></a>
+									<br>
+									<br>
+									<a href=""><img src="img/detail/37.jpg" /></a>
+									<a href="" class="trademark-link">央视购物网站</a>
+									<a href="" class="trademark-link">凡客客服电话</a>
+									<a href="" class="trademark-link">国际妈咪奶粉是正品吗</a>
+									<a href="" class="trademark-link">太平鸟男装报价</a>
+									<a href="" class="trademark-link">时尚起义杂志</a>
+									<a href="" class="trademark-link">纽巴伦和新百伦的区别</a>
+									<a href="" class="trademark-link">星期六女鞋客服电话</a>
+									<a href="" class="trademark-link">易购苏宁</a>
+									<a href="" class="trademark-link">卓越亚马逊网官网</a>
+									<a href="" class="trademark-link">卓越亚马逊礼品卡</a>
+									<a href="" class="trademark-link">国美在线物流查询</a>
+									<a href="" class="trademark-link">聚美优品里的化妆品是正品吗</a>
+									<a href="" class="trademark-link">聚美优品网址</a>
+									<a href="" class="trademark-link">淘宝付款流程图</a>
+									<a href="" class="trademark-link">1号店如何返利</a>
+									<a href="" class="trademark-link">淘宝聚划算好不好</a>
+									<a href="" class="trademark-link">相宜本草红景天套装怎么样</a>
+									<a href="" class="trademark-link">乐蜂王秒杀</a>
+									<a href="" class="trademark-link">美肤宝自然白清润眼胶怎么样</a>
+									<a href="" class="trademark-link">米奇网珠宝</a>
+								</div>
+								<img src="img/detail/35.jpeg" />
+							</li>
+							<!--实用指南-->
+							<li class="goodsinformationleft-main-cont">
+								<div class="guide">
+									<em>1</em>
+									<span>
+										吃什么可以降三高
+									</span>
+									<i>2016.01.08</i>
+								</div>
+								<div class="guide">
+									<em>2</em>
+									<span>
+										吃什么食物可以降高血脂
+									</span>
+									<i>2016.01.08</i>
+								</div>
+								<div class="guide">
+									<em>3</em>
+									<span>
+										降三高喝什么茶好
+									</span>
+									<i>2016.01.08</i>
+								</div>
+								<div class="guide">
+									<em>4</em>
+									<span>
+										选购到优质番茄红素的方法
+									</span>
+									<i>2016.01.08</i>
+								</div>
+								<div class="guide">
+									<em>5</em>
+									<span>
+										番茄红素软胶囊的特点和优势是什么
+									</span>
+									<i>2016.01.08</i>
+								</div>
+								<div class="guide">
+									<em>6</em>
+									<span>
+										番茄红素十大养生保健作用
+									</span>
+									<i>2016.01.08</i>
+								</div>
+								<div class="guide">
+									<em>7</em>
+									<span>
+										西洋红参怎么吃？七种方法随心变
+									</span>
+									<i>2016.01.08</i>
+								</div>
+								<div class="guide">
+									<em>7</em>
+									<span>
+										食用西洋红参含片有什么禁忌吗
+									</span>
+									<i>2016.01.08</i>
+								</div>
+								<img src="img/detail/35.jpeg" />
+							</li>
+						</ul>
+						<!--用户好评-->
+						<div id="userreview">
+							<div class="evalute">
+								<div class="evalute-first">
+									<h3><span>100%</span>好评</h3>
+									<p>6人评价</p>
+								</div>
+								<dl class="evalute-second">
+									<dt><input type="radio" name="eva" id="" value="" /><img src="img/detail/star1.png"/></dt>
+									<dd>6</dd>
+								</dl>
+								<dl class="evalute-second">
+									<dt><input type="radio" name="eva" id="" value="" /><img src="img/detail/star2.png"/></dt>
+									<dd>0</dd>
+								</dl>
+								<dl class="evalute-second">
+									<dt><input type="radio" name="eva" id="" value="" /><img src="img/detail/star3.png"/></dt>
+									<dd>0</dd>
+								</dl>
+								<dl class="evalute-second">
+									<dt><input type="radio" name="eva" id="" value="" /><img src="img/detail/star4.png"/></dt>
+									<dd>0</dd>
+								</dl>
+								<dl class="evalute-second">
+									<dt><input type="radio" name="eva" id="" value="" /><img src="img/detail/star5.png"/></dt>
+									<dd>0</dd>
+								</dl>
+							</div>
+							<ul class="evalute-ul">
+								<li>评价客户</li>
+								<li>评价内容</li>
+								<li>评价内容</li>
+							</ul>
+							<div class="Evaluation-con clearfix">
+								<div class="Evaluation-con-left">
+									<p>137****89</p>
+								</div>
+								<div class="Evaluation-con-center">
+									<img src="img/detail/star1.png"/>
+									好用实惠
+								</div>
+								<div class="Evaluation-con-right">
+									2016-01-10
+								</div>
+							</div>
+						</div>
+						<!--猜你可能喜欢的活动-->
+							<div id="youlove-action">
+								<p>你可能喜欢的活动</p>
+								<a href=""><img src="img/detail/love1.jpg"/></a>
+								<a href=""><img src="img/detail/love2.jpg"/></a>
+								<a href=""><img src="img/detail/love3.png"/></a>
+							</div>
+							<div id="group">
+								<a href=""><img src="img/detail/38.jpg"/></a>
+							</div>
+					</div>
+					<!--商品详情右半部分-->
+					<div id="goodsinformationright">
+						<!--商品详情右边上半部分-->
+						<div id="goodsinformationright-top">
+							<h3>猜你喜欢</h3>
+							<dl>
+								<dd>
+									<a href="" class="youlove"><img src="img/detail/1.jpg" /></a>
+									<a href="" class="youlovetit">韩国进口正官庄红参超值</a>
+									<p>
+										<strong>￥204</strong>
+										<span>￥699.00</span>
+									</p>
+								</dd>
+								<div class="cover">
+								</div>
+							</dl>
+							<dl>
+								<dd>
+									<a href="" class="youlove"><img src="img/detail/3.jpg" /></a>
+									<a href="" class="youlovetit">韩国进口正官庄红参超值</a>
+									<p>
+										<strong>￥204</strong>
+										<span>￥699.00</span>
+									</p>
+								</dd>
+								<div class="cover">
+								</div>
+							</dl>
+							<dl>
+								<dd>
+									<a href="" class="youlove"><img src="img/detail/2.jpg" /></a>
+									<a href="" class="youlovetit">韩国进口正官庄红参超值</a>
+									<p>
+										<strong>￥204</strong>
+										<span>￥699.00</span>
+									</p>
+								</dd>
+								<div class="cover">
+								</div>
+							</dl>
+							<dl>
+								<dd>
+									<a href="" class="youlove"><img src="img/detail/3.jpg" /></a>
+									<a href="" class="youlovetit">韩国进口正官庄红参超值</a>
+									<p>
+										<strong>￥204</strong>
+										<span>￥699.00</span>
+									</p>
+								</dd>
+								<div class="cover">
+								</div>
+							</dl>
+						</div>
+						<!--右边商品详情下半部分-->
+						<div id="goodsinformationright-bottom">
+							<h3>
+								其他分类
+								<em>></em>
+							</h3>
+							<ul>
+								<li>海鲜</li>
+								<li>特产零食</li>
+								<li>红酒</li>
+								<li>啤酒</li>
+								<li>白葡萄酒</li>
+								<li>滋补调养</li>
+								<li>婴幼儿用品</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--底部版权-->
+			<div id="copyright-top">
+			</div>
+			<div id="copy-right-ul">
+				<dl class="copy-right-dl left">
+					<dt class="firstdt">新手上路</dt>
+					<dd><a href="">新用户注册</a></dd>
+					<dd><a href="">忘记密码</a></dd>
+					<dd><a href="">购物流程</a></dd>
+				</dl>
+				<dl class="copy-right-dl left">
+					<dt class="firstdt">支付配送</dt>
+					<dd><a href="">货到付款</a></dd>
+					<dd><a href="">支付宝</a></dd>
+					<dd><a href="">配送方式</a></dd>
+				</dl>
+				<dl class="copy-right-dl left">
+					<dt class="firstdt">会员服务</dt>
+					<dd><a href="">服务承诺</a></dd>
+					<dd><a href="">会员制度</a></dd>
+					<dd><a href="">积分介绍</a></dd>
+					<dd><a href="">退换货原则</a></dd>
+				</dl>
+				<dl class="copy-right-dl left lastdl">
+					<dt class="firstdt">关于优惠品</dt>
+					<dd><a href="">企业介绍</a></dd>
+					<dd><a href="">联系我们</a></dd>
+					<dd><a href="">招商专区</a></dd>
+				</dl>
+				<dl class="sceonddl">
+					<dt>
+					<a href=""><img src="img/ewm90X90[1].JPG"/></a>
+					<p class="second-phone">手机优品慧</p>
+					<p class="second-phone2">（手机购）</p>
+				</dt>
+					<dd>
+						<a href=""><img src="img/foot_dh[1].JPG" /></a>
+					</dd>
+				</dl>
+			</div>
+			<div id="footer">
+				<p id="footer-list">
+					<a href="">首页</a>|
+					<a href="">关于优惠</a>|
+					<a href="">联系我们</a>|
+					<a href="">招贤纳士</a>|
+					<a href="">招商专区</a>|
+					<a href="">供应商入口</a>|
+					<a href="">友情链接</a>|
+					<a href="">网站地图</a>|
+					<a href="">资讯中心</a>|
+					<a href="">评论</a>|
+					<a href="">图片</a>
+				</p>
+				<div id="footer-firend">
+					<p class="footerp">
+						<em>友情连接:</em>
+						<a href="">华为商城</a>&nbsp;
+						<a href="">佐卡伊珠宝网</a>&nbsp;
+						<a href="">华强北</a>&nbsp;
+						<a href="">淘鞋网</a>&nbsp;
+						<a href="">团购网</a>&nbsp;
+						<a href="">中国零食网</a>&nbsp;
+						<a href="">腕表名表</a>&nbsp;
+						<a href="">太平洋家居产品库</a>&nbsp;
+						<a href="">网上购物</a>&nbsp;
+						<a href="">团购网</a>&nbsp;
+						<a href="">钻石</a>&nbsp;
+						<a href="">城市联盟</a>&nbsp;
+						<a href="">手表</a>&nbsp;
+						<a href="">九块邮</a>&nbsp;
+						<a href="">婚礼珠宝</a>&nbsp;
+						<a href="">如何开网店</a>&nbsp;
+						<a href="">法国红酒品牌</a>&nbsp;
+						<a href="">法国红酒品牌</a>&nbsp;
+					</p>
+					<div id="pulldown">
+						▼
+					</div>
+				</div>
+				<p id="footer-third">
+					优品慧（优购物）全球优品特卖网站&nbsp;专属于千万女性的优品特卖网站，优品慧（优购物）电视购物官方网站，100%正品保证&nbsp;支持货到付款.
+				</p>
+				<p id="footer-four">
+					Copyrightc2007-2015&nbsp;公司名称:北京优品慧网络科技有限公司&nbsp;统一社会信用代码:91110302339739621C&nbsp;ICP备案号:京ICP备15039150号-1&nbsp;
+				</p>
+				<p id="footer-four">
+					公司地址:北京市北京经济技术开发区同济南路19号7幢2层c区&nbsp;联系方式:400-707-0707
+				</p>
+			</div>
+			<br/>
+			<br/>
+			<br/>
+			<br/>
+			<br/>
+			<br/>
+	</body>
+
+</html>

@@ -1,0 +1,300 @@
+.ahover {
+	background: url(../img/center/leftbj.jpg) no-repeat;
+}
+
+
+/*我的订单主要内容*/
+
+#indent-right {
+	float: left;
+	width: 793px;
+	overflow: hidden;
+	background-color: #ffffff;
+	min-height: 1070px;
+	height: auto!important;
+	height: 1070px;
+	overflow-y: visible;
+}
+
+.indent-tit {
+	height: 28px;
+	width: 100%;
+	background: url(../img/center/myyhq.jpg) no-repeat 0 -38px;
+}
+
+
+/*订单内容*/
+
+.indent-con {
+	padding-top: 0px;
+	height: auto;
+	padding-bottom: 20px;
+}
+
+.indent-con-nav {
+	border-bottom: 1px solid #ff6600;
+	height: 25px;
+}
+
+.indent-con-nav li {
+	font-size: 12px;
+	float: left;
+	color: #2b2b2b;
+	width: 90px;
+	border-right: 1px solid #ffffff;
+	height: 25px;
+	line-height: 25px;
+	background-color: #f2f2f2;
+	text-align: center;
+	cursor: pointer;
+}
+
+.indent-con-nav li:hover {
+	background: salmon;
+	color: white;
+}
+
+.indent-conmain {
+	width: 100%;
+	height: auto;
+}
+
+.indent-con-list {
+	height: 35px;
+	background: url(../img/center/yhqtit.jpg) no-repeat;
+	margin-top: 5px;
+}
+
+.indent-con-list li {
+	float: left;
+	height: 35px;
+	text-align: center;
+	line-height: 35px;
+	font-size: 12px;
+	cursor: pointer;
+}
+
+.indent-con-list li:nth-child(1) {
+	width: 235px;
+}
+
+.indent-con-list li:nth-child(2) {
+	width: 67px;
+}
+
+.indent-con-list li:nth-child(3) {
+	width: 74px;
+}
+
+.indent-con-list li:nth-child(4) {
+	width: 97px;
+}
+
+
+/*交易状态*/
+
+.indent-con-list li:nth-child(5) {
+	width: 126px;
+}
+
+.tradestate div {
+	background: url(../img/center/tb.jpg) no-repeat -108px -356px;
+	padding-left: 15px;
+	text-align: left;
+	height: 22px;
+	line-height: 22px;
+	width:92px;
+	margin:5px auto;
+	overflow: hidden;
+	position:relative;
+}
+
+.tradestate div dl{
+	position:absolute;
+	top:22px;
+	left:0;
+	width:92px;
+	height:auto;
+	overflow: hidden;
+	border:1px solid #CCCCCC;
+	background:white;
+	text-align: center;
+	cursor: pointer;
+}
+.tradestate div dl dd:hover{
+	background:#ccc;
+}
+.indent-con-list li:nth-child(6) {
+	width: 90px;
+}
+
+.indent-con-list li:nth-child(7) {
+	width: 85px;
+}
+/*订单内容*/
+.indent-condetail{
+	width:793px;
+	height:282px;
+}
+.indent-condetail-main{
+	border: 5px solid #e6e6e6;
+  margin: 10px;
+  height: 272px;
+}
+.indent-condetail-main p{
+	text-align: center;
+  margin-top: 105px;
+  font-weight: bold;
+}
+.indent-condetail-main p span{
+	display: inline-block;
+  line-height: 30px;
+  background: url(../img/center/tb.jpg) no-repeat -86px -134px;
+  margin: 0 auto;
+  padding-left: 45px;
+  color: #858585;
+  font-size: 14px;
+}
+.indent-condetail-main p span a{
+	color: #307fe8;
+}
+/*特惠活动*/
+.preference{
+	height: auto;
+	overflow: hidden;
+  margin-top: 36px;
+}
+.preference h4{
+	background: url(../img/center/myyhq.jpg) no-repeat 0 -74px;
+  height: 23px;
+  text-align: right;
+  margin: 0 10px;
+  padding-top: 15px;
+}
+.preference img{
+	margin:10px 10px 0 0;
+  float: left;
+  width: 381px;
+  height:181px;
+}
+.preference img:first-child{
+	margin-left:10px;
+}
+/*昨日热销*/
+#hotsell{
+	height: auto;
+	overflow: hidden;
+	width:773px;
+  	margin:30px auto;
+}
+#hotsell h4{
+	background: url(../img/center/myyhq.jpg) no-repeat 0 -123px;
+  height: 25px;
+  text-align: right;
+  padding-top: 15px;
+}
+#hotsell-main{
+	height: 330px;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  border: 1px solid #dadad8;
+  width: 771px;
+  margin-top: 10px;
+}
+/*轮播*/
+/*左右翻页按钮*/
+.hotsell-main-left ,.hotsell-main-right{
+	width:20px;
+	height:40px;
+	background:grey;
+	border-radius:5px;
+	box-shadow: 0 0 2px 4px gold;
+	color:white;
+	text-align: center;
+	line-height: 40px;
+	font-size: 20px;
+	font-weight: 800;
+	position:absolute;
+	top:150px;
+	opacity: 0.8;
+	z-index: 8;
+	cursor: pointer;
+}
+.hotsell-main-left{
+	left:10px;
+}
+.hotsell-main-right{
+	right:10px;
+}
+/*下部小按钮*/
+.hotsell-btn{
+	position:absolute;
+	bottom:10px;
+	left:360px;
+	z-index: 4;
+}
+.hotsell-btn li{
+	z-index:5;
+	float:left;
+	width:14px;
+	height:14px;
+	margin-right:6px;
+	background:gray;
+	border-radius: 50%;
+}
+/*轮播图主要内容*/
+.carr{
+	position:absolute;
+	width:100%;
+	height:330px;
+}
+.carr dd{
+	position:absolute;
+	top:0;
+	padding-top:35px;
+	padding-left:35px;
+}
+.carr dd:first-child{
+	opacity:1;
+}
+.hotsell-btn .bc{
+	background:red;
+}
+.carr dd span{
+  display: block;
+  width: 226px;
+  height: 334px;
+  position: relative;
+  z-index: 1;
+  float: left;
+  margin-right: 14px
+}
+.carr dd span p{
+	padding-top:8px;
+	height:14px;
+	line-height: 14px;
+	font-size: 14px;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+.carr dd span p:last-child{
+	color:red;
+}
+.carr dd span p i{
+	color:#CCCCCC;
+	font-size:13px;
+	font-style: normal;
+	text-decoration: line-through;
+}
+.carr dd span img{
+	display:block;
+  width: 224px;
+  height: 224px;
+  border: 1px solid #e6e6e6;
+}
+
+
+
+

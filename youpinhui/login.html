@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>优品慧-注册</title>
+		<link rel="stylesheet" href="css/sidebar.css" />
+		<link rel="stylesheet" type="text/css" href="css/index.css" />
+		<link rel="stylesheet" type="text/css" href="css/login.css"/>
+		<script type="text/javascript" src="js/jquery-1.11.3.js">
+		</script>
+		<script type="text/javascript" src="js/index.js">
+		</script>
+		<script type="text/javascript" src="js/public.js" >
+		</script>
+		<script type="text/javascript" src="js/login.js">
+		</script>
+	</head>
+	<body>
+		<!--右侧快捷入口-->
+		<div id="sidebar">
+			<ul id="sidebar-link">
+				<li class="side-uers">
+					<a href=""></a>
+					<div id="user-login">
+						<p id="closethis">
+							<a></a>
+						</p>
+						<p id="user-login-content">
+							<a href=""><img src="img/top.JPG"/></a>
+						</p>
+						<p id="user-login-loginon">
+							<strong>
+							你好！请
+							<a href="land.html" class="login">登录</a>|
+							<a href="login.html" class="login">注册</a>
+							</strong>
+						</p>	
+						<p id="user-login-link">
+							<a class="indent">我的订单</a>
+							<a class="indent">优惠券</a>
+						</p>
+					</div>
+				</li>
+				<li class="side-cart">
+					<a href=""></a>
+					<p class="_p">购物车</p>
+					<!--购物车内商品数量-->
+					<span class="side-cart-pro">0</span>
+				</li>
+				<li class="side-care">
+					<a href=""></a>
+					<p class="_p">我的关注</p>
+				</li>
+				<li class="side-ser">
+					<a href=""></a>
+					<p class="_p">在线客服</p>
+				</li>
+			</ul>
+			<ul id="sidebar-code">
+				<li class="side-code">
+					<div class="side-code-tit">
+					</div>
+					<a href=""></a>
+				</li>
+				<li class="side-site">
+					<a href=""></a>
+					<p class="_p">调查问卷</p>
+				</li>
+				<li class="side-totop">
+					<a href=""></a>
+					<p class="_p">回到顶部</p>
+				</li>
+			</ul>
+		</div>			
+		</div>
+		<!--头部导航-->
+		<div id="main-nav">
+			<div id="main-nav-child">
+				<ul id="main-nav-ul-1">
+				</ul>
+				<ul id="main-nav-ul">
+					<li><span><a href="login.html">注册</a></span>|</li>
+					<li><span><a href="land.html">登录</a></span>|</li>
+					<li><span><a href="">我的订单</a></span>|</li>
+					<li><span><a href="">物流查询</a></span>|</li>
+					<li><span><a href="">我的关注</a></span>|</li>
+					<li><span><a href="">咨询</a></span>|</li>
+					<li><span><a href="">品牌馆</a></span>|</li>
+					<li id="lastphone">
+						<span><img src="img/phone.png"/><a href="">手机优品慧</a></span>
+						<p id="homeofphone">
+							<a href=""><img src="img/ewm90X90[1].JPG"/></a>
+							<span>扫一扫呦~</span>
+						</p>
+					</li>
+				</ul>
+			</div>
+		</div>
+		
+		<!--注册logo-->
+		<div id="loginlogo">
+			<div id="loginlogo-logo">
+				<a href="index.html"></a>
+				<p class="loginlogo-logo"></p>
+			</div>
+			<div id="login-loginon">
+				<p>已经注册，</p>
+				<a href="land.html">现在登录》</a>
+			</div>
+		</div>
+			<ul id="login-nav">
+				<li><span>手机注册</span></li>
+				<li><span>邮箱注册</span></li>
+				<li><span>电视用户激活</span></li>
+			</ul>
+			<div id="login-land">
+				<!--手机验证-->
+				<div id="phonelogin" class="ifshow">
+					<form action="" method="post">	
+						<div class="phonelogin-content">
+							<!--手机号验证-->
+							<span class="phonelogin-contenttit">
+								手机号码：
+							</span>
+							<div class="phonelogin-contentmain">
+							<input type="text" name="" class="phonelogin-contentmain1 phonelogin-contentmain2"/>
+							<div class="phonelogin-contentpic">
+							</div>
+							<div class="phonelogin-contentmain-pro showif">
+								请输入手机号
+							</div>
+							<div class="phonelogin-contentmain-pro1 showif">
+								请输入常用手机号，避免忘记
+							</div>
+							<div class="phonelogin-contentmain-pro2 showif">
+								手机格式不正确，请核对后再输入
+							</div>
+							<div class="phonelogin-contentmain-pro3 showif">
+							</div>
+							</div>
+						</div>
+						<!--验证码验证-->
+						<div class="phonelogin-content">
+							<span class="phonelogin-contenttit">
+								验证码：
+							</span>
+							<div class="phonelogin-contentmain">
+							<input type="text" name="" class="phonelogin-contentmain1" id="notecheck"/>
+							<label id="vercode">
+								<span class="number"></span>
+								看不清
+								<a href="" class="tradecode">换一张</a>
+							</label>
+							</div>
+						</div>
+						<!--设置密码-->
+						<div class="phonelogin-content">
+							<span class="phonelogin-contenttit">
+								设置密码：
+							</span>
+							<div class="phonelogin-contentmain">
+							<input type="password" name="" class="phonelogin-contentmain1 phonelogin-contentmain2"/>
+							<div class="phonelogin-contentpic3 phonelogin-contentpic">
+							</div>
+							<div class="phonelogin-contentmain-pro showif">
+								请输入密码
+							</div>
+							<div class="phonelogin-contentmain-pro1 showif">
+								6-20位字符，数字，字母，下划线数字不能开头
+							</div>
+							<div class="phonelogin-contentmain-pro2 showif">
+								密码格式不对
+							</div>
+							<div class="phonelogin-contentmain-pro3 showif">
+							</div>
+							</div>
+						</div>
+						<!--验证密码-->
+						<div class="phonelogin-content">
+							<span class="phonelogin-contenttit">
+								确认密码：
+							</span>
+							<div class="phonelogin-contentmain">
+							<input type="password" name="" class="phonelogin-contentmain1 phonelogin-contentmain2"/>
+							<div class="phonelogin-contentpic4 phonelogin-contentpic">
+							</div>
+							<div class="phonelogin-contentmain-pro showif">
+								请再次输入密码
+							</div>
+							<div class="phonelogin-contentmain-pro1 showif">
+								请再次输入密码
+							</div>
+							<div class="phonelogin-contentmain-pro2 showif">
+								两次输入不一致，请从新输入！
+							</div>
+							<div class="phonelogin-contentmain-pro3 showif">
+							</div>
+							</div>
+						</div>
+						<!--短信验证-->
+						<div class="phonelogin-content">
+							<span class="phonelogin-contenttit">
+								短信验证码：
+							</span>
+							<div class="phonelogin-contentmain">
+							<input type="text" name="" class="phonelogin-contentmain1" id="notecheck"/>
+							<input type="button" id="notesend" value="获取短信验证码"/>
+							</div>
+						</div>
+						<!--用户服务承诺-->
+						<div class="phonelogin-content">
+							<span class="phonelogin-space">
+							</span>
+							<div class="checkbox">
+								<input type="checkbox" name="" id="" value="" />
+								<label>我已阅读并同意<a href="" class="check-a">《优品慧用户服务承诺》</a></label>
+							</div>
+						</div>
+						<div class="phonelogin-content" id="lastsub">
+							<span class="phonelogin-space">
+							</span>
+							<div class="phonelogin-sub">
+								<input type="button" name="" class="phonelogin-sub-button" value="" />
+								<br />
+								<label>
+									如有疑问请点击<a href="" class="callhelp">帮助中心</a>，或拨打客服电话:
+									<em>400-707-0707</em>
+								</label>
+							</div>
+						</div>
+					</form>
+				</div>
+				<!--邮箱验证-->
+				<div id="emaillogin" class="ifshow">
+					<form action="" method="post">
+						<!--邮箱地址-->
+						<div class="phonelogin-content">
+							<span class="phonelogin-contenttit">
+								邮箱地址：
+							</span>
+							<div class="phonelogin-contentmain">
+							<input type="text" name="" class="phonelogin-contentmain1 phonelogin-contentmain2"/>
+							<div class="phonelogin-contentpic">
+							</div>
+							<div class="phonelogin-contentmain-pro showif">
+								请输入邮箱号
+							</div>
+							<div class="phonelogin-contentmain-pro1 showif">
+								请输入常用邮箱，避免忘记
+							</div>
+							<div class="phonelogin-contentmain-pro2 showif">
+								邮箱格式不正确，请核对后再输入
+							</div>
+							<div class="phonelogin-contentmain-pro3 showif">
+							</div>
+							</div>
+						</div>
+						<!--设置密码-->
+						<div class="phonelogin-content">
+							<span class="phonelogin-contenttit">
+								设置密码：
+							</span>
+							<div class="phonelogin-contentmain">
+							<input type="password" name="" class="phonelogin-contentmain1 phonelogin-contentmain2"/>
+							<div class="phonelogin-contentpic3 phonelogin-contentpic">
+							</div>
+							<div class="phonelogin-contentmain-pro showif">
+								请输入密码
+							</div>
+							<div class="phonelogin-contentmain-pro1 showif">
+								6-20位字符，数字，字母，下划线数字不能开头
+							</div>
+							<div class="phonelogin-contentmain-pro2 showif">
+								密码格式不对
+							</div>
+							<div class="phonelogin-contentmain-pro3 showif">
+							</div>
+							</div>
+						</div>
+						<!--确认密码-->
+						<div class="phonelogin-content">
+							<span class="phonelogin-contenttit">
+								确认密码：
+							</span>
+							<div class="phonelogin-contentmain">
+							<input type="password" name="" class="phonelogin-contentmain1 phonelogin-contentmain2"/>
+							<div class="phonelogin-contentpic4 phonelogin-contentpic">
+							</div>
+							<div class="phonelogin-contentmain-pro showif">
+								请再次输入密码
+							</div>
+							<div class="phonelogin-contentmain-pro1 showif">
+								请再次输入密码
+							</div>
+							<div class="phonelogin-contentmain-pro2 showif">
+								两次输入不一致，请从新输入！
+							</div>
+							<div class="phonelogin-contentmain-pro3 showif">
+							</div>
+							</div>
+						</div>
+						<div class="phonelogin-content">
+							<span class="phonelogin-contenttit">
+								验证码：
+							</span>
+							<div class="phonelogin-contentmain">
+							<input type="text" name="" class="phonelogin-contentmain1" id="notecheck"/>
+							<label id="vercode">
+								<span class="number"></span>
+								看不清
+								<a href="" class="tradecode">换一张</a>
+							</label>
+							</div>
+						</div>
+						<!--用户服务承诺-->
+						<div class="phonelogin-content">
+							<span class="phonelogin-space">
+							</span>
+							<div class="checkbox">
+								<input type="checkbox" name="" id="" value="" />
+								<label>我已阅读并同意<a href="" class="check-a">《优品慧用户服务承诺》</a></label>
+							</div>
+						</div>
+						<div class="phonelogin-content" id="lastsub">
+							<span class="phonelogin-space">
+							</span>
+							<div class="phonelogin-sub">
+								<input type="button" name="" class="phonelogin-sub-button" value="" />
+								<br />
+								<label>
+									如有疑问请点击<a href="" class="callhelp">帮助中心</a>，或拨打客服电话:
+									<em>400-707-0707</em>
+								</label>
+							</div>
+						</div>
+					</form>
+				</div>
+				<!--电视用户激活-->
+				<div id="tvlogin" class="ifshow">
+					<form action="" method="post">
+						<div class="phonelogin-content">
+							<span class="phonelogin-contenttit">
+								手机号码：
+							</span>
+							<div class="phonelogin-contentmain">
+							<input type="text" name="" class="phonelogin-contentmain1 phonelogin-contentmain2"/>
+							<div class="phonelogin-contentpic">
+							</div>
+							<div class="phonelogin-contentmain-pro showif">
+								请输入来电订购时的手机号
+							</div>
+							<div class="phonelogin-contentmain-pro1 showif">
+								请输入常用手机号，避免忘记
+							</div>
+							<div class="phonelogin-contentmain-pro2 showif">
+								手机格式不正确，请核对后再输入
+							</div>
+							<div class="phonelogin-contentmain-pro3 showif">
+							</div>
+							</div>
+						</div>
+						<div class="phonelogin-content">
+							<span class="phonelogin-contenttit">
+								验证码：
+							</span>
+							<div class="phonelogin-contentmain">
+							<input type="text" name="" class="phonelogin-contentmain1" id="notecheck"/>
+							<label id="vercode">
+								<span class="number"></span>
+								看不清
+								<a href="" class="tradecode">换一张</a>
+							</label>
+							</div>
+						</div>
+						<div class="phonelogin-content">
+							<span class="phonelogin-contenttit">
+								短信验证码：
+							</span>
+							<div class="phonelogin-contentmain">
+							<input type="text" name="" class="phonelogin-contentmain1" id="notecheck"/>
+							<input type="button" id="notesend" value="获取短信验证码"/>
+							</div>
+						</div>
+						<div class="phonelogin-content">
+							<span class="phonelogin-contenttit">
+								设置密码：
+							</span>
+							<div class="phonelogin-contentmain">
+							<input type="password" name="" class="phonelogin-contentmain1 phonelogin-contentmain2"/>
+							<div class="phonelogin-contentpic3 phonelogin-contentpic">
+							</div>
+							<div class="phonelogin-contentmain-pro showif">
+								请输入密码
+							</div>
+							<div class="phonelogin-contentmain-pro1 showif">
+								6-20位字符，数字，字母，下划线数字不能开头
+							</div>
+							<div class="phonelogin-contentmain-pro2 showif">
+								密码格式不对
+							</div>
+							<div class="phonelogin-contentmain-pro3 showif">
+							</div>
+							</div>
+						</div>
+						<div class="phonelogin-content">
+							<span class="phonelogin-contenttit">
+								确认密码：
+							</span>
+							<div class="phonelogin-contentmain">
+							<input type="password" name="" class="phonelogin-contentmain1 phonelogin-contentmain2"/>
+							<div class="phonelogin-contentpic4 phonelogin-contentpic">
+							</div>
+							<div class="phonelogin-contentmain-pro showif">
+								请再次输入密码
+							</div>
+							<div class="phonelogin-contentmain-pro1 showif">
+								请再次输入密码
+							</div>
+							<div class="phonelogin-contentmain-pro2 showif">
+								两次输入不一致，请从新输入！
+							</div>
+							<div class="phonelogin-contentmain-pro3 showif">
+							</div>
+							</div>
+						</div>
+						<!--用户服务承诺-->
+						<div class="phonelogin-content">
+							<span class="phonelogin-space">
+							</span>
+							<div class="checkbox">
+								<input type="checkbox" name="" id="" value="" />
+								<label>我已阅读并同意<a href="" class="check-a">《优品慧用户服务承诺》</a></label>
+							</div>
+						</div>
+						<div class="phonelogin-content" id="lastsub">
+							<span class="phonelogin-space">
+							</span>
+							<div class="phonelogin-sub">
+								<input type="button" name="" class="phonelogin-sub-button" value="" />
+								<br />
+								<label>
+									如有疑问请点击<a href="" class="callhelp">帮助中心</a>，或拨打客服电话:
+									<em>400-707-0707</em>
+								</label>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		<!--底部版权-->
+		<div id="copyright-top">
+		</div>
+		<div id="copy-right-ul">
+			<dl class="copy-right-dl left">
+				<dt class="firstdt">新手上路</dt>
+				<dd><a href="">新用户注册</a></dd>
+				<dd><a href="">忘记密码</a></dd>
+				<dd><a href="">购物流程</a></dd>
+			</dl>
+			<dl class="copy-right-dl left">
+				<dt class="firstdt">支付配送</dt>
+				<dd><a href="">货到付款</a></dd>
+				<dd><a href="">支付宝</a></dd>
+				<dd><a href="">配送方式</a></dd>
+			</dl>
+			<dl class="copy-right-dl left">
+				<dt class="firstdt">会员服务</dt>
+				<dd><a href="">服务承诺</a></dd>
+				<dd><a href="">会员制度</a></dd>
+				<dd><a href="">积分介绍</a></dd>
+				<dd><a href="">退换货原则</a></dd>
+			</dl>
+			<dl class="copy-right-dl left lastdl">
+				<dt class="firstdt">关于优惠品</dt>
+				<dd><a href="">企业介绍</a></dd>
+				<dd><a href="">联系我们</a></dd>
+				<dd><a href="">招商专区</a></dd>
+			</dl>
+			<dl class="sceonddl">
+				<dt>
+					<a href=""><img src="img/ewm90X90[1].JPG"/></a>
+					<p class="second-phone">手机优品慧</p>
+					<p class="second-phone2">（手机购）</p>
+				</dt>
+				<dd>
+					<a href=""><img src="img/foot_dh[1].JPG"/></a>
+				</dd>
+			</dl>
+		</div>
+		<div id="footer">
+			<p id="footer-list">
+				<a href="">首页</a>|
+				<a href="">关于优惠</a>|
+				<a href="">联系我们</a>|
+				<a href="">招贤纳士</a>|
+				<a href="">招商专区</a>|
+				<a href="">供应商入口</a>|
+				<a href="">友情链接</a>|
+				<a href="">网站地图</a>|
+				<a href="">资讯中心</a>|
+				<a href="">评论</a>|
+				<a href="">图片</a>
+			</p>
+			<p id="footer-third">
+				优品慧（优购物）全球优品特卖网站&nbsp;专属于千万女性的优品特卖网站，优品慧（优购物）电视购物官方网站，100%正品保证&nbsp;支持货到付款.
+			</p>
+			<p id="footer-four">
+				Copyrightc2007-2015&nbsp;公司名称:北京优品慧网络科技有限公司&nbsp;统一社会信用代码:91110302339739621C&nbsp;ICP备案号:京ICP备15039150号-1&nbsp;
+			</p>
+			<p id="footer-four">
+				公司地址:北京市北京经济技术开发区同济南路19号7幢2层c区&nbsp;联系方式:400-707-0707
+			</p>
+		</div>
+		<br/><br/><br/><br/><br/><br/>
+	</body>
+</html>

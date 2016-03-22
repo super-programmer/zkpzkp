@@ -1,0 +1,3102 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>食品-优品慧</title>
+		<link rel="stylesheet" href="css/sidebar.css" />
+		<link rel="stylesheet" type="text/css" href="css/index.css" />
+		<link rel="stylesheet" type="text/css" href="css/food.css" />
+		<script type="text/javascript" src="js/jquery-1.11.3.js">
+		</script>
+		<script type="text/javascript" src="js/land.js">
+		</script>
+		<script type="text/javascript" src="js/public.js">
+		</script>
+		<script type="text/javascript">
+			$(function() {
+				var dat = {}
+				var dat = {
+					t: '2016,1,28'
+				}
+				endtime(dat)
+
+				function endtime(dat) {
+					var str = "";
+					str = dat.t
+					str = str.replace(/,/g, "/")
+					var nnow = new Date(str)
+					var _date = nnow.getTime()
+						//		console.info(_date)
+					var now = new Date();
+					_now = now.getTime();
+					var t = nnow - now + 36000000;
+					now.setTime(t);
+					setInterval(function() {
+						t = t - 1000;
+						var hour = Math.floor(t / (60 * 60 * 1000))
+						var minute = Math.floor((t - (hour * 60 * 60 * 1000)) / (60 * 1000))
+						var second = Math.floor((t - (hour * 60 * 60 * 1000) - (minute * 60 * 1000)) / (1000))
+						hour < 10 ? hour = '0' + hour : hour = hour;
+						minute < 10 ? minute = '0' + minute : minute = minute;
+						second < 10 ? second = '0' + second : second = second;
+						//			console.info(hour,minute,second)
+						$('.timer').text(hour + ":" + minute + ":" + second)
+					}, 1000)
+				}
+				/*在售商品详情*/
+				$('#onsell-class').on('mouseover', function() {
+						$(this).css('overflow', 'visible')
+						$('#onsell-class').on('mouseleave', function() {
+							$(this).css('overflow', 'hidden')
+						});
+					})
+					/*logo区域购物车*/
+				$('#logo-goodcar').on('mouseover', function() {
+					$('#the-car-of-goods').show();
+				})
+				$('#logo-goodcar').on('mouseout', function() {
+						$('#the-car-of-goods').hide();
+					})
+				if(getCookie('num')!=null){
+					var im=$("<img src="+getCookie('url')+"/>")
+					$('#the-car-of-goods p').text(getCookie('name')+getCookie('num')+getCookie('price'))
+					$('#the-car-of-goods p').append(im);
+				}
+					/*手机二维码隐藏与显示*/
+				$('#lastphone').on('mouseover', function() {
+					$('#homeofphone').show();
+				})
+				$('#lastphone').on('mouseout', function() {
+					$('#homeofphone').hide();
+				})
+			})
+		</script>
+	</head>
+
+	<body>
+		<!--右侧快捷入口-->
+		<div id="sidebar">
+			<ul id="sidebar-link">
+				<li class="side-uers">
+					<a href=""></a>
+					<div id="user-login">
+						<p id="closethis">
+							<a></a>
+						</p>
+						<p id="user-login-content">
+							<a href=""><img src="img/top.JPG" /></a>
+						</p>
+						<p id="user-login-loginon">
+							<strong>
+							你好！请
+							<a href="land.html" class="login">登录</a>|
+							<a href="login.html" class="login">注册</a>
+							</strong>
+						</p>
+						<p id="user-login-link">
+							<a class="indent">我的订单</a>
+							<a class="indent">优惠券</a>
+						</p>
+					</div>
+				</li>
+				<li class="side-cart">
+					<a href=""></a>
+					<p class="_p">购物车</p>
+					<!--购物车内商品数量-->
+					<span class="side-cart-pro">0</span>
+				</li>
+				<li class="side-care">
+					<a href=""></a>
+					<p class="_p">我的关注</p>
+				</li>
+				<li class="side-ser">
+					<a href=""></a>
+					<p class="_p">在线客服</p>
+				</li>
+			</ul>
+			<ul id="sidebar-code">
+				<li class="side-code">
+					<div class="side-code-tit">
+					</div>
+					<a href=""></a>
+				</li>
+				<li class="side-site">
+					<a href=""></a>
+					<p class="_p">调查问卷</p>
+				</li>
+				<li class="side-totop">
+					<a href=""></a>
+					<p class="_p">回到顶部</p>
+				</li>
+			</ul>
+		</div>
+		</div>
+		<!--头部图片-->
+		<div id="header">
+			<div id="header-pic">
+				<a href="">
+					<img src="img/header-pic.png" id="header-pic-pic" />
+				</a>
+			</div>
+		</div>
+		<!--头部导航-->
+		<div id="main-nav">
+			<div id="main-nav-child">
+				<ul id="main-nav-ul-1">
+				</ul>
+				<ul id="main-nav-ul">
+					<li><span><a href="login.html">注册</a></span>|</li>
+					<li><span><a href="land.html">登录</a></span>|</li>
+					<li><span><a href="">我的订单</a></span>|</li>
+					<li><span><a href="">物流查询</a></span>|</li>
+					<li><span><a href="">我的关注</a></span>|</li>
+					<li><span><a href="">咨询</a></span>|</li>
+					<li><span><a href="">品牌馆</a></span>|</li>
+					<li id="lastphone">
+						<span><img src="img/phone.png"/><a href="">手机优品慧</a></span>
+						<p id="homeofphone">
+							<a href=""><img src="img/ewm90X90[1].JPG" /></a>
+							<span>扫一扫呦~</span>
+						</p>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!--banner及搜索框区域-->
+		<div id="logo">
+			<a href="index.html" id="logotohome"></a>
+			<form action="" method="post" id="nav-sea">
+				<input type="text" placeholder="厨电" />
+				<a href="">搜索</a>
+			</form>
+			<span id="logo-goodcar">
+				<img src="img/goodcar.png"/>
+				我的购物车
+				<!--购物车内商品数量-->
+				<h6>0</h6>
+				<span id="the-car-of-goods">
+					<p>购物车还没有商品快去逛逛吧！</p>
+				</span>
+			</span>
+			<ul id="nav-nav">
+				<li><a href="">双立人</a>|</li>
+				<li><a href="">品牌橱具</a>|</li>
+				<li><a href="">惠人</a>|</li>
+				<li><a href="">海参</a>|</li>
+				<li><a href="">韩束</a></li>
+			</ul>
+		</div>
+		<!--导航与在售商品-->
+		<div id="nav">
+			<div id="nav-center">
+				<ul id="nav-rec">
+					<li><a href="index.html">推荐</a></li>
+					<li><a href="food.html">食品</a></li>
+					<li><a href="">家居</a></li>
+					<li><a href="">美妆</a></li>
+					<li><a href="">服饰</a></li>
+					<li><a href="">视屏</a></li>
+					<li><a href="">预告</a></li>
+				</ul>
+				<div id="onsell-class">
+					<!--在售商品详情-->
+					<div id="onsell-detail">
+						<ul id="onsell-detail-ul">
+							<h3 id="onsell-detail-ul-h3">品质厨房</h3>
+							<li><a href="">电视热售</a></li>
+							<li><a href="">品质厨具</a></li>
+							<li><a href="">厨房电器</a></li>
+							<li><a href="">厨房用具</a></li>
+						</ul>
+						<ul id="onsell-detail-ul">
+							<h3 id="onsell-detail-ul-h3">美食·民生</h3>
+							<li><a href="">电视热售</a></li>
+							<li><a href="">进口食品</a></li>
+							<li><a href="">营养保健</a></li>
+							<li><a href="">特产零食</a></li>
+							<li><a href="">粮油干货</a></li>
+							<li><a href="">酒水茶饮</a></li>
+						</ul>
+						<ul id="onsell-detail-ul">
+							<h3 id="onsell-detail-ul-h3">健康生活</h3>
+							<li><a href="">电视热售</a></li>
+							<li><a href="">优质睡眠</a></li>
+							<li><a href="">家居装饰</a></li>
+							<li><a href="">清洁收纳</a></li>
+							<li><a href="">家庭健身</a></li>
+							<li><a href="">生活电器</a></li>
+							<li><a href="">日用配件</a></li>
+						</ul>
+						<ul id="onsell-detail-ul">
+							<h3 id="onsell-detail-ul-h3">美丽穿戴</h3>
+							<li><a href="">电视热售</a></li>
+							<li><a href="">服装内衣</a></li>
+							<li><a href="">鞋包配饰</a></li>
+							<li><a href="">旅游户外</a></li>
+						</ul>
+						<ul id="onsell-detail-ul">
+							<h3 id="onsell-detail-ul-h3">珠宝收藏</h3>
+							<li><a href="">电视热售</a></li>
+							<li><a href="">珍珠财宝</a></li>
+							<li><a href="">翡翠玉石</a></li>
+							<li><a href="">天然木饰</a></li>
+						</ul>
+						<ul id="onsell-detail-ul">
+							<h3 id="onsell-detail-ul-h3">美肤靓装</h3>
+							<li><a href="">电视热售</a></li>
+							<li><a href="">品牌护肤</a></li>
+							<li><a href="">洗护护理</a></li>
+							<li><a href="">彩妆香水</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--banner图片-->
+		<div id="banner">
+			<div id="banner-main">
+				<div class="banner-first">
+					<a href=""><img src="img/banner1.jpg" /></a>
+				</div>
+			</div>
+		</div>
+		<!--主要内容及精品推荐-->
+		<div id="main">
+			<!--全球尖货-->
+			<div id="global-goods">
+				<h3 id="fashion-main-tit" class="global-tit"><span>精品</span>推荐
+					<strong>超值特惠&nbsp;每日必逛</strong>
+					<ul class="global-tit-nav">
+						<li><a href="">进口食品</a>|</li>
+						<li><a href="">品质厨具</a>|</li>
+						<li><a href="">清洁收纳</a></li>
+					</ul>
+				</h3>
+				<div id="global-goods-main">
+					<div class="global-goods-main-first">
+						<a href=""><img src="img/food/1452748190558816330[1].png" /></a>
+					</div>
+					<div class="global-goods-main-second">
+						<a href="" class="lm"><img src="img/food/1452748306793387460[1].png" /></a>
+						<a href="" class="lm"><img src="img/food/1452749422060283269[1].png" /></a>
+					</div>
+					<div class="global-goods-main-three">
+						<a href=""><img src="img/food/1453228062896444590[1].jpg" /></a>
+					</div>
+					<div class="global-goods-main-four">
+						<a href="" class="lm"><img src="img/food/1452749012346707314[1].png" /></a>
+						<a href="" class="lm"><img src="img/food/1452749067780646790[1].png" /></a>
+					</div>
+				</div>
+			</div>
+			<!--精品推荐-->
+			<div id="fashion-main">
+				<h3 id="fashion-main-tit"><span>今日</span>上新
+					<strong>每天十点准时开抢</strong>
+				</h3>
+				<div id="fashion-main-content">
+					<ul>
+						<li>
+							<div class="fashion-main-content-top">
+								<div class="fashion-main-content-goodspic">
+									<a href="fooddetail.html"><img src="img/food/1445799833857664406[1].jpg" /></a>
+								</div>
+								<p class="goods-tit">
+									<span>【<strong>4.1折</strong>】</span>
+									<a href="">swisse护肝宝澳洲进口120粒</a>
+								</p>
+								<p class="goods-space"></p>
+								<div class="salespro">
+									<span class="nowprice">￥149</span>
+									<span class="saleprice">￥369</span>
+									<span class="peopleshop"><i>411人</i>已购买</span>
+								</div>
+							</div>
+							<div class="fashion-main-content-bottom">
+								<span class="goodscountry1">
+									<img src="img/food/110[1].png"/>
+									保税区直发
+								</span>
+								<span class="lasttime">
+									距结束仅剩
+									<span class="timer"></span>
+								</span>
+							</div>
+						</li>
+						<li>
+							<div class="fashion-main-content-top">
+								<div class="fashion-main-content-goodspic">
+									<a href=""><img src="img/food/1409722498475415380[1].jpg" /></a>
+								</div>
+								<p class="goods-tit">
+									<span>【<strong>4.1折</strong>】</span>
+									<a href="">swisse护肝宝澳洲进口120粒</a>
+								</p>
+								<p class="goods-space"></p>
+								<div class="salespro">
+									<span class="nowprice">￥149</span>
+									<span class="saleprice">￥369</span>
+									<span class="peopleshop"><i>411人</i>已购买</span>
+								</div>
+							</div>
+							<div class="fashion-main-content-bottom">
+								<span class="goodscountry">
+									<img src="img/food/110[1].png"/>
+									保税区直发
+								</span>
+								<span class="lasttime">
+									距结束仅剩
+									<span class="timer"></span>
+								</span>
+							</div>
+						</li>
+						<li>
+							<div class="fashion-main-content-top">
+								<div class="fashion-main-content-goodspic">
+									<a href=""><img src="img/food/1415761838619686754[1].jpg" /></a>
+								</div>
+								<p class="goods-tit">
+									<span>【<strong>4.1折</strong>】</span>
+									<a href="">swisse护肝宝澳洲进口120粒</a>
+								</p>
+								<p class="goods-space"></p>
+								<div class="salespro">
+									<span class="nowprice">￥149</span>
+									<span class="saleprice">￥369</span>
+									<span class="peopleshop"><i>411人</i>已购买</span>
+								</div>
+							</div>
+							<div class="fashion-main-content-bottom">
+								<span class="goodscountry">
+									<img src="img/food/110[1].png"/>
+									保税区直发
+								</span>
+								<span class="lasttime">
+									距结束仅剩
+									<span class="timer"></span>
+								</span>
+							</div>
+						</li>
+						<li>
+							<div class="fashion-main-content-top">
+								<div class="fashion-main-content-goodspic">
+									<a href=""><img src="img/food/1415762277322400961[1].jpg" /></a>
+								</div>
+								<p class="goods-tit">
+									<span>【<strong>4.1折</strong>】</span>
+									<a href="">swisse护肝宝澳洲进口120粒</a>
+								</p>
+								<p class="goods-space"></p>
+								<div class="salespro">
+									<span class="nowprice">￥149</span>
+									<span class="saleprice">￥369</span>
+									<span class="peopleshop"><i>411人</i>已购买</span>
+								</div>
+							</div>
+							<div class="fashion-main-content-bottom">
+								<span class="goodscountry">
+									<img src="img/food/110[1].png"/>
+									保税区直发
+								</span>
+								<span class="lasttime">
+									距结束仅剩
+									<span class="timer"></span>
+								</span>
+							</div>
+						</li>
+						<li>
+							<div class="fashion-main-content-top">
+								<div class="fashion-main-content-goodspic">
+									<a href=""><img src="img/food/1415935556745112991[1].jpg" /></a>
+								</div>
+								<p class="goods-tit">
+									<span>【<strong>4.1折</strong>】</span>
+									<a href="">swisse护肝宝澳洲进口120粒</a>
+								</p>
+								<p class="goods-space"></p>
+								<div class="salespro">
+									<span class="nowprice">￥149</span>
+									<span class="saleprice">￥369</span>
+									<span class="peopleshop"><i>411人</i>已购买</span>
+								</div>
+							</div>
+							<div class="fashion-main-content-bottom">
+								<span class="goodscountry">
+									<img src="img/food/110[1].png"/>
+									保税区直发
+								</span>
+								<span class="lasttime">
+									距结束仅剩
+									<span class="timer"></span>
+								</span>
+							</div>
+						</li>
+						<li>
+							<div class="fashion-main-content-top">
+								<div class="fashion-main-content-goodspic">
+									<a href=""><img src="img/food/1417659024540684044[1].jpg" /></a>
+								</div>
+								<p class="goods-tit">
+									<span>【<strong>4.1折</strong>】</span>
+									<a href="">swisse护肝宝澳洲进口120粒</a>
+								</p>
+								<p class="goods-space"></p>
+								<div class="salespro">
+									<span class="nowprice">￥149</span>
+									<span class="saleprice">￥369</span>
+									<span class="peopleshop"><i>411人</i>已购买</span>
+								</div>
+							</div>
+							<div class="fashion-main-content-bottom">
+								<span class="goodscountry">
+									<img src="img/food/110[1].png"/>
+									保税区直发
+								</span>
+								<span class="lasttime">
+									距结束仅剩
+									<span class="timer"></span>
+								</span>
+							</div>
+						</li>
+						<li>
+							<div class="fashion-main-content-top">
+								<div class="fashion-main-content-goodspic">
+									<a href=""><img src="img/food/1417974947818050632[1].jpg" /></a>
+								</div>
+								<p class="goods-tit">
+									<span>【<strong>4.1折</strong>】</span>
+									<a href="">swisse护肝宝澳洲进口120粒</a>
+								</p>
+								<p class="goods-space"></p>
+								<div class="salespro">
+									<span class="nowprice">￥149</span>
+									<span class="saleprice">￥369</span>
+									<span class="peopleshop"><i>411人</i>已购买</span>
+								</div>
+							</div>
+							<div class="fashion-main-content-bottom">
+								<span class="goodscountry">
+									<img src="img/food/110[1].png"/>
+									保税区直发
+								</span>
+								<span class="lasttime">
+									距结束仅剩
+									<span class="timer"></span>
+								</span>
+							</div>
+						</li>
+						<li>
+							<div class="fashion-main-content-top">
+								<div class="fashion-main-content-goodspic">
+									<a href=""><img src="img/food/1418576833170009942[1].jpg" /></a>
+								</div>
+								<p class="goods-tit">
+									<span>【<strong>4.1折</strong>】</span>
+									<a href="">swisse护肝宝澳洲进口120粒</a>
+								</p>
+								<p class="goods-space"></p>
+								<div class="salespro">
+									<span class="nowprice">￥149</span>
+									<span class="saleprice">￥369</span>
+									<span class="peopleshop"><i>411人</i>已购买</span>
+								</div>
+							</div>
+							<div class="fashion-main-content-bottom">
+								<span class="goodscountry">
+									<img src="img/food/110[1].png"/>
+									保税区直发
+								</span>
+								<span class="lasttime">
+									距结束仅剩
+									<span class="timer"></span>
+								</span>
+							</div>
+						</li>
+						<li>
+							<div class="fashion-main-content-top">
+								<div class="fashion-main-content-goodspic">
+									<a href=""><img src="img/food/1419188251716417885[1].jpg" /></a>
+								</div>
+								<p class="goods-tit">
+									<span>【<strong>4.1折</strong>】</span>
+									<a href="">swisse护肝宝澳洲进口120粒</a>
+								</p>
+								<p class="goods-space"></p>
+								<div class="salespro">
+									<span class="nowprice">￥149</span>
+									<span class="saleprice">￥369</span>
+									<span class="peopleshop"><i>411人</i>已购买</span>
+								</div>
+							</div>
+							<div class="fashion-main-content-bottom">
+								<span class="goodscountry">
+									<img src="img/food/110[1].png"/>
+									保税区直发
+								</span>
+								<span class="lasttime">
+									距结束仅剩
+									<span class="timer"></span>
+								</span>
+							</div>
+						</li>
+						<li>
+							<div class="fashion-main-content-top">
+								<div class="fashion-main-content-goodspic">
+									<a href=""><img src="img/food/1419982180887488409[1].jpg" /></a>
+								</div>
+								<p class="goods-tit">
+									<span>【<strong>4.1折</strong>】</span>
+									<a href="">swisse护肝宝澳洲进口120粒</a>
+								</p>
+								<p class="goods-space"></p>
+								<div class="salespro">
+									<span class="nowprice">￥149</span>
+									<span class="saleprice">￥369</span>
+									<span class="peopleshop"><i>411人</i>已购买</span>
+								</div>
+							</div>
+							<div class="fashion-main-content-bottom">
+								<span class="goodscountry">
+									<img src="img/food/110[1].png"/>
+									保税区直发
+								</span>
+								<span class="lasttime">
+									距结束仅剩
+									<span class="timer"></span>
+								</span>
+							</div>
+						</li>
+						<li>
+							<div class="fashion-main-content-top">
+								<div class="fashion-main-content-goodspic">
+									<a href=""><img src="img/food/1421348054278468272[1].jpg" /></a>
+								</div>
+								<p class="goods-tit">
+									<span>【<strong>4.1折</strong>】</span>
+									<a href="">swisse护肝宝澳洲进口120粒</a>
+								</p>
+								<p class="goods-space"></p>
+								<div class="salespro">
+									<span class="nowprice">￥149</span>
+									<span class="saleprice">￥369</span>
+									<span class="peopleshop"><i>411人</i>已购买</span>
+								</div>
+							</div>
+							<div class="fashion-main-content-bottom">
+								<span class="goodscountry">
+									<img src="img/food/110[1].png"/>
+									保税区直发
+								</span>
+								<span class="lasttime">
+									距结束仅剩
+									<span class="timer"></span>
+								</span>
+							</div>
+						</li>
+						<li>
+							<div class="fashion-main-content-top">
+								<div class="fashion-main-content-goodspic">
+									<a href=""><img src="img/food/1426704230499483564[1].jpg" /></a>
+								</div>
+								<p class="goods-tit">
+									<span>【<strong>4.1折</strong>】</span>
+									<a href="">swisse护肝宝澳洲进口120粒</a>
+								</p>
+								<p class="goods-space"></p>
+								<div class="salespro">
+									<span class="nowprice">￥149</span>
+									<span class="saleprice">￥369</span>
+									<span class="peopleshop"><i>411人</i>已购买</span>
+								</div>
+							</div>
+							<div class="fashion-main-content-bottom">
+								<span class="goodscountry">
+									<img src="img/food/110[1].png"/>
+									保税区直发
+								</span>
+								<span class="lasttime">
+									距结束仅剩
+									<span class="timer"></span>
+								</span>
+							</div>
+						</li>
+						<li>
+							<div class="fashion-main-content-top">
+								<div class="fashion-main-content-goodspic">
+									<a href=""><img src="img/food/1428708957353787595[1].jpg" /></a>
+								</div>
+								<p class="goods-tit">
+									<span>【<strong>4.1折</strong>】</span>
+									<a href="">swisse护肝宝澳洲进口120粒</a>
+								</p>
+								<p class="goods-space"></p>
+								<div class="salespro">
+									<span class="nowprice">￥149</span>
+									<span class="saleprice">￥369</span>
+									<span class="peopleshop"><i>411人</i>已购买</span>
+								</div>
+							</div>
+							<div class="fashion-main-content-bottom">
+								<span class="goodscountry">
+									<img src="img/food/110[1].png"/>
+									保税区直发
+								</span>
+								<span class="lasttime">
+									距结束仅剩
+									<span class="timer"></span>
+								</span>
+							</div>
+						</li>
+						<li>
+							<div class="fashion-main-content-top">
+								<div class="fashion-main-content-goodspic">
+									<a href=""><img src="img/food/1428867954545052006[1].jpg" /></a>
+								</div>
+								<p class="goods-tit">
+									<span>【<strong>4.1折</strong>】</span>
+									<a href="">swisse护肝宝澳洲进口120粒</a>
+								</p>
+								<p class="goods-space"></p>
+								<div class="salespro">
+									<span class="nowprice">￥149</span>
+									<span class="saleprice">￥369</span>
+									<span class="peopleshop"><i>411人</i>已购买</span>
+								</div>
+							</div>
+							<div class="fashion-main-content-bottom">
+								<span class="goodscountry">
+									<img src="img/food/110[1].png"/>
+									保税区直发
+								</span>
+								<span class="lasttime">
+									距结束仅剩
+									<span class="timer"></span>
+								</span>
+							</div>
+						</li>
+						<li>
+							<div class="fashion-main-content-top">
+								<div class="fashion-main-content-goodspic">
+									<a href=""><img src="img/food/1429729899439656313[1].jpg" /></a>
+								</div>
+								<p class="goods-tit">
+									<span>【<strong>4.1折</strong>】</span>
+									<a href="">swisse护肝宝澳洲进口120粒</a>
+								</p>
+								<p class="goods-space"></p>
+								<div class="salespro">
+									<span class="nowprice">￥149</span>
+									<span class="saleprice">￥369</span>
+									<span class="peopleshop"><i>411人</i>已购买</span>
+								</div>
+							</div>
+							<div class="fashion-main-content-bottom">
+								<span class="goodscountry">
+									<img src="img/food/110[1].png"/>
+									保税区直发
+								</span>
+								<span class="lasttime">
+									距结束仅剩
+									<span class="timer"></span>
+								</span>
+							</div>
+						</li>
+						<li>
+							<div class="fashion-main-content-top">
+								<div class="fashion-main-content-goodspic">
+									<a href=""><img src="img/food/1431467034204491855[1].jpg" /></a>
+								</div>
+								<p class="goods-tit">
+									<span>【<strong>4.1折</strong>】</span>
+									<a href="">swisse护肝宝澳洲进口120粒</a>
+								</p>
+								<p class="goods-space"></p>
+								<div class="salespro">
+									<span class="nowprice">￥149</span>
+									<span class="saleprice">￥369</span>
+									<span class="peopleshop"><i>411人</i>已购买</span>
+								</div>
+							</div>
+							<div class="fashion-main-content-bottom">
+								<span class="goodscountry">
+									<img src="img/food/110[1].png"/>
+									保税区直发
+								</span>
+								<span class="lasttime">
+									距结束仅剩
+									<span class="timer"></span>
+								</span>
+							</div>
+						</li>
+						<li>
+							<div class="fashion-main-content-top">
+								<div class="fashion-main-content-goodspic">
+									<a href=""><img src="img/food/1432243877326127179[1].jpg" /></a>
+								</div>
+								<p class="goods-tit">
+									<span>【<strong>4.1折</strong>】</span>
+									<a href="">swisse护肝宝澳洲进口120粒</a>
+								</p>
+								<p class="goods-space"></p>
+								<div class="salespro">
+									<span class="nowprice">￥149</span>
+									<span class="saleprice">￥369</span>
+									<span class="peopleshop"><i>411人</i>已购买</span>
+								</div>
+							</div>
+							<div class="fashion-main-content-bottom">
+								<span class="goodscountry">
+									<img src="img/food/110[1].png"/>
+									保税区直发
+								</span>
+								<span class="lasttime">
+									距结束仅剩
+									<span class="timer"></span>
+								</span>
+							</div>
+						</li>
+						<li>
+							<div class="fashion-main-content-top">
+								<div class="fashion-main-content-goodspic">
+									<a href=""><img src="img/food/1435620234750845090[1].jpg" /></a>
+								</div>
+								<p class="goods-tit">
+									<span>【<strong>4.1折</strong>】</span>
+									<a href="">swisse护肝宝澳洲进口120粒</a>
+								</p>
+								<p class="goods-space"></p>
+								<div class="salespro">
+									<span class="nowprice">￥149</span>
+									<span class="saleprice">￥369</span>
+									<span class="peopleshop"><i>411人</i>已购买</span>
+								</div>
+							</div>
+							<div class="fashion-main-content-bottom">
+								<span class="goodscountry">
+									<img src="img/food/110[1].png"/>
+									保税区直发
+								</span>
+								<span class="lasttime">
+									距结束仅剩
+									<span class="timer"></span>
+								</span>
+							</div>
+						</li>
+						<li>
+							<div class="fashion-main-content-top">
+								<div class="fashion-main-content-goodspic">
+									<a href=""><img src="img/food/1435628109736838616[1].jpg" /></a>
+								</div>
+								<p class="goods-tit">
+									<span>【<strong>4.1折</strong>】</span>
+									<a href="">swisse护肝宝澳洲进口120粒</a>
+								</p>
+								<p class="goods-space"></p>
+								<div class="salespro">
+									<span class="nowprice">￥149</span>
+									<span class="saleprice">￥369</span>
+									<span class="peopleshop"><i>411人</i>已购买</span>
+								</div>
+							</div>
+							<div class="fashion-main-content-bottom">
+								<span class="goodscountry">
+									<img src="img/food/110[1].png"/>
+									保税区直发
+								</span>
+								<span class="lasttime">
+									距结束仅剩
+									<span class="timer"></span>
+								</span>
+							</div>
+						</li>
+						<li>
+							<div class="fashion-main-content-top">
+								<div class="fashion-main-content-goodspic">
+									<a href=""><img src="img/food/1436203190830222207[1].jpg" /></a>
+								</div>
+								<p class="goods-tit">
+									<span>【<strong>4.1折</strong>】</span>
+									<a href="">swisse护肝宝澳洲进口120粒</a>
+								</p>
+								<p class="goods-space"></p>
+								<div class="salespro">
+									<span class="nowprice">￥149</span>
+									<span class="saleprice">￥369</span>
+									<span class="peopleshop"><i>411人</i>已购买</span>
+								</div>
+							</div>
+							<div class="fashion-main-content-bottom">
+								<span class="goodscountry">
+									<img src="img/food/110[1].png"/>
+									保税区直发
+								</span>
+								<span class="lasttime">
+									距结束仅剩
+									<span class="timer"></span>
+								</span>
+							</div>
+						</li>
+						<li>
+							<div class="fashion-main-content-top">
+								<div class="fashion-main-content-goodspic">
+									<a href=""><img src="img/food/1436206926543626935[1].jpg" /></a>
+								</div>
+								<p class="goods-tit">
+									<span>【<strong>4.1折</strong>】</span>
+									<a href="">swisse护肝宝澳洲进口120粒</a>
+								</p>
+								<p class="goods-space"></p>
+								<div class="salespro">
+									<span class="nowprice">￥149</span>
+									<span class="saleprice">￥369</span>
+									<span class="peopleshop"><i>411人</i>已购买</span>
+								</div>
+							</div>
+							<div class="fashion-main-content-bottom">
+								<span class="goodscountry">
+									<img src="img/food/110[1].png"/>
+									保税区直发
+								</span>
+								<span class="lasttime">
+									距结束仅剩
+									<span class="timer"></span>
+								</span>
+							</div>
+						</li>
+						<li>
+							<div class="fashion-main-content-top">
+								<div class="fashion-main-content-goodspic">
+									<a href=""><img src="img/food/1436725196303409152[1].jpg" /></a>
+								</div>
+								<p class="goods-tit">
+									<span>【<strong>4.1折</strong>】</span>
+									<a href="">swisse护肝宝澳洲进口120粒</a>
+								</p>
+								<p class="goods-space"></p>
+								<div class="salespro">
+									<span class="nowprice">￥149</span>
+									<span class="saleprice">￥369</span>
+									<span class="peopleshop"><i>411人</i>已购买</span>
+								</div>
+							</div>
+							<div class="fashion-main-content-bottom">
+								<span class="goodscountry">
+									<img src="img/food/110[1].png"/>
+									保税区直发
+								</span>
+								<span class="lasttime">
+									距结束仅剩
+									<span class="timer"></span>
+								</span>
+							</div>
+						</li>
+						<li>
+							<div class="fashion-main-content-top">
+								<div class="fashion-main-content-goodspic">
+									<a href=""><img src="img/food/1437092148821945704[1].jpg" /></a>
+								</div>
+								<p class="goods-tit">
+									<span>【<strong>4.1折</strong>】</span>
+									<a href="">swisse护肝宝澳洲进口120粒</a>
+								</p>
+								<p class="goods-space"></p>
+								<div class="salespro">
+									<span class="nowprice">￥149</span>
+									<span class="saleprice">￥369</span>
+									<span class="peopleshop"><i>411人</i>已购买</span>
+								</div>
+							</div>
+							<div class="fashion-main-content-bottom">
+								<span class="goodscountry">
+									<img src="img/food/110[1].png"/>
+									保税区直发
+								</span>
+								<span class="lasttime">
+									距结束仅剩
+									<span class="timer"></span>
+								</span>
+							</div>
+						</li>
+						<li>
+							<div class="fashion-main-content-top">
+								<div class="fashion-main-content-goodspic">
+									<a href=""><img src="img/food/1451345442139413149[1].jpg" /></a>
+								</div>
+								<p class="goods-tit">
+									<span>【<strong>4.1折</strong>】</span>
+									<a href="">swisse护肝宝澳洲进口120粒</a>
+								</p>
+								<p class="goods-space"></p>
+								<div class="salespro">
+									<span class="nowprice">￥149</span>
+									<span class="saleprice">￥369</span>
+									<span class="peopleshop"><i>411人</i>已购买</span>
+								</div>
+							</div>
+							<div class="fashion-main-content-bottom">
+								<span class="goodscountry">
+									<img src="img/food/110[1].png"/>
+									保税区直发
+								</span>
+								<span class="lasttime">
+									距结束仅剩
+									<span class="timer"></span>
+								</span>
+							</div>
+						</li>
+						<li>
+							<div class="fashion-main-content-top">
+								<div class="fashion-main-content-goodspic">
+									<a href=""><img src="img/food/1448922676417195603[1].jpg" /></a>
+								</div>
+								<p class="goods-tit">
+									<span>【<strong>4.1折</strong>】</span>
+									<a href="">swisse护肝宝澳洲进口120粒</a>
+								</p>
+								<p class="goods-space"></p>
+								<div class="salespro">
+									<span class="nowprice">￥149</span>
+									<span class="saleprice">￥369</span>
+									<span class="peopleshop"><i>411人</i>已购买</span>
+								</div>
+							</div>
+							<div class="fashion-main-content-bottom">
+								<span class="goodscountry">
+									<img src="img/food/110[1].png"/>
+									保税区直发
+								</span>
+								<span class="lasttime">
+									距结束仅剩
+									<span class="timer"></span>
+								</span>
+							</div>
+						</li>
+						<li>
+							<div class="fashion-main-content-top">
+								<div class="fashion-main-content-goodspic">
+									<a href=""><img src="img/food/1451877548176623972[1].jpg" /></a>
+								</div>
+								<p class="goods-tit">
+									<span>【<strong>4.1折</strong>】</span>
+									<a href="">swisse护肝宝澳洲进口120粒</a>
+								</p>
+								<p class="goods-space"></p>
+								<div class="salespro">
+									<span class="nowprice">￥149</span>
+									<span class="saleprice">￥369</span>
+									<span class="peopleshop"><i>411人</i>已购买</span>
+								</div>
+							</div>
+							<div class="fashion-main-content-bottom">
+								<span class="goodscountry">
+									<img src="img/food/110[1].png"/>
+									保税区直发
+								</span>
+								<span class="lasttime">
+									距结束仅剩
+									<span class="timer"></span>
+								</span>
+							</div>
+						</li>
+						<li>
+							<div class="fashion-main-content-top">
+								<div class="fashion-main-content-goodspic">
+									<a href=""><img src="img/food/1446446554353280595[1].jpg" /></a>
+								</div>
+								<p class="goods-tit">
+									<span>【<strong>4.1折</strong>】</span>
+									<a href="">swisse护肝宝澳洲进口120粒</a>
+								</p>
+								<p class="goods-space"></p>
+								<div class="salespro">
+									<span class="nowprice">￥149</span>
+									<span class="saleprice">￥369</span>
+									<span class="peopleshop"><i>411人</i>已购买</span>
+								</div>
+							</div>
+							<div class="fashion-main-content-bottom">
+								<span class="goodscountry">
+									<img src="img/food/110[1].png"/>
+									保税区直发
+								</span>
+								<span class="lasttime">
+									距结束仅剩
+									<span class="timer"></span>
+								</span>
+							</div>
+						</li>
+						<li>
+							<div class="fashion-main-content-top">
+								<div class="fashion-main-content-goodspic">
+									<a href=""><img src="img/food/1447871840242360710[1].jpg" /></a>
+								</div>
+								<p class="goods-tit">
+									<span>【<strong>4.1折</strong>】</span>
+									<a href="">swisse护肝宝澳洲进口120粒</a>
+								</p>
+								<p class="goods-space"></p>
+								<div class="salespro">
+									<span class="nowprice">￥149</span>
+									<span class="saleprice">￥369</span>
+									<span class="peopleshop"><i>411人</i>已购买</span>
+								</div>
+							</div>
+							<div class="fashion-main-content-bottom">
+								<span class="goodscountry">
+									<img src="img/food/110[1].png"/>
+									保税区直发
+								</span>
+								<span class="lasttime">
+									距结束仅剩
+									<span class="timer"></span>
+								</span>
+							</div>
+						</li>
+						<li>
+							<div class="fashion-main-content-top">
+								<div class="fashion-main-content-goodspic">
+									<a href=""><img src="img/food/1448568591343882281[1].jpg" /></a>
+								</div>
+								<p class="goods-tit">
+									<span>【<strong>4.1折</strong>】</span>
+									<a href="">swisse护肝宝澳洲进口120粒</a>
+								</p>
+								<p class="goods-space"></p>
+								<div class="salespro">
+									<span class="nowprice">￥149</span>
+									<span class="saleprice">￥369</span>
+									<span class="peopleshop"><i>411人</i>已购买</span>
+								</div>
+							</div>
+							<div class="fashion-main-content-bottom">
+								<span class="goodscountry">
+									<img src="img/food/110[1].png"/>
+									保税区直发
+								</span>
+								<span class="lasttime">
+									距结束仅剩
+									<span class="timer"></span>
+								</span>
+							</div>
+						</li>
+						<li>
+							<div class="fashion-main-content-top">
+								<div class="fashion-main-content-goodspic">
+									<a href=""><img src="img/food/1449523206601565281[1].jpg" /></a>
+								</div>
+								<p class="goods-tit">
+									<span>【<strong>4.1折</strong>】</span>
+									<a href="">swisse护肝宝澳洲进口120粒</a>
+								</p>
+								<p class="goods-space"></p>
+								<div class="salespro">
+									<span class="nowprice">￥149</span>
+									<span class="saleprice">￥369</span>
+									<span class="peopleshop"><i>411人</i>已购买</span>
+								</div>
+							</div>
+							<div class="fashion-main-content-bottom">
+								<span class="goodscountry">
+									<img src="img/food/110[1].png"/>
+									保税区直发
+								</span>
+								<span class="lasttime">
+									距结束仅剩
+									<span class="timer"></span>
+								</span>
+							</div>
+						</li>
+						<li>
+							<div class="fashion-main-content-top">
+								<div class="fashion-main-content-goodspic">
+									<a href=""><img src="img/food/1444872937204139489[1].jpg" /></a>
+								</div>
+								<p class="goods-tit">
+									<span>【<strong>4.1折</strong>】</span>
+									<a href="">swisse护肝宝澳洲进口120粒</a>
+								</p>
+								<p class="goods-space"></p>
+								<div class="salespro">
+									<span class="nowprice">￥149</span>
+									<span class="saleprice">￥369</span>
+									<span class="peopleshop"><i>411人</i>已购买</span>
+								</div>
+							</div>
+							<div class="fashion-main-content-bottom">
+								<span class="goodscountry">
+									<img src="img/food/110[1].png"/>
+									保税区直发
+								</span>
+								<span class="lasttime">
+									距结束仅剩
+									<span class="timer"></span>
+								</span>
+							</div>
+						</li>
+						<li>
+							<div class="fashion-main-content-top">
+								<div class="fashion-main-content-goodspic">
+									<a href=""><img src="img/food/1445798831755115623[1].jpg" /></a>
+								</div>
+								<p class="goods-tit">
+									<span>【<strong>4.1折</strong>】</span>
+									<a href="">swisse护肝宝澳洲进口120粒</a>
+								</p>
+								<p class="goods-space"></p>
+								<div class="salespro">
+									<span class="nowprice">￥149</span>
+									<span class="saleprice">￥369</span>
+									<span class="peopleshop"><i>411人</i>已购买</span>
+								</div>
+							</div>
+							<div class="fashion-main-content-bottom">
+								<span class="goodscountry">
+									<img src="img/food/110[1].png"/>
+									保税区直发
+								</span>
+								<span class="lasttime">
+									距结束仅剩
+									<span class="timer"></span>
+								</span>
+							</div>
+						</li>
+						<li>
+							<div class="fashion-main-content-top">
+								<div class="fashion-main-content-goodspic">
+									<a href=""><img src="img/food/1452620026442266591[1].jpg" /></a>
+								</div>
+								<p class="goods-tit">
+									<span>【<strong>4.1折</strong>】</span>
+									<a href="">swisse护肝宝澳洲进口120粒</a>
+								</p>
+								<p class="goods-space"></p>
+								<div class="salespro">
+									<span class="nowprice">￥149</span>
+									<span class="saleprice">￥369</span>
+									<span class="peopleshop"><i>411人</i>已购买</span>
+								</div>
+							</div>
+							<div class="fashion-main-content-bottom">
+								<span class="goodscountry">
+									<img src="img/food/110[1].png"/>
+									保税区直发
+								</span>
+								<span class="lasttime">
+									距结束仅剩
+									<span class="timer"></span>
+								</span>
+							</div>
+						</li>
+						<li>
+							<div class="fashion-main-content-top">
+								<div class="fashion-main-content-goodspic">
+									<a href=""><img src="img/food/1452620026442266591[1].jpg" /></a>
+								</div>
+								<p class="goods-tit">
+									<span>【<strong>4.1折</strong>】</span>
+									<a href="">swisse护肝宝澳洲进口120粒</a>
+								</p>
+								<p class="goods-space"></p>
+								<div class="salespro">
+									<span class="nowprice">￥149</span>
+									<span class="saleprice">￥369</span>
+									<span class="peopleshop"><i>411人</i>已购买</span>
+								</div>
+							</div>
+							<div class="fashion-main-content-bottom">
+								<span class="goodscountry">
+									<img src="img/food/110[1].png"/>
+									保税区直发
+								</span>
+								<span class="lasttime">
+									距结束仅剩
+									<span class="timer"></span>
+								</span>
+							</div>
+						</li>
+						<li>
+							<div class="fashion-main-content-top">
+								<div class="fashion-main-content-goodspic">
+									<a href=""><img src="img/food/1452212179306123922[1].jpg" /></a>
+								</div>
+								<p class="goods-tit">
+									<span>【<strong>4.1折</strong>】</span>
+									<a href="">swisse护肝宝澳洲进口120粒</a>
+								</p>
+								<p class="goods-space"></p>
+								<div class="salespro">
+									<span class="nowprice">￥149</span>
+									<span class="saleprice">￥369</span>
+									<span class="peopleshop"><i>411人</i>已购买</span>
+								</div>
+							</div>
+							<div class="fashion-main-content-bottom">
+								<span class="goodscountry">
+									<img src="img/food/110[1].png"/>
+									保税区直发
+								</span>
+								<span class="lasttime">
+									距结束仅剩
+									<span class="timer"></span>
+								</span>
+							</div>
+						</li>
+						<li>
+							<div class="fashion-main-content-top">
+								<div class="fashion-main-content-goodspic">
+									<a href=""><img src="img/food/1452211501905084289[1].jpg" /></a>
+								</div>
+								<p class="goods-tit">
+									<span>【<strong>4.1折</strong>】</span>
+									<a href="">swisse护肝宝澳洲进口120粒</a>
+								</p>
+								<p class="goods-space"></p>
+								<div class="salespro">
+									<span class="nowprice">￥149</span>
+									<span class="saleprice">￥369</span>
+									<span class="peopleshop"><i>411人</i>已购买</span>
+								</div>
+							</div>
+							<div class="fashion-main-content-bottom">
+								<span class="goodscountry">
+									<img src="img/food/110[1].png"/>
+									保税区直发
+								</span>
+								<span class="lasttime">
+									距结束仅剩
+									<span class="timer"></span>
+								</span>
+							</div>
+						</li>
+						<li>
+							<div class="fashion-main-content-top">
+								<div class="fashion-main-content-goodspic">
+									<a href=""><img src="img/food/1451877548176623972[1].jpg" /></a>
+								</div>
+								<p class="goods-tit">
+									<span>【<strong>4.1折</strong>】</span>
+									<a href="">swisse护肝宝澳洲进口120粒</a>
+								</p>
+								<p class="goods-space"></p>
+								<div class="salespro">
+									<span class="nowprice">￥149</span>
+									<span class="saleprice">￥369</span>
+									<span class="peopleshop"><i>411人</i>已购买</span>
+								</div>
+							</div>
+							<div class="fashion-main-content-bottom">
+								<span class="goodscountry">
+									<img src="img/food/110[1].png"/>
+									保税区直发
+								</span>
+								<span class="lasttime">
+									距结束仅剩
+									<span class="timer"></span>
+								</span>
+							</div>
+						</li>
+						<li>
+							<div class="fashion-main-content-top">
+								<div class="fashion-main-content-goodspic">
+									<a href=""><img src="img/food/1451872502855856544[1].jpg" /></a>
+								</div>
+								<p class="goods-tit">
+									<span>【<strong>4.1折</strong>】</span>
+									<a href="">swisse护肝宝澳洲进口120粒</a>
+								</p>
+								<p class="goods-space"></p>
+								<div class="salespro">
+									<span class="nowprice">￥149</span>
+									<span class="saleprice">￥369</span>
+									<span class="peopleshop"><i>411人</i>已购买</span>
+								</div>
+							</div>
+							<div class="fashion-main-content-bottom">
+								<span class="goodscountry">
+									<img src="img/food/110[1].png"/>
+									保税区直发
+								</span>
+								<span class="lasttime">
+									距结束仅剩
+									<span class="timer"></span>
+								</span>
+							</div>
+						</li>
+						<li>
+							<div class="fashion-main-content-top">
+								<div class="fashion-main-content-goodspic">
+									<a href=""><img src="img/food/1451870169778059137[1].jpg" /></a>
+								</div>
+								<p class="goods-tit">
+									<span>【<strong>4.1折</strong>】</span>
+									<a href="">swisse护肝宝澳洲进口120粒</a>
+								</p>
+								<p class="goods-space"></p>
+								<div class="salespro">
+									<span class="nowprice">￥149</span>
+									<span class="saleprice">￥369</span>
+									<span class="peopleshop"><i>411人</i>已购买</span>
+								</div>
+							</div>
+							<div class="fashion-main-content-bottom">
+								<span class="goodscountry">
+									<img src="img/food/110[1].png"/>
+									保税区直发
+								</span>
+								<span class="lasttime">
+									距结束仅剩
+									<span class="timer"></span>
+								</span>
+							</div>
+						</li>
+						<li>
+							<div class="fashion-main-content-top">
+								<div class="fashion-main-content-goodspic">
+									<a href=""><img src="img/food/1451869484814907980[1].jpg" /></a>
+								</div>
+								<p class="goods-tit">
+									<span>【<strong>4.1折</strong>】</span>
+									<a href="">swisse护肝宝澳洲进口120粒</a>
+								</p>
+								<p class="goods-space"></p>
+								<div class="salespro">
+									<span class="nowprice">￥149</span>
+									<span class="saleprice">￥369</span>
+									<span class="peopleshop"><i>411人</i>已购买</span>
+								</div>
+							</div>
+							<div class="fashion-main-content-bottom">
+								<span class="goodscountry">
+									<img src="img/food/110[1].png"/>
+									保税区直发
+								</span>
+								<span class="lasttime">
+									距结束仅剩
+									<span class="timer"></span>
+								</span>
+							</div>
+						</li>
+						<li>
+							<div class="fashion-main-content-top">
+								<div class="fashion-main-content-goodspic">
+									<a href=""><img src="img/food/1450745385947819986[1].jpg" /></a>
+								</div>
+								<p class="goods-tit">
+									<span>【<strong>4.1折</strong>】</span>
+									<a href="">swisse护肝宝澳洲进口120粒</a>
+								</p>
+								<p class="goods-space"></p>
+								<div class="salespro">
+									<span class="nowprice">￥149</span>
+									<span class="saleprice">￥369</span>
+									<span class="peopleshop"><i>411人</i>已购买</span>
+								</div>
+							</div>
+							<div class="fashion-main-content-bottom">
+								<span class="goodscountry">
+									<img src="img/food/110[1].png"/>
+									保税区直发
+								</span>
+								<span class="lasttime">
+									距结束仅剩
+									<span class="timer"></span>
+								</span>
+							</div>
+						</li>
+						<li>
+							<div class="fashion-main-content-top">
+								<div class="fashion-main-content-goodspic">
+									<a href=""><img src="img/food/1451868349344648438[1].jpg" /></a>
+								</div>
+								<p class="goods-tit">
+									<span>【<strong>4.1折</strong>】</span>
+									<a href="">swisse护肝宝澳洲进口120粒</a>
+								</p>
+								<p class="goods-space"></p>
+								<div class="salespro">
+									<span class="nowprice">￥149</span>
+									<span class="saleprice">￥369</span>
+									<span class="peopleshop"><i>411人</i>已购买</span>
+								</div>
+							</div>
+							<div class="fashion-main-content-bottom">
+								<span class="goodscountry">
+									<img src="img/food/110[1].png"/>
+									保税区直发
+								</span>
+								<span class="lasttime">
+									距结束仅剩
+									<span class="timer"></span>
+								</span>
+							</div>
+						</li>
+						<li>
+							<div class="fashion-main-content-top">
+								<div class="fashion-main-content-goodspic">
+									<a href=""><img src="img/food/1451856776155363776[1].jpg" /></a>
+								</div>
+								<p class="goods-tit">
+									<span>【<strong>4.1折</strong>】</span>
+									<a href="">swisse护肝宝澳洲进口120粒</a>
+								</p>
+								<p class="goods-space"></p>
+								<div class="salespro">
+									<span class="nowprice">￥149</span>
+									<span class="saleprice">￥369</span>
+									<span class="peopleshop"><i>411人</i>已购买</span>
+								</div>
+							</div>
+							<div class="fashion-main-content-bottom">
+								<span class="goodscountry">
+									<img src="img/food/110[1].png"/>
+									保税区直发
+								</span>
+								<span class="lasttime">
+									距结束仅剩
+									<span class="timer"></span>
+								</span>
+							</div>
+						</li>
+						<li>
+							<div class="fashion-main-content-top">
+								<div class="fashion-main-content-goodspic">
+									<a href=""><img src="img/food/1451723948697321696[1].jpg" /></a>
+								</div>
+								<p class="goods-tit">
+									<span>【<strong>4.1折</strong>】</span>
+									<a href="">swisse护肝宝澳洲进口120粒</a>
+								</p>
+								<p class="goods-space"></p>
+								<div class="salespro">
+									<span class="nowprice">￥149</span>
+									<span class="saleprice">￥369</span>
+									<span class="peopleshop"><i>411人</i>已购买</span>
+								</div>
+							</div>
+							<div class="fashion-main-content-bottom">
+								<span class="goodscountry">
+									<img src="img/food/110[1].png"/>
+									保税区直发
+								</span>
+								<span class="lasttime">
+									距结束仅剩
+									<span class="timer"></span>
+								</span>
+							</div>
+						</li>
+						<li>
+							<div class="fashion-main-content-top">
+								<div class="fashion-main-content-goodspic">
+									<a href=""><img src="img/food/1451432854191788671[1].jpg" /></a>
+								</div>
+								<p class="goods-tit">
+									<span>【<strong>4.1折</strong>】</span>
+									<a href="">swisse护肝宝澳洲进口120粒</a>
+								</p>
+								<p class="goods-space"></p>
+								<div class="salespro">
+									<span class="nowprice">￥149</span>
+									<span class="saleprice">￥369</span>
+									<span class="peopleshop"><i>411人</i>已购买</span>
+								</div>
+							</div>
+							<div class="fashion-main-content-bottom">
+								<span class="goodscountry">
+									<img src="img/food/110[1].png"/>
+									保税区直发
+								</span>
+								<span class="lasttime">
+									距结束仅剩
+									<span class="timer"></span>
+								</span>
+							</div>
+						</li>
+						<li>
+							<div class="fashion-main-content-top">
+								<div class="fashion-main-content-goodspic">
+									<a href=""><img src="img/food/1451345442139413149[1].jpg" /></a>
+								</div>
+								<p class="goods-tit">
+									<span>【<strong>4.1折</strong>】</span>
+									<a href="">swisse护肝宝澳洲进口120粒</a>
+								</p>
+								<p class="goods-space"></p>
+								<div class="salespro">
+									<span class="nowprice">￥149</span>
+									<span class="saleprice">￥369</span>
+									<span class="peopleshop"><i>411人</i>已购买</span>
+								</div>
+							</div>
+							<div class="fashion-main-content-bottom">
+								<span class="goodscountry">
+									<img src="img/food/110[1].png"/>
+									保税区直发
+								</span>
+								<span class="lasttime">
+									距结束仅剩
+									<span class="timer"></span>
+								</span>
+							</div>
+						</li>
+						<li>
+							<div class="fashion-main-content-top">
+								<div class="fashion-main-content-goodspic">
+									<a href=""><img src="img/food/1451322049459343204[1].jpg" /></a>
+								</div>
+								<p class="goods-tit">
+									<span>【<strong>4.1折</strong>】</span>
+									<a href="">swisse护肝宝澳洲进口120粒</a>
+								</p>
+								<p class="goods-space"></p>
+								<div class="salespro">
+									<span class="nowprice">￥149</span>
+									<span class="saleprice">￥369</span>
+									<span class="peopleshop"><i>411人</i>已购买</span>
+								</div>
+							</div>
+							<div class="fashion-main-content-bottom">
+								<span class="goodscountry">
+									<img src="img/food/110[1].png"/>
+									保税区直发
+								</span>
+								<span class="lasttime">
+									距结束仅剩
+									<span class="timer"></span>
+								</span>
+							</div>
+						</li>
+						<li>
+							<div class="fashion-main-content-top">
+								<div class="fashion-main-content-goodspic">
+									<a href=""><img src="img/food/1450831104154537090[1].jpg" /></a>
+								</div>
+								<p class="goods-tit">
+									<span>【<strong>4.1折</strong>】</span>
+									<a href="">swisse护肝宝澳洲进口120粒</a>
+								</p>
+								<p class="goods-space"></p>
+								<div class="salespro">
+									<span class="nowprice">￥149</span>
+									<span class="saleprice">￥369</span>
+									<span class="peopleshop"><i>411人</i>已购买</span>
+								</div>
+							</div>
+							<div class="fashion-main-content-bottom">
+								<span class="goodscountry">
+									<img src="img/food/110[1].png"/>
+									保税区直发
+								</span>
+								<span class="lasttime">
+									距结束仅剩
+									<span class="timer"></span>
+								</span>
+							</div>
+						</li>
+						<li>
+							<div class="fashion-main-content-top">
+								<div class="fashion-main-content-goodspic">
+									<a href=""><img src="img/food/1450830007380864098[1].jpg" /></a>
+								</div>
+								<p class="goods-tit">
+									<span>【<strong>4.1折</strong>】</span>
+									<a href="">swisse护肝宝澳洲进口120粒</a>
+								</p>
+								<p class="goods-space"></p>
+								<div class="salespro">
+									<span class="nowprice">￥149</span>
+									<span class="saleprice">￥369</span>
+									<span class="peopleshop"><i>411人</i>已购买</span>
+								</div>
+							</div>
+							<div class="fashion-main-content-bottom">
+								<span class="goodscountry">
+									<img src="img/food/110[1].png"/>
+									保税区直发
+								</span>
+								<span class="lasttime">
+									距结束仅剩
+									<span class="timer"></span>
+								</span>
+							</div>
+						</li>
+						<li>
+							<div class="fashion-main-content-top">
+								<div class="fashion-main-content-goodspic">
+									<a href=""><img src="img/food/1450830766514734370[1].jpg" /></a>
+								</div>
+								<p class="goods-tit">
+									<span>【<strong>4.1折</strong>】</span>
+									<a href="">swisse护肝宝澳洲进口120粒</a>
+								</p>
+								<p class="goods-space"></p>
+								<div class="salespro">
+									<span class="nowprice">￥149</span>
+									<span class="saleprice">￥369</span>
+									<span class="peopleshop"><i>411人</i>已购买</span>
+								</div>
+							</div>
+							<div class="fashion-main-content-bottom">
+								<span class="goodscountry">
+									<img src="img/food/110[1].png"/>
+									保税区直发
+								</span>
+								<span class="lasttime">
+									距结束仅剩
+									<span class="timer"></span>
+								</span>
+							</div>
+						</li>
+						<li>
+							<div class="fashion-main-content-top">
+								<div class="fashion-main-content-goodspic">
+									<a href=""><img src="img/food/1450830007380864098[1].jpg" /></a>
+								</div>
+								<p class="goods-tit">
+									<span>【<strong>4.1折</strong>】</span>
+									<a href="">swisse护肝宝澳洲进口120粒</a>
+								</p>
+								<p class="goods-space"></p>
+								<div class="salespro">
+									<span class="nowprice">￥149</span>
+									<span class="saleprice">￥369</span>
+									<span class="peopleshop"><i>411人</i>已购买</span>
+								</div>
+							</div>
+							<div class="fashion-main-content-bottom">
+								<span class="goodscountry">
+									<img src="img/food/110[1].png"/>
+									保税区直发
+								</span>
+								<span class="lasttime">
+									距结束仅剩
+									<span class="timer"></span>
+								</span>
+							</div>
+						</li>
+						<li>
+							<div class="fashion-main-content-top">
+								<div class="fashion-main-content-goodspic">
+									<a href=""><img src="img/food/1450745385947819986[1].jpg" /></a>
+								</div>
+								<p class="goods-tit">
+									<span>【<strong>4.1折</strong>】</span>
+									<a href="">swisse护肝宝澳洲进口120粒</a>
+								</p>
+								<p class="goods-space"></p>
+								<div class="salespro">
+									<span class="nowprice">￥149</span>
+									<span class="saleprice">￥369</span>
+									<span class="peopleshop"><i>411人</i>已购买</span>
+								</div>
+							</div>
+							<div class="fashion-main-content-bottom">
+								<span class="goodscountry">
+									<img src="img/food/110[1].png"/>
+									保税区直发
+								</span>
+								<span class="lasttime">
+									距结束仅剩
+									<span class="timer"></span>
+								</span>
+							</div>
+						</li>
+						<li>
+							<div class="fashion-main-content-top">
+								<div class="fashion-main-content-goodspic">
+									<a href=""><img src="img/food/1450739935026900067[1].jpg" /></a>
+								</div>
+								<p class="goods-tit">
+									<span>【<strong>4.1折</strong>】</span>
+									<a href="">swisse护肝宝澳洲进口120粒</a>
+								</p>
+								<p class="goods-space"></p>
+								<div class="salespro">
+									<span class="nowprice">￥149</span>
+									<span class="saleprice">￥369</span>
+									<span class="peopleshop"><i>411人</i>已购买</span>
+								</div>
+							</div>
+							<div class="fashion-main-content-bottom">
+								<span class="goodscountry">
+									<img src="img/food/110[1].png"/>
+									保税区直发
+								</span>
+								<span class="lasttime">
+									距结束仅剩
+									<span class="timer"></span>
+								</span>
+							</div>
+						</li>
+						<li>
+							<div class="fashion-main-content-top">
+								<div class="fashion-main-content-goodspic">
+									<a href=""><img src="img/food/1450650084013127432[1].jpg" /></a>
+								</div>
+								<p class="goods-tit">
+									<span>【<strong>4.1折</strong>】</span>
+									<a href="">swisse护肝宝澳洲进口120粒</a>
+								</p>
+								<p class="goods-space"></p>
+								<div class="salespro">
+									<span class="nowprice">￥149</span>
+									<span class="saleprice">￥369</span>
+									<span class="peopleshop"><i>411人</i>已购买</span>
+								</div>
+							</div>
+							<div class="fashion-main-content-bottom">
+								<span class="goodscountry">
+									<img src="img/food/110[1].png"/>
+									保税区直发
+								</span>
+								<span class="lasttime">
+									距结束仅剩
+									<span class="timer"></span>
+								</span>
+							</div>
+						</li>
+						<li>
+							<div class="fashion-main-content-top">
+								<div class="fashion-main-content-goodspic">
+									<a href=""><img src="img/food/1450227292061584858[1].jpg" /></a>
+								</div>
+								<p class="goods-tit">
+									<span>【<strong>4.1折</strong>】</span>
+									<a href="">swisse护肝宝澳洲进口120粒</a>
+								</p>
+								<p class="goods-space"></p>
+								<div class="salespro">
+									<span class="nowprice">￥149</span>
+									<span class="saleprice">￥369</span>
+									<span class="peopleshop"><i>411人</i>已购买</span>
+								</div>
+							</div>
+							<div class="fashion-main-content-bottom">
+								<span class="goodscountry">
+									<img src="img/food/110[1].png"/>
+									保税区直发
+								</span>
+								<span class="lasttime">
+									距结束仅剩
+									<span class="timer"></span>
+								</span>
+							</div>
+						</li>
+						<li>
+							<div class="fashion-main-content-top">
+								<div class="fashion-main-content-goodspic">
+									<a href=""><img src="img/food/1450220026640992168[1].jpg" /></a>
+								</div>
+								<p class="goods-tit">
+									<span>【<strong>4.1折</strong>】</span>
+									<a href="">swisse护肝宝澳洲进口120粒</a>
+								</p>
+								<p class="goods-space"></p>
+								<div class="salespro">
+									<span class="nowprice">￥149</span>
+									<span class="saleprice">￥369</span>
+									<span class="peopleshop"><i>411人</i>已购买</span>
+								</div>
+							</div>
+							<div class="fashion-main-content-bottom">
+								<span class="goodscountry">
+									<img src="img/food/110[1].png"/>
+									保税区直发
+								</span>
+								<span class="lasttime">
+									距结束仅剩
+									<span class="timer"></span>
+								</span>
+							</div>
+						</li>
+						<li>
+							<div class="fashion-main-content-top">
+								<div class="fashion-main-content-goodspic">
+									<a href=""><img src="img/food/1449687644176420930[1].jpg" /></a>
+								</div>
+								<p class="goods-tit">
+									<span>【<strong>4.1折</strong>】</span>
+									<a href="">swisse护肝宝澳洲进口120粒</a>
+								</p>
+								<p class="goods-space"></p>
+								<div class="salespro">
+									<span class="nowprice">￥149</span>
+									<span class="saleprice">￥369</span>
+									<span class="peopleshop"><i>411人</i>已购买</span>
+								</div>
+							</div>
+							<div class="fashion-main-content-bottom">
+								<span class="goodscountry">
+									<img src="img/food/110[1].png"/>
+									保税区直发
+								</span>
+								<span class="lasttime">
+									距结束仅剩
+									<span class="timer"></span>
+								</span>
+							</div>
+						</li>
+						<li>
+							<div class="fashion-main-content-top">
+								<div class="fashion-main-content-goodspic">
+									<a href=""><img src="img/food/1449599310444094231[1].jpg"></a>
+								</div>
+								<p class="goods-tit">
+									<span>【<strong>4.1折</strong>】</span>
+									<a href="">swisse护肝宝澳洲进口120粒</a>
+								</p>
+								<p class="goods-space"></p>
+								<div class="salespro">
+									<span class="nowprice">￥149</span>
+									<span class="saleprice">￥369</span>
+									<span class="peopleshop"><i>411人</i>已购买</span>
+								</div>
+							</div>
+							<div class="fashion-main-content-bottom">
+								<span class="goodscountry">
+									<img src="img/food/110[1].png"/>
+									保税区直发
+								</span>
+								<span class="lasttime">
+									距结束仅剩
+									<span class="timer"></span>
+								</span>
+							</div>
+						</li>
+						<li>
+							<div class="fashion-main-content-top">
+								<div class="fashion-main-content-goodspic">
+									<a href=""><img src="img/food/1449523206601565281[1].jpg" /></a>
+								</div>
+								<p class="goods-tit">
+									<span>【<strong>4.1折</strong>】</span>
+									<a href="">swisse护肝宝澳洲进口120粒</a>
+								</p>
+								<p class="goods-space"></p>
+								<div class="salespro">
+									<span class="nowprice">￥149</span>
+									<span class="saleprice">￥369</span>
+									<span class="peopleshop"><i>411人</i>已购买</span>
+								</div>
+							</div>
+							<div class="fashion-main-content-bottom">
+								<span class="goodscountry">
+									<img src="img/food/110[1].png"/>
+									保税区直发
+								</span>
+								<span class="lasttime">
+									距结束仅剩
+									<span class="timer"></span>
+								</span>
+							</div>
+						</li>
+						<li>
+							<div class="fashion-main-content-top">
+								<div class="fashion-main-content-goodspic">
+									<a href=""><img src="img/food/1449512572478370770[1].jpg" /></a>
+								</div>
+								<p class="goods-tit">
+									<span>【<strong>4.1折</strong>】</span>
+									<a href="">swisse护肝宝澳洲进口120粒</a>
+								</p>
+								<p class="goods-space"></p>
+								<div class="salespro">
+									<span class="nowprice">￥149</span>
+									<span class="saleprice">￥369</span>
+									<span class="peopleshop"><i>411人</i>已购买</span>
+								</div>
+							</div>
+							<div class="fashion-main-content-bottom">
+								<span class="goodscountry">
+									<img src="img/food/110[1].png"/>
+									保税区直发
+								</span>
+								<span class="lasttime">
+									距结束仅剩
+									<span class="timer"></span>
+								</span>
+							</div>
+						</li>
+						<li>
+							<div class="fashion-main-content-top">
+								<div class="fashion-main-content-goodspic">
+									<a href=""><img src="img/food/1449082553405628145[1].jpg" /></a>
+								</div>
+								<p class="goods-tit">
+									<span>【<strong>4.1折</strong>】</span>
+									<a href="">swisse护肝宝澳洲进口120粒</a>
+								</p>
+								<p class="goods-space"></p>
+								<div class="salespro">
+									<span class="nowprice">￥149</span>
+									<span class="saleprice">￥369</span>
+									<span class="peopleshop"><i>411人</i>已购买</span>
+								</div>
+							</div>
+							<div class="fashion-main-content-bottom">
+								<span class="goodscountry">
+									<img src="img/food/110[1].png"/>
+									保税区直发
+								</span>
+								<span class="lasttime">
+									距结束仅剩
+									<span class="timer"></span>
+								</span>
+							</div>
+						</li>
+						<li>
+							<div class="fashion-main-content-top">
+								<div class="fashion-main-content-goodspic">
+									<a href=""><img src="img/food/1448922676417195603[1].jpg" /></a>
+								</div>
+								<p class="goods-tit">
+									<span>【<strong>4.1折</strong>】</span>
+									<a href="">swisse护肝宝澳洲进口120粒</a>
+								</p>
+								<p class="goods-space"></p>
+								<div class="salespro">
+									<span class="nowprice">￥149</span>
+									<span class="saleprice">￥369</span>
+									<span class="peopleshop"><i>411人</i>已购买</span>
+								</div>
+							</div>
+							<div class="fashion-main-content-bottom">
+								<span class="goodscountry">
+									<img src="img/food/110[1].png"/>
+									保税区直发
+								</span>
+								<span class="lasttime">
+									距结束仅剩
+									<span class="timer"></span>
+								</span>
+							</div>
+						</li>
+						<li>
+							<div class="fashion-main-content-top">
+								<div class="fashion-main-content-goodspic">
+									<a href=""><img src="img/food/1448849378957412190[1].jpg" /></a>
+								</div>
+								<p class="goods-tit">
+									<span>【<strong>4.1折</strong>】</span>
+									<a href="">swisse护肝宝澳洲进口120粒</a>
+								</p>
+								<p class="goods-space"></p>
+								<div class="salespro">
+									<span class="nowprice">￥149</span>
+									<span class="saleprice">￥369</span>
+									<span class="peopleshop"><i>411人</i>已购买</span>
+								</div>
+							</div>
+							<div class="fashion-main-content-bottom">
+								<span class="goodscountry">
+									<img src="img/food/110[1].png"/>
+									保税区直发
+								</span>
+								<span class="lasttime">
+									距结束仅剩
+									<span class="timer"></span>
+								</span>
+							</div>
+						</li>
+						<li>
+							<div class="fashion-main-content-top">
+								<div class="fashion-main-content-goodspic">
+									<a href=""><img src="img/food/1448575512052609052[1].jpg" /></a>
+								</div>
+								<p class="goods-tit">
+									<span>【<strong>4.1折</strong>】</span>
+									<a href="">swisse护肝宝澳洲进口120粒</a>
+								</p>
+								<p class="goods-space"></p>
+								<div class="salespro">
+									<span class="nowprice">￥149</span>
+									<span class="saleprice">￥369</span>
+									<span class="peopleshop"><i>411人</i>已购买</span>
+								</div>
+							</div>
+							<div class="fashion-main-content-bottom">
+								<span class="goodscountry">
+									<img src="img/food/110[1].png"/>
+									保税区直发
+								</span>
+								<span class="lasttime">
+									距结束仅剩
+									<span class="timer"></span>
+								</span>
+							</div>
+						</li>
+						<li>
+							<div class="fashion-main-content-top">
+								<div class="fashion-main-content-goodspic">
+									<a href=""><img src="img/food/1448574741251585709[1].jpg" /></a>
+								</div>
+								<p class="goods-tit">
+									<span>【<strong>4.1折</strong>】</span>
+									<a href="">swisse护肝宝澳洲进口120粒</a>
+								</p>
+								<p class="goods-space"></p>
+								<div class="salespro">
+									<span class="nowprice">￥149</span>
+									<span class="saleprice">￥369</span>
+									<span class="peopleshop"><i>411人</i>已购买</span>
+								</div>
+							</div>
+							<div class="fashion-main-content-bottom">
+								<span class="goodscountry">
+									<img src="img/food/110[1].png"/>
+									保税区直发
+								</span>
+								<span class="lasttime">
+									距结束仅剩
+									<span class="timer"></span>
+								</span>
+							</div>
+						</li>
+						<li>
+							<div class="fashion-main-content-top">
+								<div class="fashion-main-content-goodspic">
+									<a href=""><img src="img/food/1448568591343882281[1].jpg" /></a>
+								</div>
+								<p class="goods-tit">
+									<span>【<strong>4.1折</strong>】</span>
+									<a href="">swisse护肝宝澳洲进口120粒</a>
+								</p>
+								<p class="goods-space"></p>
+								<div class="salespro">
+									<span class="nowprice">￥149</span>
+									<span class="saleprice">￥369</span>
+									<span class="peopleshop"><i>411人</i>已购买</span>
+								</div>
+							</div>
+							<div class="fashion-main-content-bottom">
+								<span class="goodscountry">
+									<img src="img/food/110[1].png"/>
+									保税区直发
+								</span>
+								<span class="lasttime">
+									距结束仅剩
+									<span class="timer"></span>
+								</span>
+							</div>
+						</li>
+						<li>
+							<div class="fashion-main-content-top">
+								<div class="fashion-main-content-goodspic">
+									<a href=""><img src="img/food/1448477942205910397[1].jpg" /></a>
+								</div>
+								<p class="goods-tit">
+									<span>【<strong>4.1折</strong>】</span>
+									<a href="">swisse护肝宝澳洲进口120粒</a>
+								</p>
+								<p class="goods-space"></p>
+								<div class="salespro">
+									<span class="nowprice">￥149</span>
+									<span class="saleprice">￥369</span>
+									<span class="peopleshop"><i>411人</i>已购买</span>
+								</div>
+							</div>
+							<div class="fashion-main-content-bottom">
+								<span class="goodscountry">
+									<img src="img/food/110[1].png"/>
+									保税区直发
+								</span>
+								<span class="lasttime">
+									距结束仅剩
+									<span class="timer"></span>
+								</span>
+							</div>
+						</li>
+						<li>
+							<div class="fashion-main-content-top">
+								<div class="fashion-main-content-goodspic">
+									<a href=""><img src="img/food/1448300442252543757[1].jpg" /></a>
+								</div>
+								<p class="goods-tit">
+									<span>【<strong>4.1折</strong>】</span>
+									<a href="">swisse护肝宝澳洲进口120粒</a>
+								</p>
+								<p class="goods-space"></p>
+								<div class="salespro">
+									<span class="nowprice">￥149</span>
+									<span class="saleprice">￥369</span>
+									<span class="peopleshop"><i>411人</i>已购买</span>
+								</div>
+							</div>
+							<div class="fashion-main-content-bottom">
+								<span class="goodscountry">
+									<img src="img/food/110[1].png"/>
+									保税区直发
+								</span>
+								<span class="lasttime">
+									距结束仅剩
+									<span class="timer"></span>
+								</span>
+							</div>
+						</li>
+						<li>
+							<div class="fashion-main-content-top">
+								<div class="fashion-main-content-goodspic">
+									<a href=""><img src="img/food/1447871840242360710[1].jpg" /></a>
+								</div>
+								<p class="goods-tit">
+									<span>【<strong>4.1折</strong>】</span>
+									<a href="">swisse护肝宝澳洲进口120粒</a>
+								</p>
+								<p class="goods-space"></p>
+								<div class="salespro">
+									<span class="nowprice">￥149</span>
+									<span class="saleprice">￥369</span>
+									<span class="peopleshop"><i>411人</i>已购买</span>
+								</div>
+							</div>
+							<div class="fashion-main-content-bottom">
+								<span class="goodscountry">
+									<img src="img/food/110[1].png"/>
+									保税区直发
+								</span>
+								<span class="lasttime">
+									距结束仅剩
+									<span class="timer"></span>
+								</span>
+							</div>
+						</li>
+						<li>
+							<div class="fashion-main-content-top">
+								<div class="fashion-main-content-goodspic">
+									<a href=""><img src="img/food/1447797974651612550[1].jpg" /></a>
+								</div>
+								<p class="goods-tit">
+									<span>【<strong>4.1折</strong>】</span>
+									<a href="">swisse护肝宝澳洲进口120粒</a>
+								</p>
+								<p class="goods-space"></p>
+								<div class="salespro">
+									<span class="nowprice">￥149</span>
+									<span class="saleprice">￥369</span>
+									<span class="peopleshop"><i>411人</i>已购买</span>
+								</div>
+							</div>
+							<div class="fashion-main-content-bottom">
+								<span class="goodscountry">
+									<img src="img/food/110[1].png"/>
+									保税区直发
+								</span>
+								<span class="lasttime">
+									距结束仅剩
+									<span class="timer"></span>
+								</span>
+							</div>
+						</li>
+						<li>
+							<div class="fashion-main-content-top">
+								<div class="fashion-main-content-goodspic">
+									<a href=""><img src="img/food/1446588405380020681[1].jpg" /></a>
+								</div>
+								<p class="goods-tit">
+									<span>【<strong>4.1折</strong>】</span>
+									<a href="">swisse护肝宝澳洲进口120粒</a>
+								</p>
+								<p class="goods-space"></p>
+								<div class="salespro">
+									<span class="nowprice">￥149</span>
+									<span class="saleprice">￥369</span>
+									<span class="peopleshop"><i>411人</i>已购买</span>
+								</div>
+							</div>
+							<div class="fashion-main-content-bottom">
+								<span class="goodscountry">
+									<img src="img/food/110[1].png"/>
+									保税区直发
+								</span>
+								<span class="lasttime">
+									距结束仅剩
+									<span class="timer"></span>
+								</span>
+							</div>
+						</li>
+						<li>
+							<div class="fashion-main-content-top">
+								<div class="fashion-main-content-goodspic">
+									<a href=""><img src="img/food/1446577942803828637[1].jpg" /></a>
+								</div>
+								<p class="goods-tit">
+									<span>【<strong>4.1折</strong>】</span>
+									<a href="">swisse护肝宝澳洲进口120粒</a>
+								</p>
+								<p class="goods-space"></p>
+								<div class="salespro">
+									<span class="nowprice">￥149</span>
+									<span class="saleprice">￥369</span>
+									<span class="peopleshop"><i>411人</i>已购买</span>
+								</div>
+							</div>
+							<div class="fashion-main-content-bottom">
+								<span class="goodscountry">
+									<img src="img/food/110[1].png"/>
+									保税区直发
+								</span>
+								<span class="lasttime">
+									距结束仅剩
+									<span class="timer"></span>
+								</span>
+							</div>
+						</li>
+						<li>
+							<div class="fashion-main-content-top">
+								<div class="fashion-main-content-goodspic">
+									<a href=""><img src="img/food/1437092148821945704[1].jpg" /></a>
+								</div>
+								<p class="goods-tit">
+									<span>【<strong>4.1折</strong>】</span>
+									<a href="">swisse护肝宝澳洲进口120粒</a>
+								</p>
+								<p class="goods-space"></p>
+								<div class="salespro">
+									<span class="nowprice">￥149</span>
+									<span class="saleprice">￥369</span>
+									<span class="peopleshop"><i>411人</i>已购买</span>
+								</div>
+							</div>
+							<div class="fashion-main-content-bottom">
+								<span class="goodscountry">
+									<img src="img/food/110[1].png"/>
+									保税区直发
+								</span>
+								<span class="lasttime">
+									距结束仅剩
+									<span class="timer"></span>
+								</span>
+							</div>
+						</li>
+						<li>
+							<div class="fashion-main-content-top">
+								<div class="fashion-main-content-goodspic">
+									<a href=""><img src="img/food/1445883341416795795[1].jpg" /></a>
+								</div>
+								<p class="goods-tit">
+									<span>【<strong>4.1折</strong>】</span>
+									<a href="">swisse护肝宝澳洲进口120粒</a>
+								</p>
+								<p class="goods-space"></p>
+								<div class="salespro">
+									<span class="nowprice">￥149</span>
+									<span class="saleprice">￥369</span>
+									<span class="peopleshop"><i>411人</i>已购买</span>
+								</div>
+							</div>
+							<div class="fashion-main-content-bottom">
+								<span class="goodscountry">
+									<img src="img/food/110[1].png"/>
+									保税区直发
+								</span>
+								<span class="lasttime">
+									距结束仅剩
+									<span class="timer"></span>
+								</span>
+							</div>
+						</li>
+						<li>
+							<div class="fashion-main-content-top">
+								<div class="fashion-main-content-goodspic">
+									<a href=""><img src="img/food/1446446554353280595[1].jpg" /></a>
+								</div>
+								<p class="goods-tit">
+									<span>【<strong>4.1折</strong>】</span>
+									<a href="">swisse护肝宝澳洲进口120粒</a>
+								</p>
+								<p class="goods-space"></p>
+								<div class="salespro">
+									<span class="nowprice">￥149</span>
+									<span class="saleprice">￥369</span>
+									<span class="peopleshop"><i>411人</i>已购买</span>
+								</div>
+							</div>
+							<div class="fashion-main-content-bottom">
+								<span class="goodscountry">
+									<img src="img/food/110[1].png"/>
+									保税区直发
+								</span>
+								<span class="lasttime">
+									距结束仅剩
+									<span class="timer"></span>
+								</span>
+							</div>
+						</li>
+						<li>
+							<div class="fashion-main-content-top">
+								<div class="fashion-main-content-goodspic">
+									<a href=""><img src="img/food/1445801740332040502[1].jpg" /></a>
+								</div>
+								<p class="goods-tit">
+									<span>【<strong>4.1折</strong>】</span>
+									<a href="">swisse护肝宝澳洲进口120粒</a>
+								</p>
+								<p class="goods-space"></p>
+								<div class="salespro">
+									<span class="nowprice">￥149</span>
+									<span class="saleprice">￥369</span>
+									<span class="peopleshop"><i>411人</i>已购买</span>
+								</div>
+							</div>
+							<div class="fashion-main-content-bottom">
+								<span class="goodscountry">
+									<img src="img/food/110[1].png"/>
+									保税区直发
+								</span>
+								<span class="lasttime">
+									距结束仅剩
+									<span class="timer"></span>
+								</span>
+							</div>
+						</li>
+						<li>
+							<div class="fashion-main-content-top">
+								<div class="fashion-main-content-goodspic">
+									<a href=""><img src="img/food/1445800672647670354[1].jpg" /></a>
+								</div>
+								<p class="goods-tit">
+									<span>【<strong>4.1折</strong>】</span>
+									<a href="">swisse护肝宝澳洲进口120粒</a>
+								</p>
+								<p class="goods-space"></p>
+								<div class="salespro">
+									<span class="nowprice">￥149</span>
+									<span class="saleprice">￥369</span>
+									<span class="peopleshop"><i>411人</i>已购买</span>
+								</div>
+							</div>
+							<div class="fashion-main-content-bottom">
+								<span class="goodscountry">
+									<img src="img/food/110[1].png"/>
+									保税区直发
+								</span>
+								<span class="lasttime">
+									距结束仅剩
+									<span class="timer"></span>
+								</span>
+							</div>
+						</li>
+						<li>
+							<div class="fashion-main-content-top">
+								<div class="fashion-main-content-goodspic">
+									<a href=""><img src="img/food/1445800378605988182[1].jpg" /></a>
+								</div>
+								<p class="goods-tit">
+									<span>【<strong>4.1折</strong>】</span>
+									<a href="">swisse护肝宝澳洲进口120粒</a>
+								</p>
+								<p class="goods-space"></p>
+								<div class="salespro">
+									<span class="nowprice">￥149</span>
+									<span class="saleprice">￥369</span>
+									<span class="peopleshop"><i>411人</i>已购买</span>
+								</div>
+							</div>
+							<div class="fashion-main-content-bottom">
+								<span class="goodscountry">
+									<img src="img/food/110[1].png"/>
+									保税区直发
+								</span>
+								<span class="lasttime">
+									距结束仅剩
+									<span class="timer"></span>
+								</span>
+							</div>
+						</li>
+						<li>
+							<div class="fashion-main-content-top">
+								<div class="fashion-main-content-goodspic">
+									<a href=""><img src="img/food/1445799117663498198[1].jpg" /></a>
+								</div>
+								<p class="goods-tit">
+									<span>【<strong>4.1折</strong>】</span>
+									<a href="">swisse护肝宝澳洲进口120粒</a>
+								</p>
+								<p class="goods-space"></p>
+								<div class="salespro">
+									<span class="nowprice">￥149</span>
+									<span class="saleprice">￥369</span>
+									<span class="peopleshop"><i>411人</i>已购买</span>
+								</div>
+							</div>
+							<div class="fashion-main-content-bottom">
+								<span class="goodscountry">
+									<img src="img/food/110[1].png"/>
+									保税区直发
+								</span>
+								<span class="lasttime">
+									距结束仅剩
+									<span class="timer"></span>
+								</span>
+							</div>
+						</li>
+						<li>
+							<div class="fashion-main-content-top">
+								<div class="fashion-main-content-goodspic">
+									<a href=""><img src="img/food/1445798831755115623[1].jpg" /></a>
+								</div>
+								<p class="goods-tit">
+									<span>【<strong>4.1折</strong>】</span>
+									<a href="">swisse护肝宝澳洲进口120粒</a>
+								</p>
+								<p class="goods-space"></p>
+								<div class="salespro">
+									<span class="nowprice">￥149</span>
+									<span class="saleprice">￥369</span>
+									<span class="peopleshop"><i>411人</i>已购买</span>
+								</div>
+							</div>
+							<div class="fashion-main-content-bottom">
+								<span class="goodscountry">
+									<img src="img/food/110[1].png"/>
+									保税区直发
+								</span>
+								<span class="lasttime">
+									距结束仅剩
+									<span class="timer"></span>
+								</span>
+							</div>
+						</li>
+						<li>
+							<div class="fashion-main-content-top">
+								<div class="fashion-main-content-goodspic">
+									<a href=""><img src="img/food/1445798831755115623[1].jpg" /></a>
+								</div>
+								<p class="goods-tit">
+									<span>【<strong>4.1折</strong>】</span>
+									<a href="">swisse护肝宝澳洲进口120粒</a>
+								</p>
+								<p class="goods-space"></p>
+								<div class="salespro">
+									<span class="nowprice">￥149</span>
+									<span class="saleprice">￥369</span>
+									<span class="peopleshop"><i>411人</i>已购买</span>
+								</div>
+							</div>
+							<div class="fashion-main-content-bottom">
+								<span class="goodscountry">
+									<img src="img/food/110[1].png"/>
+									保税区直发
+								</span>
+								<span class="lasttime">
+									距结束仅剩
+									<span class="timer"></span>
+								</span>
+							</div>
+						</li>
+						<li>
+							<div class="fashion-main-content-top">
+								<div class="fashion-main-content-goodspic">
+									<a href=""><img src="img/food/1445219737629447879[1].jpg" /></a>
+								</div>
+								<p class="goods-tit">
+									<span>【<strong>4.1折</strong>】</span>
+									<a href="">swisse护肝宝澳洲进口120粒</a>
+								</p>
+								<p class="goods-space"></p>
+								<div class="salespro">
+									<span class="nowprice">￥149</span>
+									<span class="saleprice">￥369</span>
+									<span class="peopleshop"><i>411人</i>已购买</span>
+								</div>
+							</div>
+							<div class="fashion-main-content-bottom">
+								<span class="goodscountry">
+									<img src="img/food/110[1].png"/>
+									保税区直发
+								</span>
+								<span class="lasttime">
+									距结束仅剩
+									<span class="timer"></span>
+								</span>
+							</div>
+						</li>
+						<li>
+							<div class="fashion-main-content-top">
+								<div class="fashion-main-content-goodspic">
+									<a href=""><img src="img/food/1444959304286935207[1].jpg" /></a>
+								</div>
+								<p class="goods-tit">
+									<span>【<strong>4.1折</strong>】</span>
+									<a href="">swisse护肝宝澳洲进口120粒</a>
+								</p>
+								<p class="goods-space"></p>
+								<div class="salespro">
+									<span class="nowprice">￥149</span>
+									<span class="saleprice">￥369</span>
+									<span class="peopleshop"><i>411人</i>已购买</span>
+								</div>
+							</div>
+							<div class="fashion-main-content-bottom">
+								<span class="goodscountry">
+									<img src="img/food/110[1].png"/>
+									保税区直发
+								</span>
+								<span class="lasttime">
+									距结束仅剩
+									<span class="timer"></span>
+								</span>
+							</div>
+						</li>
+						<li>
+							<div class="fashion-main-content-top">
+								<div class="fashion-main-content-goodspic">
+									<a href=""><img src="img/food/1444953258716059995[1].jpg" /></a>
+								</div>
+								<p class="goods-tit">
+									<span>【<strong>4.1折</strong>】</span>
+									<a href="">swisse护肝宝澳洲进口120粒</a>
+								</p>
+								<p class="goods-space"></p>
+								<div class="salespro">
+									<span class="nowprice">￥149</span>
+									<span class="saleprice">￥369</span>
+									<span class="peopleshop"><i>411人</i>已购买</span>
+								</div>
+							</div>
+							<div class="fashion-main-content-bottom">
+								<span class="goodscountry">
+									<img src="img/food/110[1].png"/>
+									保税区直发
+								</span>
+								<span class="lasttime">
+									距结束仅剩
+									<span class="timer"></span>
+								</span>
+							</div>
+						</li>
+						<li>
+							<div class="fashion-main-content-top">
+								<div class="fashion-main-content-goodspic">
+									<a href=""><img src="img/food/1444872937204139489[1].jpg" /></a>
+								</div>
+								<p class="goods-tit">
+									<span>【<strong>4.1折</strong>】</span>
+									<a href="">swisse护肝宝澳洲进口120粒</a>
+								</p>
+								<p class="goods-space"></p>
+								<div class="salespro">
+									<span class="nowprice">￥149</span>
+									<span class="saleprice">￥369</span>
+									<span class="peopleshop"><i>411人</i>已购买</span>
+								</div>
+							</div>
+							<div class="fashion-main-content-bottom">
+								<span class="goodscountry">
+									<img src="img/food/110[1].png"/>
+									保税区直发
+								</span>
+								<span class="lasttime">
+									距结束仅剩
+									<span class="timer"></span>
+								</span>
+							</div>
+						</li>
+						<li>
+							<div class="fashion-main-content-top">
+								<div class="fashion-main-content-goodspic">
+									<a href=""><img src="img/food/1444423700832724007[1].jpg" /></a>
+								</div>
+								<p class="goods-tit">
+									<span>【<strong>4.1折</strong>】</span>
+									<a href="">swisse护肝宝澳洲进口120粒</a>
+								</p>
+								<p class="goods-space"></p>
+								<div class="salespro">
+									<span class="nowprice">￥149</span>
+									<span class="saleprice">￥369</span>
+									<span class="peopleshop"><i>411人</i>已购买</span>
+								</div>
+							</div>
+							<div class="fashion-main-content-bottom">
+								<span class="goodscountry">
+									<img src="img/food/110[1].png"/>
+									保税区直发
+								</span>
+								<span class="lasttime">
+									距结束仅剩
+									<span class="timer"></span>
+								</span>
+							</div>
+						</li>
+						<li>
+							<div class="fashion-main-content-top">
+								<div class="fashion-main-content-goodspic">
+									<a href=""><img src="img/food/1444243469439444183[1].jpg" /></a>
+								</div>
+								<p class="goods-tit">
+									<span>【<strong>4.1折</strong>】</span>
+									<a href="">swisse护肝宝澳洲进口120粒</a>
+								</p>
+								<p class="goods-space"></p>
+								<div class="salespro">
+									<span class="nowprice">￥149</span>
+									<span class="saleprice">￥369</span>
+									<span class="peopleshop"><i>411人</i>已购买</span>
+								</div>
+							</div>
+							<div class="fashion-main-content-bottom">
+								<span class="goodscountry">
+									<img src="img/food/110[1].png"/>
+									保税区直发
+								</span>
+								<span class="lasttime">
+									距结束仅剩
+									<span class="timer"></span>
+								</span>
+							</div>
+						</li>
+						<li>
+							<div class="fashion-main-content-top">
+								<div class="fashion-main-content-goodspic">
+									<a href=""><img src="img/food/1443054067442609427[1].jpg" /></a>
+								</div>
+								<p class="goods-tit">
+									<span>【<strong>4.1折</strong>】</span>
+									<a href="">swisse护肝宝澳洲进口120粒</a>
+								</p>
+								<p class="goods-space"></p>
+								<div class="salespro">
+									<span class="nowprice">￥149</span>
+									<span class="saleprice">￥369</span>
+									<span class="peopleshop"><i>411人</i>已购买</span>
+								</div>
+							</div>
+							<div class="fashion-main-content-bottom">
+								<span class="goodscountry">
+									<img src="img/food/110[1].png"/>
+									保税区直发
+								</span>
+								<span class="lasttime">
+									距结束仅剩
+									<span class="timer"></span>
+								</span>
+							</div>
+						</li>
+						<li>
+							<div class="fashion-main-content-top">
+								<div class="fashion-main-content-goodspic">
+									<a href=""><img src="img/food/1442596935695647184[1].jpg" /></a>
+								</div>
+								<p class="goods-tit">
+									<span>【<strong>4.1折</strong>】</span>
+									<a href="">swisse护肝宝澳洲进口120粒</a>
+								</p>
+								<p class="goods-space"></p>
+								<div class="salespro">
+									<span class="nowprice">￥149</span>
+									<span class="saleprice">￥369</span>
+									<span class="peopleshop"><i>411人</i>已购买</span>
+								</div>
+							</div>
+							<div class="fashion-main-content-bottom">
+								<span class="goodscountry">
+									<img src="img/food/110[1].png"/>
+									保税区直发
+								</span>
+								<span class="lasttime">
+									距结束仅剩
+									<span class="timer"></span>
+								</span>
+							</div>
+						</li>
+						<li>
+							<div class="fashion-main-content-top">
+								<div class="fashion-main-content-goodspic">
+									<a href=""><img src="img/food/1442357321968601713[1].jpg" /></a>
+								</div>
+								<p class="goods-tit">
+									<span>【<strong>4.1折</strong>】</span>
+									<a href="">swisse护肝宝澳洲进口120粒</a>
+								</p>
+								<p class="goods-space"></p>
+								<div class="salespro">
+									<span class="nowprice">￥149</span>
+									<span class="saleprice">￥369</span>
+									<span class="peopleshop"><i>411人</i>已购买</span>
+								</div>
+							</div>
+							<div class="fashion-main-content-bottom">
+								<span class="goodscountry">
+									<img src="img/food/110[1].png"/>
+									保税区直发
+								</span>
+								<span class="lasttime">
+									距结束仅剩
+									<span class="timer"></span>
+								</span>
+							</div>
+						</li>
+						<li>
+							<div class="fashion-main-content-top">
+								<div class="fashion-main-content-goodspic">
+									<a href=""><img src="img/food/1442346403673532933[1].jpg" /></a>
+								</div>
+								<p class="goods-tit">
+									<span>【<strong>4.1折</strong>】</span>
+									<a href="">swisse护肝宝澳洲进口120粒</a>
+								</p>
+								<p class="goods-space"></p>
+								<div class="salespro">
+									<span class="nowprice">￥149</span>
+									<span class="saleprice">￥369</span>
+									<span class="peopleshop"><i>411人</i>已购买</span>
+								</div>
+							</div>
+							<div class="fashion-main-content-bottom">
+								<span class="goodscountry">
+									<img src="img/food/110[1].png"/>
+									保税区直发
+								</span>
+								<span class="lasttime">
+									距结束仅剩
+									<span class="timer"></span>
+								</span>
+							</div>
+						</li>
+						<li>
+							<div class="fashion-main-content-top">
+								<div class="fashion-main-content-goodspic">
+									<a href=""><img src="img/food/1441762834030342024[1].jpg" /></a>
+								</div>
+								<p class="goods-tit">
+									<span>【<strong>4.1折</strong>】</span>
+									<a href="">swisse护肝宝澳洲进口120粒</a>
+								</p>
+								<p class="goods-space"></p>
+								<div class="salespro">
+									<span class="nowprice">￥149</span>
+									<span class="saleprice">￥369</span>
+									<span class="peopleshop"><i>411人</i>已购买</span>
+								</div>
+							</div>
+							<div class="fashion-main-content-bottom">
+								<span class="goodscountry">
+									<img src="img/food/110[1].png"/>
+									保税区直发
+								</span>
+								<span class="lasttime">
+									距结束仅剩
+									<span class="timer"></span>
+								</span>
+							</div>
+						</li>
+						<li>
+							<div class="fashion-main-content-top">
+								<div class="fashion-main-content-goodspic">
+									<a href=""><img src="img/food/1441674779525267017[1].jpg" /></a>
+								</div>
+								<p class="goods-tit">
+									<span>【<strong>4.1折</strong>】</span>
+									<a href="">swisse护肝宝澳洲进口120粒</a>
+								</p>
+								<p class="goods-space"></p>
+								<div class="salespro">
+									<span class="nowprice">￥149</span>
+									<span class="saleprice">￥369</span>
+									<span class="peopleshop"><i>411人</i>已购买</span>
+								</div>
+							</div>
+							<div class="fashion-main-content-bottom">
+								<span class="goodscountry">
+									<img src="img/food/110[1].png"/>
+									保税区直发
+								</span>
+								<span class="lasttime">
+									距结束仅剩
+									<span class="timer"></span>
+								</span>
+							</div>
+						</li>
+						<li>
+							<div class="fashion-main-content-top">
+								<div class="fashion-main-content-goodspic">
+									<a href=""><img src="img/food/1441647839169386460[1].jpg" /></a>
+								</div>
+								<p class="goods-tit">
+									<span>【<strong>4.1折</strong>】</span>
+									<a href="">swisse护肝宝澳洲进口120粒</a>
+								</p>
+								<p class="goods-space"></p>
+								<div class="salespro">
+									<span class="nowprice">￥149</span>
+									<span class="saleprice">￥369</span>
+									<span class="peopleshop"><i>411人</i>已购买</span>
+								</div>
+							</div>
+							<div class="fashion-main-content-bottom">
+								<span class="goodscountry">
+									<img src="img/food/110[1].png"/>
+									保税区直发
+								</span>
+								<span class="lasttime">
+									距结束仅剩
+									<span class="timer"></span>
+								</span>
+							</div>
+						</li>
+						<li>
+							<div class="fashion-main-content-top">
+								<div class="fashion-main-content-goodspic">
+									<a href=""><img src="img/food/1441575257424511000[1].jpg" /></a>
+								</div>
+								<p class="goods-tit">
+									<span>【<strong>4.1折</strong>】</span>
+									<a href="">swisse护肝宝澳洲进口120粒</a>
+								</p>
+								<p class="goods-space"></p>
+								<div class="salespro">
+									<span class="nowprice">￥149</span>
+									<span class="saleprice">￥369</span>
+									<span class="peopleshop"><i>411人</i>已购买</span>
+								</div>
+							</div>
+							<div class="fashion-main-content-bottom">
+								<span class="goodscountry">
+									<img src="img/food/110[1].png"/>
+									保税区直发
+								</span>
+								<span class="lasttime">
+									距结束仅剩
+									<span class="timer"></span>
+								</span>
+							</div>
+						</li>
+						<li>
+							<div class="fashion-main-content-top">
+								<div class="fashion-main-content-goodspic">
+									<a href=""><img src="img/food/1440974284852628335[1].jpg" /></a>
+								</div>
+								<p class="goods-tit">
+									<span>【<strong>4.1折</strong>】</span>
+									<a href="">swisse护肝宝澳洲进口120粒</a>
+								</p>
+								<p class="goods-space"></p>
+								<div class="salespro">
+									<span class="nowprice">￥149</span>
+									<span class="saleprice">￥369</span>
+									<span class="peopleshop"><i>411人</i>已购买</span>
+								</div>
+							</div>
+							<div class="fashion-main-content-bottom">
+								<span class="goodscountry">
+									<img src="img/food/110[1].png"/>
+									保税区直发
+								</span>
+								<span class="lasttime">
+									距结束仅剩
+									<span class="timer"></span>
+								</span>
+							</div>
+						</li>
+						<li>
+							<div class="fashion-main-content-top">
+								<div class="fashion-main-content-goodspic">
+									<a href=""><img src="img/food/1440697173606139261[1].jpg" /></a>
+								</div>
+								<p class="goods-tit">
+									<span>【<strong>4.1折</strong>】</span>
+									<a href="">swisse护肝宝澳洲进口120粒</a>
+								</p>
+								<p class="goods-space"></p>
+								<div class="salespro">
+									<span class="nowprice">￥149</span>
+									<span class="saleprice">￥369</span>
+									<span class="peopleshop"><i>411人</i>已购买</span>
+								</div>
+							</div>
+							<div class="fashion-main-content-bottom">
+								<span class="goodscountry">
+									<img src="img/food/110[1].png"/>
+									保税区直发
+								</span>
+								<span class="lasttime">
+									距结束仅剩
+									<span class="timer"></span>
+								</span>
+							</div>
+						</li>
+						<li>
+							<div class="fashion-main-content-top">
+								<div class="fashion-main-content-goodspic">
+									<a href=""><img src="img/food/1439513601764036590[1].jpg" /></a>
+								</div>
+								<p class="goods-tit">
+									<span>【<strong>4.1折</strong>】</span>
+									<a href="">swisse护肝宝澳洲进口120粒</a>
+								</p>
+								<p class="goods-space"></p>
+								<div class="salespro">
+									<span class="nowprice">￥149</span>
+									<span class="saleprice">￥369</span>
+									<span class="peopleshop"><i>411人</i>已购买</span>
+								</div>
+							</div>
+							<div class="fashion-main-content-bottom">
+								<span class="goodscountry">
+									<img src="img/food/110[1].png"/>
+									保税区直发
+								</span>
+								<span class="lasttime">
+									距结束仅剩
+									<span class="timer"></span>
+								</span>
+							</div>
+						</li>
+						<li>
+							<div class="fashion-main-content-top">
+								<div class="fashion-main-content-goodspic">
+									<a href=""><img src="img/food/1439239924340852537[1].jpg" /></a>
+								</div>
+								<p class="goods-tit">
+									<span>【<strong>4.1折</strong>】</span>
+									<a href="">swisse护肝宝澳洲进口120粒</a>
+								</p>
+								<p class="goods-space"></p>
+								<div class="salespro">
+									<span class="nowprice">￥149</span>
+									<span class="saleprice">￥369</span>
+									<span class="peopleshop"><i>411人</i>已购买</span>
+								</div>
+							</div>
+							<div class="fashion-main-content-bottom">
+								<span class="goodscountry">
+									<img src="img/food/110[1].png"/>
+									保税区直发
+								</span>
+								<span class="lasttime">
+									距结束仅剩
+									<span class="timer"></span>
+								</span>
+							</div>
+						</li>
+						<li>
+							<div class="fashion-main-content-top">
+								<div class="fashion-main-content-goodspic">
+									<a href=""><img src="img/food/1438995608445806958[1].jpg"></a>
+								</div>
+								<p class="goods-tit">
+									<span>【<strong>4.1折</strong>】</span>
+									<a href="">swisse护肝宝澳洲进口120粒</a>
+								</p>
+								<p class="goods-space"></p>
+								<div class="salespro">
+									<span class="nowprice">￥149</span>
+									<span class="saleprice">￥369</span>
+									<span class="peopleshop"><i>411人</i>已购买</span>
+								</div>
+							</div>
+							<div class="fashion-main-content-bottom">
+								<span class="goodscountry">
+									<img src="img/food/110[1].png"/>
+									保税区直发
+								</span>
+								<span class="lasttime">
+									距结束仅剩
+									<span class="timer"></span>
+								</span>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!--底部版权-->
+		<div id="copyright-top">
+		</div>
+		<div id="copy-right-ul">
+			<dl class="copy-right-dl left">
+				<dt class="firstdt">新手上路</dt>
+				<dd><a href="">新用户注册</a></dd>
+				<dd><a href="">忘记密码</a></dd>
+				<dd><a href="">购物流程</a></dd>
+			</dl>
+			<dl class="copy-right-dl left">
+				<dt class="firstdt">支付配送</dt>
+				<dd><a href="">货到付款</a></dd>
+				<dd><a href="">支付宝</a></dd>
+				<dd><a href="">配送方式</a></dd>
+			</dl>
+			<dl class="copy-right-dl left">
+				<dt class="firstdt">会员服务</dt>
+				<dd><a href="">服务承诺</a></dd>
+				<dd><a href="">会员制度</a></dd>
+				<dd><a href="">积分介绍</a></dd>
+				<dd><a href="">退换货原则</a></dd>
+			</dl>
+			<dl class="copy-right-dl left lastdl">
+				<dt class="firstdt">关于优惠品</dt>
+				<dd><a href="">企业介绍</a></dd>
+				<dd><a href="">联系我们</a></dd>
+				<dd><a href="">招商专区</a></dd>
+			</dl>
+			<dl class="sceonddl">
+				<dt>
+					<a href=""><img src="img/ewm90X90[1].JPG"/></a>
+					<p class="second-phone">手机优品慧</p>
+					<p class="second-phone2">（手机购）</p>
+				</dt>
+				<dd>
+					<a href=""><img src="img/foot_dh[1].JPG" /></a>
+				</dd>
+			</dl>
+		</div>
+		<div id="footer">
+			<p id="footer-list">
+				<a href="">首页</a>|
+				<a href="">关于优惠</a>|
+				<a href="">联系我们</a>|
+				<a href="">招贤纳士</a>|
+				<a href="">招商专区</a>|
+				<a href="">供应商入口</a>|
+				<a href="">友情链接</a>|
+				<a href="">网站地图</a>|
+				<a href="">资讯中心</a>|
+				<a href="">评论</a>|
+				<a href="">图片</a>
+			</p>
+			<div id="footer-firend">
+				<p class="footerp">
+					<em>友情连接:</em>
+					<a href="">华为商城</a>&nbsp;
+					<a href="">佐卡伊珠宝网</a>&nbsp;
+					<a href="">华强北</a>&nbsp;
+					<a href="">淘鞋网</a>&nbsp;
+					<a href="">团购网</a>&nbsp;
+					<a href="">中国零食网</a>&nbsp;
+					<a href="">腕表名表</a>&nbsp;
+					<a href="">太平洋家居产品库</a>&nbsp;
+					<a href="">网上购物</a>&nbsp;
+					<a href="">团购网</a>&nbsp;
+					<a href="">钻石</a>&nbsp;
+					<a href="">城市联盟</a>&nbsp;
+					<a href="">手表</a>&nbsp;
+					<a href="">九块邮</a>&nbsp;
+					<a href="">婚礼珠宝</a>&nbsp;
+					<a href="">如何开网店</a>&nbsp;
+					<a href="">法国红酒品牌</a>&nbsp;
+					<a href="">法国红酒品牌</a>&nbsp;
+				</p>
+				<div id="pulldown">
+					▼
+				</div>
+			</div>
+			<p id="footer-third">
+				优品慧（优购物）全球优品特卖网站&nbsp;专属于千万女性的优品特卖网站，优品慧（优购物）电视购物官方网站，100%正品保证&nbsp;支持货到付款.
+			</p>
+			<p id="footer-four">
+				Copyrightc2007-2015&nbsp;公司名称:北京优品慧网络科技有限公司&nbsp;统一社会信用代码:91110302339739621C&nbsp;ICP备案号:京ICP备15039150号-1&nbsp;
+			</p>
+			<p id="footer-four">
+				公司地址:北京市北京经济技术开发区同济南路19号7幢2层c区&nbsp;联系方式:400-707-0707
+			</p>
+		</div>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+	</body>
+
+</html>

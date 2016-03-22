@@ -1,0 +1,213 @@
+#sidebar{
+width:32px;
+height:100%;
+position:fixed;
+top:0px;
+right:0;
+z-index: 999;
+border-right:4px solid black;
+}
+/*用户登录购物车及客服*/
+#sidebar-link{
+	width:100%;
+	height:144px;
+	position:absolute;
+	top:40%;
+	right:0;
+}
+#sidebar-link li,#sidebar-code li{
+	width:36px;
+	height:36px;
+	overflow:hidden;
+	position:relative;
+}
+#sidebar-link li a,#sidebar-code li a{
+	display:block;
+	width:36px;
+	height:36px;
+}
+#sidebar-link li:hover,#sidebar-code li:hover{
+	overflow:visible;
+}
+.side-uers{
+	background:url(../img/good/xfbj[1].png);
+}
+/*登录快速入口*/
+#sidebar-link .side-uers #user-login{
+	top:0;
+	position:absolute;
+	left:-263px;
+	z-index:900;
+	height:228px;
+	width:257px;
+	padding:2px;
+	border:1px solid #ccc;
+	background:white;
+}
+/*用户登录*/
+#closethis{
+	margin-top:10px;
+	position:relative;
+	height:12px;
+}
+#closethis a{
+	cursor: pointer;
+	position:absolute;
+	right:2px;
+	display:block;
+	height:12px;
+	width:8px;
+	background:url(../img/makepic.PNG) no-repeat -60px -357px;
+}
+/*弹框用户头像*/
+#user-login-content{
+	margin-top:10px;
+	height:74px;
+}
+ #sidebar-link li #user-login-content a{
+	display:block;
+	width:74px;
+	height:74px;
+	margin:0 auto;
+}
+/*弹框用户登录及注册*/
+#user-login-loginon {
+	margin-top:20px;
+	height:14px;
+	line-height:14px;
+}
+#user-login-loginon strong{
+	font-weight:100;
+	display:block;
+	width:100%;
+	text-align:center;
+	margin:0 auto;
+	height:14px;
+}
+#sidebar-link li #user-login-loginon strong a{
+	display:inline-block;
+	height:14px;
+	color:#E20701;
+}
+/*我的订单及优惠券*/
+#user-login-link{
+	padding:20px 0 0 30px;
+	height:40px;
+	position:absolute;
+	bottom:0px;
+	background:#CCCCCC;
+	width:229px;
+}
+#sidebar-link li #user-login-link a{
+	float:left;
+	border-radius:5px;
+	margin-left:10px;
+	display:block;
+	width:88px;
+	height:28px;
+	color:black;
+	text-align: center;
+	line-height: 28px;
+	border:1px solid #999999;
+	cursor: pointer;
+}
+.side-uers:hover{
+	background:url(../img/good/xfbj[1].png) -46px 0;
+	overflow:visible;
+}
+.side-cart{
+	background:url(../img/good/xfbj[1].png) 0 -46px;
+	position:relative;
+}
+#sidebar-link li ._p,#sidebar-code li ._p{
+	width:90px;
+	height:36px;
+	line-height:36px;
+	text-align:center;
+	color:white;
+	position:absolute;
+	cursor:pointer;
+	top:0px;
+	left:-90px;
+	background:url(../img/good/xfbj[1].png) 0px -412px ;
+}
+.side-cart:hover{
+	background:url(../img/good/xfbj[1].png) -46px -46px;
+	position:relative;
+}
+.side-cart-pro{
+	position:absolute;
+	right:0;
+	top:0px;
+	color:white;
+	text-align: center;
+	display: block;
+	width:23px;
+	height:14px;
+	background:url(../img/good/xfbj[1].png) 0 -342px;
+}
+.side-care{
+	background:url(../img/good/xfbj[1].png) 0 -92px;
+}
+.side-care:hover{
+	background:url(../img/good/xfbj[1].png) -46px -92px;
+}
+.side-ser{
+	background:url(../img/good/xfbj[1].png) 0 -138px;
+}
+.side-ser:hover{
+	background:url(../img/good/xfbj[1].png) -46px -138px;
+}
+/*二维码及客户评价*/
+#sidebar-code{
+	width:100%;
+	height:108px;
+	position:absolute;
+	bottom:-1px;
+	right:0;
+}
+.side-code{
+	background:url(../img/good/xfbj[1].png) 0 -184px;
+}
+.side-code-tit{
+	position: absolute;
+    left: -132px;
+    top: -73px;
+    width: 132px;
+    height: 182px;
+    z-index: 1;
+    background:url(../img/code[1].JPG)
+}
+.side-site{
+	background:url(../img/good/xfbj[1].png) 0 -230px;
+}
+.side-totop{
+	background:url(../img/good/xfbj[1].png) 0 -276px;
+}
+.side-code:hover{
+	background:url(../img/good/xfbj[1].png) -46px -184px;
+}
+.side-site:hover{
+	background:url(../img/good/xfbj[1].png) -46px -230px;
+}
+.side-totop:hover{
+	background:url(../img/good/xfbj[1].png) -46px -276px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

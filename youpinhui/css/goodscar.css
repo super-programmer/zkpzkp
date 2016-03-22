@@ -1,0 +1,261 @@
+/*支付状态*/
+
+.buystate {
+	float: right;
+	width: 600px;
+	height: 55px;
+	background-image: url("../img/state.gif");
+	background-repeat: no-repeat;
+	background-position: 0 0;
+}
+
+
+/*全国客服电话*/
+
+.service-goodscar {
+	margin: 0 auto;
+	width: 1000px;
+	height: 47px;
+	background: url("../img/cart.jpg") no-repeat 840px 0;
+}
+
+.goodscarlogo {
+	height: 55px;
+	line-height: 55px;
+	padding: 13px 0 14px 0;
+	color: #999;
+	font-size: 14px;
+	margin: 0 auto;
+	width: 1000px;
+}
+
+.goodscarlogo p {
+	width: 192px;
+	height: 38px;
+	float: left;
+	background: url("../img/shop-sprite.gif") 0 -50px no-repeat;
+}
+
+
+/*购物车主要内容*/
+
+#goodscarmain {
+	width: 968px;
+	height: auto;
+	/*overflow: hidden;*/
+	margin: 0 auto;
+}
+
+
+/*购物车表头*/
+
+.goodscarmain-tit {
+	height: 38px;
+	line-height: 38px;
+	background: #f4f4f4;
+	padding-left: 20px;
+	font-weight: bold;
+	border: 1px solid #e5e5e5;
+}
+/*购物车表头左半部分*/
+.goodscarmain-tit-left{
+	width:auto;
+	height:30px;
+	float:left;
+	padding-top:8px;
+}
+.check-goodscar{
+	  border-left: 5px solid #fd475a;
+  width: 30px;
+  height: 17px;
+  padding: 3px 0 0 15px;
+  line-height:;
+  display: inline-block;
+  float: left;
+  line-height: 17px;
+}
+.foreign{
+	display: inline-block;
+  	float: left;
+  	width:59px;
+  	height:20px;
+  	line-height:20px;
+  	background:url(../img/over.gif) no-repeat;
+  	padding-left:20px;
+}
+/*购物车表头右半部分*/
+
+.goodscarmain-tit-right{
+	float:right;
+	width:600px;
+	height:38px;
+}
+.goodscarmain-tit-right div{
+	height:36px;
+	line-height:38px;
+	float:left;
+}
+.goodscarmain-tit-right div:nth-child(2){
+	margin-left:40px;
+}
+.goodscar-price{
+	width:100px;
+	height:38px;
+}
+/*所选内容*/
+
+.goodscarmain {
+	border: 1px solid #e5e5e5;
+	padding: 20px 20px 10px;
+	margin-top: -1px;
+	color: #666;
+}
+.goodscarmain img{
+	border:1px solid #ccc;
+	width:74px;
+	height:75px;
+}
+.goodscarmain-tab{
+	width:100%;
+	border:1px solid #CCCCCC;
+  margin-bottom: 10px; 
+}
+/*设置商品详情*/
+.goodscarmain input{
+	width:10px;
+	text-align: center;
+	height:75px;
+	line-height:75px;
+}
+.goodscarmain img{
+	display:inline-block;
+}
+.goodscarmain tr td:first-child{
+	width:96px;
+}
+.goodscarmain tr td:nth-child(2) span:hover{
+	text-decoration: underline;
+	color:red;
+}
+.bottom-fix-bar .btn-area {
+  float: right;
+  padding: 13px 22px 0 20px;
+}
+.bottom-fix-bar .price-area {
+  color: #d81f27;
+  width: 111px;
+  padding: 19px 8px 0 0;
+  line-height: 50px;
+  text-align: right;
+  font-size: 18px;
+  font-weight: bold;
+  float: right;
+}
+.bottom-fix-bar .acount-total-area {
+  float: right;
+  line-height: 66px;
+  text-align: right;
+  padding-right: 20px;
+}
+.goodscarmain tr td:nth-child(2){
+	width:280px;
+}
+.goodscarmain tr td:nth-child(3){
+	width:140px;
+}
+.goodscarmain tr td:nth-child(4){
+	width:90px;
+}
+.goodscarmain tr td:nth-child(5){
+	width:90px;
+}
+.goodscarmain  tr td:last-child input{ 
+	display:inline-block;
+	height:30px;
+	width:40px;
+	text-align:center;
+	line-height:30px;
+}
+/*底部结算*/
+.bottom-fix-bar {
+  width:100%;
+  height: 70px;
+  margin:0 auto;
+  background: url("../img/total-price-bar.gif") no-repeat center 0;
+  padding-top: 12px;
+}
+.shopbody {
+  width: 968px;
+  margin: 0 auto;
+  font-family: "Microsoft yahei";
+}
+.bottom-fix-bar .select-all {
+  width: 65px;
+  float: left;
+  padding-left: 34px;
+  line-height: 70px;
+}
+.bottom-fix-bar .fl-oprate {
+  width: 174px;
+  height: 70px;
+  float: left;
+  line-height: 70px;
+}
+.bottom-fix-bar .chk-selector {
+  margin: 28px 10px 0 0;
+  float: left;
+}
+.chk-selector {
+  width: 15px;
+  height: 15px;
+  overflow: hidden;
+  position: relative;
+  display: inline-block;
+}
+.chk-selector input {
+  position:absolute;
+  left: 0;
+  top:0;
+}
+.chk-selector label {
+  float: left;
+  line-height: 200px;
+  width: 15px;
+  height: 15px;
+}
+.bottom-fix-bar a.darkblue {
+  color: #0039bc;
+  float: left;
+}
+.bottom-fix-bar .btn-continue {
+  float: right;
+  width: 108px;
+  height: 28px;
+  margin-top: 18px;
+  border-radius: 2px;
+  color: #676767;
+  line-height: 28px;
+  text-align: center;
+  border: 1px solid #dcdcdc;
+  background: #fff;
+}
+a:visited {
+  color: #333;
+}
+.bottom-fix-bar .btn-area a {
+  width: 140px;
+  height: 45px;
+  display: block;
+  background: #000;
+  opacity: 0;
+  filter: alpha(opacity=0);
+}
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,162 @@
+/*登录页顶部*/
+#loginlogo{
+	width:968px;
+	height:112px;
+	margin:0 auto;
+}
+#loginlogo-logo{
+	width:353px;
+	height:57px;
+	margin-top:31px;
+	float:left;
+}
+#loginlogo-logo p{
+	width:168px;
+	height:57px;
+	background:url(../img/login/welland[1].gif) 0 -58px;
+	float: left; 
+}
+#loginlogo-logo a{
+	display:block;
+	width:185px;
+	height:57px;
+	float:left;
+	background:url(../img/login/welland[1].gif);
+}
+#login-loginon{
+	float:right;
+	height:14px;
+	padding-top:70px;
+	width:300px;
+}
+#login-loginon p{
+	float:left;
+	font-size:12px;
+}
+#login-loginon a{
+	font-size:12px;
+ 	color:blue;
+}
+#login-loginon span{
+	font-size:12px;
+ 	color:salmon;
+}
+
+/*登录页面详细信息*/
+
+#login-land{
+	border: 2px solid #ff8400;
+  	width:964px;
+  	height:374px;
+  	margin:0 auto;
+  	position:relative;
+}
+#login-land-main{
+	width:532px;
+	height:208px;
+	padding:62px 0 0 133px;
+	float:left;
+}
+#login-land-quick{
+	width:217px;
+	height:316px;
+	padding:58px 0 0 82px;
+	float:left;
+	background:#fff6ec;
+}
+/*登录具体样式*/
+.landdetail{
+	width:351px;
+	height:65px;
+	font-size: 12px;
+	position:relative;
+}
+.landdetail p{
+	line-height: 20px;
+}
+.landinput{
+	font: 13px Arial;
+	display:block;
+  	color: #222;
+  	width: 315px;
+  	padding: 5px 25px 5px 10px;
+  	height: 25px;
+  	line-height:25px;
+  	border: 1px solid #a2a2a2;
+}
+/*提示信息位置*/
+.landpro{
+	height: 20px;
+  	width: 340px;
+  	corlor: #eb0007;
+  	padding-left: 10px;
+  	line-height: 20px;
+  	border: 1px solid #ffadb0;
+  	background-color: #fff3f3;
+ 	position:absolute;
+  	z-index: 999;
+  	left:0;
+  	top:50px;
+  	display:none;
+}
+.landbc{
+	width:16px;
+	height:16px;
+	z-index: 1;
+	background:url(../img/login/welland[1].gif) 0 -229px no-repeat;
+	position:absolute;
+	top:26px;
+	right:2px;
+}
+.landbc1{
+	width:16px;
+	height:16px;
+	z-index: 1;
+	background:url(../img/login/welland[1].gif) 0 -251px no-repeat;
+	position:absolute;
+	top:26px;
+	right:2px;
+}
+.addbc{
+	background:url(../img/login/welland[1].gif) 0 -275px no-repeat;
+}
+.forgetpass{
+	float:right;
+	color:blue;
+}
+.landbutton{
+	margin-top:26px;
+	width: 351px;
+  	height: 37px;
+  	background: url(../img/login/welland[1].gif) 0 -117px no-repeat;
+  	border: none;
+  	cursor: pointer;
+}
+/*登录页面右侧部分*/
+.landloginroad{
+	width:100%;
+	height:57px;
+}
+.landloginroad:nth-child(2){
+	margin-top:42px;
+}
+.landloginroad p{
+	font-size:14px;
+  	color: #555555;
+  	font-family:"微软雅黑";
+}
+.landa{
+	display: block;
+	width: 142px;
+  	height: 32px;
+  	font-size: 12px;
+  	background: url(../img/login/welland[1].gif) 0 -155px no-repeat;
+  	line-height: 32px;
+  	text-align: center;
+  	color: #ff6000;
+  	margin-top: 10px;
+  	cursor: pointer;
+}	
+	
+	
+	

@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>我的购物车</title>
+		<link rel="stylesheet" href="css/sidebar.css" />
+		<link rel="stylesheet" type="text/css" href="css/index.css" />
+		<link rel="stylesheet" type="text/css" href="css/fooddetail.css" />
+		<link rel="stylesheet" type="text/css" href="css/goodscar.css" />
+		<script type="text/javascript" src="js/jquery-1.11.3.js">
+		</script>
+		<script type="text/javascript" src="js/land.js">
+		</script>
+		<script type="text/javascript" src="js/public.js">
+		</script>
+		<script type="text/javascript" src="js/goodscar.js">
+		</script>
+	</head>
+
+	<body>
+		<!--右侧快捷入口-->
+		<div id="sidebar">
+			<ul id="sidebar-link">
+				<li class="side-uers">
+					<a href=""></a>
+					<div id="user-login">
+						<p id="closethis">
+							<a></a>
+						</p>
+						<p id="user-login-content">
+							<a href=""><img src="img/top.JPG" /></a>
+						</p>
+						<p id="user-login-loginon">
+							<strong>
+							你好！请
+							<a href="land.html" class="login">登录</a>|
+							<a href="login.html" class="login">注册</a>
+							</strong>
+						</p>
+						<p id="user-login-link">
+							<a class="indent">我的订单</a>
+							<a class="indent">优惠券</a>
+						</p>
+					</div>
+				</li>
+				<li class="side-cart">
+					<a href="goodscar.html"></a>
+					<p class="_p">购物车</p>
+					<!--购物车内商品数量-->
+					<span class="side-cart-pro">0</span>
+				</li>
+				<li class="side-care">
+					<a href=""></a>
+					<p class="_p">我的关注</p>
+				</li>
+				<li class="side-ser">
+					<a href=""></a>
+					<p class="_p">在线客服</p>
+				</li>
+			</ul>
+			<ul id="sidebar-code">
+				<li class="side-code">
+					<div class="side-code-tit">
+					</div>
+					<a href=""></a>
+				</li>
+				<li class="side-site">
+					<a href=""></a>
+					<p class="_p">调查问卷</p>
+				</li>
+				<li class="side-totop">
+					<a href=""></a>
+					<p class="_p">回到顶部</p>
+				</li>
+			</ul>
+		</div>
+		</div>
+		<!--头部图片-->
+		<div id="header">
+			<div id="header-pic">
+				<a href="">
+					<img src="img/header-pic.png" id="header-pic-pic" />
+				</a>
+			</div>
+		</div>
+		<!--头部导航-->
+		<div id="main-nav">
+			<div id="main-nav-child">
+				<ul id="main-nav-ul-1">
+				</ul>
+				<ul id="main-nav-ul">
+					<li><span><a href="login.html">注册</a></span>|</li>
+					<li><span><a href="land.html">登录</a></span>|</li>
+					<li><span><a href="">我的订单</a></span>|</li>
+					<li><span><a href="">物流查询</a></span>|</li>
+					<li><span><a href="">我的关注</a></span>|</li>
+					<li><span><a href="">咨询</a></span>|</li>
+					<li><span><a href="">品牌馆</a></span>|</li>
+					<li id="lastphone">
+						<span><img src="img/phone.png"/><a href="">手机优品慧</a></span>
+						<p id="homeofphone">
+							<a href=""><img src="img/ewm90X90[1].JPG" /></a>
+							<span>扫一扫呦~</span>
+						</p>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!--banner及搜索框区域-->
+		<div id="logo">
+			<a href="index.html" id="logotohome"></a>
+			<div class="buystate">
+			</div>
+		</div>
+		<div class="service-goodscar">
+		</div>
+		<!--购物车主要内容-->
+		<div class="goodscarlogo">
+			<p></p>
+		</div>
+		<div id="goodscarmain">
+			<!--购物车头部-->
+			<div class="goodscarmain-tit">
+				<div class="goodscarmain-tit-left">
+					<div class="check-goodscar">
+						<input type="checkbox" name="" id="" value="" />
+					</div>
+					<div class="foreign">
+						海外购
+					</div>
+				</div>
+				<div class="goodscarmain-tit-right">
+					<!--地址-->
+					<div class="addresssea ">
+						<p class="pcontent ">北京北京大兴区</p>
+						<span>▼</span>
+						<!--地址导航省市县（区）-->
+						<div class="alladdress ">
+							<p class="_p ">×</p>
+							<ul class="alladdresstit ">
+								<li>
+									<p>请选择</p><span>▼</span></li>
+								<li>
+									<p>请选择</p><span>▼</span></li>
+								<li>
+									<p>请选择</p><span>▼</span></li>
+							</ul>
+							<ul class="alladdressprovince ">
+							</ul>
+							<ul class="alladdresscity ">
+							</ul>
+							<ul class="alladdressarea ">
+							</ul>
+						</div>
+					</div>
+					<!--单价-->
+					<div class="goodscar-price">
+						单价（元）
+					</div>
+					<!--数量-->
+					<div class="goodscar-price">
+						数量
+					</div>
+					<!--小计-->
+					<div class="goodscar-price">
+						小计
+					</div>
+					<!--操作-->
+					<div class="goodscar-price">
+						操作
+					</div>
+				</div>
+			</div>
+			<div class="goodscarmain">
+			</div>
+		</div>
+				<div class="bottom-fix-bar">
+					<div class="shopbody" id="order_div">
+						<div class="select-all">
+							<div class="chk-selector chk-selector-checked">
+								<input type="checkbox" name="item-select-all" class="item-select-all" id="chk-2015" checked="checked">
+								<label for="chk-2015">勾选商品</label>
+							</div>
+							全选
+						</div>
+						<div class="fl-oprate">
+							<a id="batchRemove" class="darkblue tu">批量删除</a> <a href="index.html" target="_blank" class="btn-continue">&lt;&lt;继续购物</a>
+						</div>
+						<div class="btn-area">
+
+							<a href="javascript:void(0)" onclick="CartManager.showCheckout();">
+								<!-- 立即结算 -->
+							</a>
+						</div>
+						<div class="price-area">
+							￥745
+						</div>
+						<div class="acount-total-area">
+							已选商品 <span class="fb">5</span> 件
+						</div>
+					</div>
+				</div>
+		<!--底部版权-->
+		<div id="copyright-top">
+		</div>
+		<div id="copy-right-ul">
+			<dl class="copy-right-dl left">
+				<dt class="firstdt">新手上路</dt>
+				<dd><a href="">新用户注册</a></dd>
+				<dd><a href="">忘记密码</a></dd>
+				<dd><a href="">购物流程</a></dd>
+			</dl>
+			<dl class="copy-right-dl left">
+				<dt class="firstdt">支付配送</dt>
+				<dd><a href="">货到付款</a></dd>
+				<dd><a href="">支付宝</a></dd>
+				<dd><a href="">配送方式</a></dd>
+			</dl>
+			<dl class="copy-right-dl left">
+				<dt class="firstdt">会员服务</dt>
+				<dd><a href="">服务承诺</a></dd>
+				<dd><a href="">会员制度</a></dd>
+				<dd><a href="">积分介绍</a></dd>
+				<dd><a href="">退换货原则</a></dd>
+			</dl>
+			<dl class="copy-right-dl left lastdl">
+				<dt class="firstdt">关于优惠品</dt>
+				<dd><a href="">企业介绍</a></dd>
+				<dd><a href="">联系我们</a></dd>
+				<dd><a href="">招商专区</a></dd>
+			</dl>
+			<dl class="sceonddl">
+				<dt>
+					<a href=""><img src="img/ewm90X90[1].JPG"/></a>
+					<p class="second-phone">手机优品慧</p>
+					<p class="second-phone2">（手机购）</p>
+				</dt>
+				<dd>
+					<a href=""><img src="img/foot_dh[1].JPG" /></a>
+				</dd>
+			</dl>
+		</div>
+		<div id="footer">
+			<p id="footer-list">
+				<a href="">首页</a>|
+				<a href="">关于优惠</a>|
+				<a href="">联系我们</a>|
+				<a href="">招贤纳士</a>|
+				<a href="">招商专区</a>|
+				<a href="">供应商入口</a>|
+				<a href="">友情链接</a>|
+				<a href="">网站地图</a>|
+				<a href="">资讯中心</a>|
+				<a href="">评论</a>|
+				<a href="">图片</a>
+			</p>
+			<div id="footer-firend">
+				<p class="footerp">
+					<em>友情连接:</em>
+					<a href="">华为商城</a>&nbsp;
+					<a href="">佐卡伊珠宝网</a>&nbsp;
+					<a href="">华强北</a>&nbsp;
+					<a href="">淘鞋网</a>&nbsp;
+					<a href="">团购网</a>&nbsp;
+					<a href="">中国零食网</a>&nbsp;
+					<a href="">腕表名表</a>&nbsp;
+					<a href="">太平洋家居产品库</a>&nbsp;
+					<a href="">网上购物</a>&nbsp;
+					<a href="">团购网</a>&nbsp;
+					<a href="">钻石</a>&nbsp;
+					<a href="">城市联盟</a>&nbsp;
+					<a href="">手表</a>&nbsp;
+					<a href="">九块邮</a>&nbsp;
+					<a href="">婚礼珠宝</a>&nbsp;
+					<a href="">如何开网店</a>&nbsp;
+					<a href="">法国红酒品牌</a>&nbsp;
+					<a href="">法国红酒品牌</a>&nbsp;
+				</p>
+				<div id="pulldown">
+					▼
+				</div>
+			</div>
+			<p id="footer-third">
+				优品慧（优购物）全球优品特卖网站&nbsp;专属于千万女性的优品特卖网站，优品慧（优购物）电视购物官方网站，100%正品保证&nbsp;支持货到付款.
+			</p>
+			<p id="footer-four">
+				Copyrightc2007-2015&nbsp;公司名称:北京优品慧网络科技有限公司&nbsp;统一社会信用代码:91110302339739621C&nbsp;ICP备案号:京ICP备15039150号-1&nbsp;
+			</p>
+			<p id="footer-four">
+				公司地址:北京市北京经济技术开发区同济南路19号7幢2层c区&nbsp;联系方式:400-707-0707
+			</p>
+		</div>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+	</body>
+
+</html>

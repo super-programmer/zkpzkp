@@ -1,0 +1,272 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+#logo {
+	padding-left: 286px;
+	position: relative;
+	padding-top: 26px;
+	width: 714px;
+	margin: 0 auto;
+	height: 79px;
+	background: url(../img/logo.png) no-repeat left bottom;
+}
+
+#logotohome {
+	display: block;
+	height: 79px;
+	width: 286px;
+	position: absolute;
+	left: 0px;
+	top: 37px;
+}
+
+
+/*导航样式*/
+
+#nav-center #nav-rec li a {
+	background: #F70800;
+}
+
+#nav-center #nav-rec li a:hover {
+	background: #BC0600;
+}
+
+#nav-center #nav-rec li:nth-child(2) a {
+	background: #BC0600;
+}
+
+#nav-center #nav-rec li:nth-child(6) a {
+	padding-left: 40px;
+	background: url(../img/tv.png) no-repeat 10px 8px;
+}
+
+#nav-center #nav-rec li:nth-child(6) a:hover {
+	padding-left: 40px;
+	background: url(../img/tv1.png) no-repeat 10px 8px #BC0600;
+}
+
+
+/*推荐标题后内容样式*/
+
+#fashion-main-tit strong {
+	display: block;
+	position: absolute;
+	top: 0px;
+	left: 100px;
+	font-weight: 100;
+	color: grey;
+	font-size: 16px;
+}
+
+
+/*食品精品推荐主要内容*/
+
+#main{
+	padding-bottom:20px;
+}
+#global-goods {
+	height: 410px;
+}
+
+.global-goods-main-first,
+.global-goods-main-second,
+.global-goods-main-three,
+.global-goods-main-four {
+	float: left;
+	height: 352px;
+	width: 226px;
+	background: #fff;
+}
+
+.global-goods-main-first {
+	width: 322px;
+}
+
+.global-goods-main-first a,
+.global-goods-main-three a {
+	display: block;
+	border-right: 1px solid #e8e8e8;
+	border-bottom: 1px solid #e8e8e8;
+	border-left: 1px solid #e8e8e8;
+	height: 351px;
+	overflow: hidden;
+}
+
+.global-goods-main-three a {
+	border: 0;
+	border-right: 1px solid #e8e8e8;
+	border-bottom: 1px solid #e8e8e8;
+}
+
+.global-goods-main-second a,
+.global-goods-main-four a {
+	display: block;
+	border-right: 1px solid #e8e8e8;
+	border-bottom: 1px solid #e8e8e8;
+	height: 175px;
+	overflow: hidden;
+}
+
+
+/*今日上新*/
+
+#fashion-main {
+	height: 16146px;
+	margin-bottom:20px;
+}
+
+#fashion-main-content {
+	height: 16146px;
+}
+
+#fashion-main-content ul {
+	width: 1020px;
+}
+
+#fashion-main-content ul li:hover {
+	border: 2px solid #f00;
+	width: 316px;
+	height: 450px;
+}
+
+#fashion-main-content ul li {
+	float: left;
+	margin-top: 20px;
+	margin-right: 20px;
+	width: 318px;
+	height: 452px;
+	overflow: hidden;
+	border: 1px solid #ddd;
+}
+
+
+/*上半部分内容*/
+
+.fashion-main-content-top {
+	width: 298px;
+	height: 399px;
+	padding: 10px;
+	background-color: #fff;
+	position: relative;
+}
+
+.fashion-main-content-goodspic {
+	position: relative;
+	width: 298px;
+	height: 298px;
+	overflow: hidden;
+	z-index: 2;
+}
+
+.fashion-main-content-goodspic img {
+	display: block;
+	width: 298px;
+	height: 298px;
+}
+
+.goods-tit {
+	line-height: 32px;
+	font-size: 12px;
+}
+
+.goods-tit span {
+	color: #f70800;
+	font-size: 16px;
+	margin-right: 5px;
+	float: left;
+}
+
+.goods-tit a {
+	color: black;
+	font-size: 16px;
+	display: block;
+	overflow: hidden;
+}
+
+.goods-space {
+	color: #f70800;
+	margin-top: 5px;
+	overflow: hidden;
+	height: 16px;
+	line-height: 16px;
+	font-size: 12px;
+	padding: 0 10px;
+}
+
+.salespro {
+	margin-top: 13px;
+	height: 26px;
+	padding: 0 10px 3px 10px;
+}
+
+.nowprice {
+	font-size: 26px;
+	color: #222;
+	font-family: arial;
+	margin-right: 10px;
+}
+
+.saleprice {
+	text-decoration: line-through;
+	color: #999;
+	font-size: 16px;
+	margin-top: 5px;
+}
+
+.peopleshop {
+	color: #666;
+	margin-top: 9px;
+	float: right;
+	font-size: 12px;
+}
+
+.peopleshop i {
+	font-style: normal;
+	color: red;
+}
+
+
+/*下半部分*/
+
+.fashion-main-content-bottom {
+	height: 32px;
+	line-height: 32px;
+	background-color: #f8f8f8;
+	color: #666;
+	font-size: 12px;
+	border-top: 1px solid #eee;
+	padding: 0 20px;
+}
+
+.goodscountry1 {
+	float: left;
+	line-height: 32px;
+	color: #666;
+	font-size: 12px;
+}
+.goodscountry{
+	display:none;
+}
+.goodscountry1 img {
+	float: left;
+	width: 38px;
+	height: 23px;
+	margin: 3px 5px 0 0;
+	display: inline;
+	_margin-top: 1px;
+	border: 1px solid #eaeaea;
+	border-radius: 5px;
+	overflow: hidden;
+}
+
+.lasttime {
+	float: right;
+	line-height: 32px;
+	color: #666;
+	font-size: 12px;
+	position:relative;
+	padding-left:18px;
+	background:url(../img/i_time[1].PNG) no-repeat 0 10px;
+}

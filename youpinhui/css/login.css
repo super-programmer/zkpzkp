@@ -1,0 +1,258 @@
+/*注册页顶部*/
+#loginlogo{
+	width:968px;
+	height:112px;
+	margin:0 auto;
+}
+#loginlogo-logo{
+	width:353px;
+	height:57px;
+	margin-top:31px;
+	float:left;
+}
+#loginlogo-logo p{
+	width:168px;
+	height:57px;
+	background:url(../img/login/zc.GIF);
+	float: left; 
+}
+#loginlogo-logo a{
+	display:block;
+	width:185px;
+	height:57px;
+	float:left;
+	background:url(../img/login/welland[1].gif);
+}
+#login-loginon{
+	float:right;
+	height:14px;
+	padding-top:70px;
+	width:120px;
+}
+#login-loginon p{
+	float:left;
+	font-size:12px;
+}
+#login-loginon a{
+	display:block;
+	font-size:12px;
+	float:left;
+	color:red;
+}
+/*注册主要内容*/
+/*导航*/
+#login-nav{
+	width:968px;
+	height:42px;
+	margin-top:5px;
+	margin:0 auto;
+}
+#login-nav li{
+	float:left;
+	width:225px;
+	height:42px;
+	color:#777;
+	font-weight:700;
+	text-align: center;
+	line-height: 42px;
+	margin-right:2px;
+	list-style: none;
+	font-size:14px;
+	background:url(../img/login/zc.GIF) no-repeat 0 -102px;
+	cursor:pointer;
+}
+#login-nav li span{
+	padding-left:16px;
+	background:url(../img/login/zc.GIF) no-repeat 0 -212px;
+}
+#login-nav li:nth-child(2) span{
+	background:url(../img/login/zc.GIF) no-repeat 0 -252px;
+}
+#login-nav li:nth-child(3) span{
+	background:url(../img/login/zc.GIF) no-repeat 0 -304px;
+}
+#login-land{
+	border: 2px solid #ff8400;
+  	width:964px;
+  	height:445px;
+  	margin:0 auto;
+  	padding-top:45px;
+  	position:relative;
+}
+/*注册详细信息*/
+#phonelogin，#emaillogin,#tvlogin{
+	width:964px;
+	height:401px;
+	position:absolute;
+	margin-top:45px;
+	top:0;
+}
+/*手机验证*/
+#phonelogin{
+	/*display:none;*/
+}
+.phonelogin-content{
+	width:100%;
+	height:52px;
+	font-size:12px;
+}
+.phonelogin-contenttit{
+	display: block;
+  	text-align: right;
+  	width: 187px;
+  	padding-right: 15px;
+  	height: 37px;
+  	line-height: 37px;
+  	color: #666666;
+  	float:left;
+}
+.phonelogin-contentmain{
+	display:block;
+	height:37px;
+	float:left;
+	position:relative;
+}
+.phonelogin-contentmain1{
+	display:block;
+	width:351px;
+	height:37px;
+	float:left;
+}
+.tradecode{
+	color: blue;
+}
+.phonelogin-contentpic{
+	width:16px;
+	height:16px;
+	z-index: 1;
+	background:url(../img/login/welland[1].gif) 0 -229px no-repeat;
+	position:absolute;
+	right:290px;
+	top:12px;
+}
+.phonelogin-contentpic3,
+.phonelogin-contentpic4{
+	background:url(../img/login/welland[1].gif) 0 -251px no-repeat;
+}
+.phonelogin-contentmain-pro{
+	background-color: #fff3f3;
+  	border: 1px solid #ffadb0;
+  	color: #eb0007;
+  	width: 270px;
+  	height: 37px;
+  	line-height: 35px;
+  	padding-left: 9px;
+  	margin-left:2px;
+  	float:left;
+  	display:none;
+}
+.phonelogin-contentmain-pro1{
+	background-color:#CCCCCC;
+  	border: 1px solid #a2a2a2;
+  	color:black;
+  	width: 270px;
+  	height: 37px;
+  	line-height: 35px;
+  	padding-left:9px;
+  	margin-left:2px;
+  	float:left;
+  	display:none;
+}
+.phonelogin-contentmain-pro2{
+	background-color: #fff3f3;
+  	border: 1px solid #ffadb0;
+  	color: #eb0007;
+  	width: 270px;
+  	height: 37px;
+  	line-height: 35px;
+  	padding-left: 9px;
+  	margin-left:2px;
+  	float:left;
+  	display:none;
+}
+.phonelogin-contentmain-pro3{
+  	color: #eb0007;
+  	width: 270px;
+  	height: 37px;
+  	line-height: 35px;
+  	padding-left: 9px;
+  	margin-left:2px;
+  	float:left;
+  	/*display:none;*/
+}
+/*验证码*/
+.number{
+	width:100px;
+	height:37px;
+	display:inline-block;
+	text-align: center;
+	line-height: 37px;
+	font-size: 16px;
+	letter-spacing: 4px;
+}
+#notecheck{
+	width:102px;
+	height:25px;
+	padding:5px 10px 5px  10px;
+}
+#notesend{
+	float:left;
+	width: 116px;
+  	height: 26px;
+  	border: none;
+  	background: url(../img/login/zc.GIF) 0 -146px no-repeat;
+  	cursor: pointer;
+  	margin: 6px 0 0 10px;
+  	display: block;
+  	line-height: 26px;
+  	text-align: center;
+  	color: #858585;
+}
+/*用户服务承诺*/
+.phonelogin-space{
+	display:block;
+	width:187px;
+	height:37px;
+	padding-right:15px;
+	float:left;
+}
+.check-a{
+	color:blue;
+}
+#lastsub{
+	height:117px;
+	width:964px;
+}
+.phonelogin-sub{
+	width:324px;
+	height:88px;
+	float:left;
+}
+.phonelogin-sub em{
+	font: 13px '微软雅黑';
+  	color: #eb0007;
+}
+.phonelogin-sub-button{
+	width: 126px;
+  	height: 33px;
+  	border: none;
+  	background: url(../img/login/zc.GIF) 0 -175px no-repeat;
+  	margin-bottom: 40px;
+  	cursor: pointer;
+}
+.callhelp{
+	color: #0089CF;
+}
+/*邮箱验证*/
+#emaillogin{
+	/*display:none;*/
+}
+/*电视用户激活*/
+#tvlogin{
+	/*display:none;*/
+}
+
+
+
+
+

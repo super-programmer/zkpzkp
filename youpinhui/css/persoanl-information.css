@@ -1,0 +1,304 @@
+/*个人资料*/
+
+.per-information {
+	display: block;
+	height: 24px;
+	width: 793px;
+	border-bottom: 2px solid #e50038;
+	position: relative;
+}
+
+#indent-right {
+	position: relative;
+}
+
+.per-information li {
+	float: left;
+	width: 132px;
+	height: 24px;
+	line-height: 24px;
+	background: url(../img/center/order.gif) 0 -42px no-repeat;
+	position: absolute;
+	top: 0;
+	text-align: center;
+	cursor: pointer;
+	font-size: 14px;
+	color: #555;
+	font-weight: 600;
+}
+
+
+/*安全设置*/
+
+.pos {
+	left: 110px;
+}
+
+.per-information .on {
+	color: #fff;
+	font-size: 14px;
+	background: url(../img/center/order.gif) 0 -13px no-repeat;
+	z-index: 9;
+}
+
+
+/*个人资料内容*/
+
+.data {
+	position: absolute;
+	height: 508px;
+	width: 753px;
+	padding: 45px 0 0 40px;
+}
+
+.personal-safe {
+	position: absolute;
+	float: left;
+	width: 773px;
+	height: 392px;
+	overflow: hidden;
+	margin: 20px 0 0 10px;
+}
+
+
+/*头像*/
+.data form{
+	width:753px;
+	height:508px;
+}
+.per-pic {
+	width: 753px;
+	height: 103px;
+	font-size: 12px;
+}
+
+
+.per-pic span {
+	display: block;
+	float: left;
+}
+.per-pic span:first-child {
+	height: 70px;
+	width:78px;
+	line-height: 74px;
+}
+.per-pic span:nth-child(2) {
+	width: 70px;
+	height: 70px;
+	border: 1px solid #dadada;
+	padding: 2px;
+	cursor: pointer;
+	background: url(../img/center/headimg.jpg) left -512px no-repeat;
+}
+.per-pic em{
+   height: 70px;
+  line-height: 74px;
+  font-family: "微软雅黑";
+  font-size: 14px;
+  color: #999999;
+  font-style: normal;
+  padding-left: 14px;
+}
+/*资料详情*/
+.pre-con{
+  width: 750px;
+  height: 45px;
+}
+.pre-con-tit{
+  font-size:12px;
+	display: block;
+  float: left;
+  height: 27px;
+  line-height: 27px;
+  width: 78px;
+  text-align: left;
+}
+.pre-con-main{
+	float: left;
+	font-size:12px;
+  height: 27px;
+  line-height: 27px;
+}
+/*输入框*/
+.pre-con-main input{
+	width: 260px;
+  height: 26px;
+  border: 1px solid #b3b3b3;
+}
+.pre-con em{
+	height: 27px;
+  line-height: 24px;
+  font-family: "微软雅黑";
+  font-size:14px;
+  color: #999999;
+  padding-left: 14px;
+  font-style:normal;
+}
+.pre-con em strong{
+	color:red;
+}
+/*性别*/
+.sex input{
+	display:inline-block;
+	width:13px;
+	height:13px;
+}
+/*生日*/
+.pre-con select{
+	width: 81px;
+  height: 22px;
+  border: 1px solid #b3b3b3;
+  margin-right: 7px;
+}
+/*手机号码*/
+.pre-con a{
+	color:blue;
+}
+.pre-con2{
+	display:none;
+}
+/*邮箱验证*/
+.lastpre-con {
+	position:relative;
+}
+.lastpre-con i{
+	font-style: normal;
+	position:absolute;
+	top:30px;
+	left:78px;
+}
+/*提交按钮*/
+.pre-btn{
+	margin-top:30px;
+}
+.pre-btn input{
+	width:100px;
+	background:red;
+	color:white;
+	cursor: pointer;
+	border-radius:4px;
+}
+/*安全设置*/
+.securitylevel {
+  width: 771px;
+  height: 49px;
+  background-color: #fff8f1;
+  border: 1px solid #ffdfc0;
+}
+.securitylevel span {
+  display: block;
+  float: left;
+  margin-top: 17px;
+  height: 15px;
+  line-height: 15px;
+}
+.mgl17 {
+  margin-left: 39px;
+}
+/*安全等级*/
+.seclev b.aning {
+  background-color: #ff8400;
+}
+.seclev b {
+  display: block;
+  float: left;
+  width: 36px;
+  height: 15px;
+  line-height: 15px;
+  text-align: center;
+  margin-right: 1px;
+  font-weight: normal;
+  color: #fff;
+}
+.seclev b.noting {
+  background-color: #c4c4c4;
+}
+.setsectips {
+  margin-left: 20px;
+  color: #eb0007;
+}
+/*安全设置详情*/
+.secverify {
+  width: 771px;
+  height: 329px;
+  border: 1px solid #dbdbdb;
+  margin-top: 10px;
+}
+.landpassword {
+  margin-top: 45px;
+  height: 85px;
+}
+/*登录密码*/
+.landpassword, .phoneverify, .emailverify {
+  margin-left: 70px;
+  width: 690px;
+}
+.l {
+	font-size: 12px;
+  float: left;
+}
+.levtips {
+  height: 85px;
+  width: 305px;
+  color: #414141;
+}
+.setok {
+  background: url(../img/center/tips_10.jpg) left top no-repeat;
+}
+.setok, .setno {
+  width: 123px;
+  height: 35px;
+  line-height: 35px;
+  font-size: 16px;
+  font-weight: bold;
+  font-family: '微软雅黑';
+  color: #494949;
+  padding-left: 46px;
+}
+.changepassword a{
+  color:#22acf3;
+}
+.changepassword, .verifynow {
+  width: 100px;
+  margin-left: 75px;
+}
+.levtips b {
+  color: #999;
+  font-weight: normal;
+}
+/*手机*/
+.phoneverify {
+  height: 112px;
+}
+.bangding {
+  padding-left: 17px;
+  color: #999;
+  line-height: 20px;
+}
+.verifywhere {
+  width: 75px;
+  height: 24px;
+  line-height: 24px;
+  text-align: center;
+  color: #ff6600;
+  display: block;
+  border: 1px solid #ff6600;
+  border-radius: 2px;
+}
+/*邮箱*/
+.emailverify {
+  height: 85px;
+}
+.setno {
+  background: url(../img/center/xiajia_03.jpg) left top no-repeat;
+}
+
+
+
+
+/*昨日热销*/
+#hotsell {
+	position: absolute;
+	bottom: 10px;
+	left: 10px;
+}
