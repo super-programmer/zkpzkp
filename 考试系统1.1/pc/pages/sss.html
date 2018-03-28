@@ -1,0 +1,669 @@
+<html><head>
+    <title>用户管理 - 乐课网</title>
+
+
+    <meta charset="UTF-8">
+    <meta property="qc:admins" content="1521476575645356367">
+    <!-- <meta name="google" value="notranslate" /> -->
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="Cache-Control" content="no-store, no-cache, must-revalidate">
+    <meta http-equiv="Expires" content="0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <link type="image/x-icon" rel="Bookmark" href="https://static.leke.cn/images/common/favicon.ico">
+    <link type="image/x-icon" rel="shortcut icon" href="https://static.leke.cn/images/common/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="https://static.leke.cn/styles/common/global.css?t=20180201">
+
+
+    <!--[if lte IE 8]>
+    <script src="https://static.leke.cn/scripts/common/polyfill/html5shiv.min.js"></script>
+    <script src="https://static.leke.cn/scripts/common/polyfill/es5-shim.min.js"></script>
+    <script src="https://static.leke.cn/scripts/common/polyfill/es5-sham.min.js"></script>
+    <script src="https://static.leke.cn/scripts/common/polyfill/console-polyfill.js"></script>
+    <![endif]-->
+    <script src="https://hm.baidu.com/hm.js?1cc429d7f39859f7f65470f59284e944"></script><script src="/scripts/seajs/2.2.1/sea.js?v=20140422"></script>
+    <script src="/scripts/seajs/2.2.1/seajs-text-1.0.2.js?v=20140825"></script>
+    <script type="text/javascript">if(!Leke){var Leke={};}Leke.ctx='';Leke.assets='https://static.leke.cn';Leke.user={"currentSchoolId":5313,"userExtraInfo":null,"currentUserName":"3decr4ewdc@163.com","currentEnglishName":null,"currentSchoolName":"皮皮小学","currentSchoolNature":1,"currentPhoto":null,"userId":676597,"currentRoleName":"教务","currentRoleId":104,"currentMenus":null,"currentIsLearnCenter":false,"secondDomain":""};Leke.ticket='VFZSUlBRPT07TnpnNE9UYzdPRGs0OzE0MTQ=';Leke.locale='zh_CN';Leke.domain={"payServerName":"https://pay.leke.cn","learnServerName":"https://learn.leke.cn","tutorServerName":"https://tutor.leke.cn","mainDomain":"leke.cn","wrongtopicServerName":"https://wrongtopic.leke.cn","tesolServerName":"http://tesol.sclass.cn","helpServerName":"https://help.leke.cn","fileServerName":"https://file.leke.cn","videoServerName":"https://video.leke.cn","crmServerName":"https://crm.leke.cn","eduplanServerName":"https://eduplan.leke.cn","noteServerName":"https://note.leke.cn","chatServerName":"https://chat.leke.cn","incentiveServerName":"https://incentive.leke.cn","casServerName":"https://cas.leke.cn","questionServerName":"https://question.leke.cn","homeworkServerName":"https://homework.leke.cn","noticeServerName":"https://notice.leke.cn","diagServerName":"https://diag.leke.cn","classServerName":"class.leke.cn","lekeServerName":"https://www.leke.cn","paperServerName":"https://paper.leke.cn","supportServerName":"https://support.leke.cn","mallServerName":"https://mall.leke.cn","lessonServerName":"https://lesson.leke.cn","indexServerName":"https://index.leke.cn","staticServerName":"https://static.leke.cn","resourceServerName":"https://resource.leke.cn","repositoryServerName":"https://repository.leke.cn","beikeServerName":"https://beike.leke.cn","monitorServerName":"https://monitor.leke.cn","fsServerName":"https://fs.leke.cn","sclassServerName":"http://www.sclass.cn","courseServerName":"https://course.leke.cn","homeServerName":"https://home.leke.cn","rateServerName":"https://rate.leke.cn","voiceServerName":"https://voice.leke.cn","casDomain":"leke.cn,sclass.cn","userServerName":"https://user.leke.cn","rtmpServerName":"rtmp://vod1.leke.cn/vod","onlineServerName":"https://onlineclass.leke.cn"};Leke.device=null;Leke.spm=null;Leke.currentSystemTime='1522144548886';Leke.Clock=(function(time){var offset=new Date().getTime()-time;return {date:function(){return new Date(this.time());},time:function(){return new Date().getTime()-offset;}}})(1522144548886);</script>
+    <script>
+        seajs.config({
+            base: '/scripts/',
+            alias: {
+                'jquery': 'common/jquery-1.12.0.min.js',
+                'underscore': 'common/underscore-min.js',
+                'knockout': 'common/knockout/knockout-latest.js',
+                'jquery-cookie': 'common/jquery.cookie.js',
+                'i18n': 'common/i18n.js',
+                'swfobject': 'common/swfobject.js',
+                'fileupload': 'common/ui/ui-fileupload/FileUpLoad.js',
+                'fileprogress': 'common/ui/ui-fileupload/defaultFileProgress.js',
+
+                'tree': 'common/ui/ui-tree/Tree.js',
+                'date': 'common/ui/ui-datepicker/ui-datepicker.js?v=20141126',
+                'dialog': 'common/ui/ui-dialog/ui-dialog.js',
+                'editor': 'common/ui/ui-htmleditor/ui-htmleditor.js',
+                'placeholder': 'common/ui/ui-placeholder/ui-placeholder.js',
+                'page': 'common/ui/ui-page/ui-page.js',
+                'thselect': 'common/ui/ui-thselect/ui-thselect.js',
+                'echart': 'common/ui/ui-echarts/echart.js',
+                'chart': 'common/ui/ui-echarts/chart.js',
+                'jquery-ui':'common/jquery.ui-1.9.2.min.js',
+                'autocomplete':'common/jquery.ui.autocomplete.min.js',
+                'slideShow':'common/ui/ui-slideShow/ui-slideShow.js',
+
+                'base64': 'common/security/enc-base64.js',
+                'utf16': 'common/security/enc-utf16.js',
+                'md5': 'common/security/md5.js',
+                'aes': 'common/security/aes.js',
+                'sha3': 'common/security/sha3.js',
+                'hmac': 'common/security/hmac.js',
+
+                'mustache': 'common/mustache.min.js',
+                'json': 'common/json2.min.js',
+                'validator': 'common/ui/ui-validator/validator.js',//废除
+                'validate': 'common/ui/ui-validate/ui-validate.js',
+                'utils': 'common/utils.js'
+            },
+            preload: [
+                this.JSON ? '' : 'json'
+            ],
+            vars: {
+                locale: 'zh_CN'
+            },
+            map: [
+                [/^(((?!\/common\/).)*\.(?:css|js))(.*)$/i,'$1?t=20180201']
+            ]
+        });
+
+        window.ctx = '';
+        window.assets = 'https://static.leke.cn';
+        window.locale = 'zh_CN';
+        window.currentSystemTime = parseInt('' || new Date().getTime());
+        seajs.use('common/common');
+        seajs.use('core-business/online-heartbeat');
+    </script>
+
+
+
+    <link rel="stylesheet" type="text/css" href="https://static.leke.cn/styles/moveinto/moveinto.css?t=20180201">
+    <link rel="stylesheet" type="text/css" href="https://static.leke.cn/styles/lesson/lesson.css?t=20180201">
+</head>
+<body>
+
+
+
+
+
+
+
+
+<input id="iLoginUrl" type="hidden" value="https://cas.leke.cn/login?ticket=null">
+<input id="iChangeRoleUrl" type="hidden" value="https://cas.leke.cn/changeRole?ticket=null">
+
+<!-- 页面头部 -->
+<div class="m-bg"></div>
+
+
+
+
+
+
+
+<div class="g-hdn">
+    <div class="m-topn">
+        <div class="center">
+            <div class="logo">乐课网--我们的快乐课堂</div>
+            <ul class="nav">
+                <li><a href="https://www.leke.cn">乐课网首页</a></li>
+
+                <li><a href="https://mall.leke.cn">乐mall</a></li>
+
+
+                <li><a href="https://cas.leke.cn">我的乐课</a></li>
+
+
+                <li><a href="https://cas.leke.cn/changeLearnCenter">学习中心</a></li>
+
+                <li><a href="https://pay.leke.cn/auth/common/shopCart/cartItemList.htm" class="shoppingcar" target="_blank"><span class="cart-ico"></span>购物车（<span class="shopcart">0</span>）</a></li>
+                <li><a href="https://tutor.leke.cn/auth/common/help/help.htm" target="_blank">帮助中心</a></li>
+
+
+
+
+                <li class="message">
+                    <a href="https://notice.leke.cn/auth/common/todo/myTodoList.htm" target="_blank">消息中心<i class="total">10</i></a>
+                    <ol>
+                        <li><a href="https://notice.leke.cn/auth/common/todo/myTodoList.htm" target="_blank">消息<i class="count notice"></i></a></li>
+                        <li><a href="https://tutor.leke.cn/auth/common/mail/rec/recBox.htm" target="_blank">收件箱<i class="count inbox"></i></a></li>
+                        <li><a href="https://notice.leke.cn/auth/common/receivedAffiche.htm" target="_blank">公告<i class="count affiche" style="display: inline;">10</i></a></li>
+                    </ol>
+                </li>
+                <li><a href="https://tutor.leke.cn/auth/common/user/myDetail1.htm" target="_blank">个人中心</a></li>
+
+
+
+
+
+
+
+
+
+
+                <!-- 角色切换 -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <!-- 个人信息 -->
+                <li class="sculpture">
+                    <a href="https://tutor.leke.cn/auth/common/user/myDetail1.htm" target="_blank"><img src="https://static.leke.cn/images/home/photo.png" alt=""></a>
+                    <div class="pop">
+                        <div class="avatar"><a href="https://tutor.leke.cn/auth/common/user/myDetail1.htm" target="_blank"><img src="https://static.leke.cn/images/home/photo.png" alt=""></a></div>
+                        <div class="name"><span class="user-name">3decr4ewdc@163.com</span><span class="level-"></span></div>
+                        <div class="lenum">乐号：<span>774789</span></div>
+
+
+                        <div class="title"><span>教务</span> - <span class="detail">皮皮小学</span></div>
+
+                        <div class="join">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                        </div>
+
+                        <div class="sign-out"><a href="https://cas.leke.cn/logout">退出</a></div>
+                        <div class="nullbox"></div>
+                    </div>
+                </li>
+                <script>
+                    seajs.use('navigate/select-role');
+                </script>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<ul class="c-sidebar">
+
+
+
+    <li class="mobile">
+        <a href="javascript:void(0);"></a>
+        <div class="tdc">
+            <div class="download">
+                <p>下载乐课APP</p>
+            </div>
+            <div class="star">
+                <p>关注微信</p>
+            </div>
+        </div>
+    </li>
+    <li class="support">
+        <a href="http://wpa.b.qq.com/cgi/wpa.php?ln=1&amp;key=XzgwMDA2MjAzOV8yOTUwNTRfODAwMDYyMDM5XzJf" target="_blank"></a>
+        <!-- <a href="https://support.leke.cn/visitor.htm" target="_blank"></a> -->
+    </li>
+    <li class="gotop">
+        <a href="javascript:scroll(0,0)"></a>
+    </li>
+</ul>
+
+
+<script>
+    seajs.use('toolbar/toolbar');
+</script>
+
+<script>
+    seajs.use('header/header-2.4.12');
+</script>
+
+
+
+<div style="display:none">
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?1cc429d7f39859f7f65470f59284e944";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+</div>
+
+
+
+
+
+
+<div class="m-org-center-top m-center-behind-top">
+    <div class="org-center">
+        <div class="logo">
+            <div class="logo-hover">
+                <a href="https://www.leke.cn"><img src="https://static.leke.cn/images/common/header/logo-backend.png" id="schoolLogo"></a>
+            </div>
+            <i class="sign sign-school"></i>
+
+
+        </div>
+        <div class="school-motto">傻大姐阿萨德飞机回复交话费大飒飒交话费大</div>
+    </div>
+</div>
+
+<div class="g-bd">
+
+
+
+
+
+
+
+
+    <div class="g-mn">
+        <!-- 通讯录分类-->
+        <div class="z-gr-moveinto-contacts j-panel jcontactGroup ">
+            <input type="hidden" id="jerrorMessage" value="">
+            <div class="classify-title">
+                <span class="cur j-ipt" id="jTop">选考1班</span>
+
+
+                <div class="icon iconfont add-btn " style="width:38px;">
+
+                    <i class="icon iconfont j-edit-class">󰅏</i>
+
+                    <i class="icon iconfont j-addBtn" style="float:right;">󰅔</i>
+                    <div class="m-tippop m-tippop-bt-left"><span class="msg">添加分类</span><div class="arrow"><em></em><i></i></div></div>
+                </div>
+
+            </div>
+
+            <ul class="classify-list">
+
+                <li>
+                    <input type="text" data-groupid="25" readonly="readonly" class="j-ipt" value="分组名称">
+
+                    <div class="logo-btn">
+                        <i class="icon iconfont edit-btn j-editBtn">󰅏</i><i class="icon iconfont delete-btn j-delBtn">󰄿</i>
+                    </div>
+
+                </li>
+
+                <li>
+                    <input type="text" data-groupid="26" readonly="readonly" class="j-ipt" value="分组名称">
+
+                    <div class="logo-btn">
+                        <i class="icon iconfont edit-btn j-editBtn">󰅏</i><i class="icon iconfont delete-btn j-delBtn">󰄿</i>
+                    </div>
+
+                </li>
+
+                <li>
+                    <input type="text" data-groupid="27" readonly="readonly" class="j-ipt" value="分组名称">
+
+                    <div class="logo-btn">
+                        <i class="icon iconfont edit-btn j-editBtn">󰅏</i><i class="icon iconfont delete-btn j-delBtn">󰄿</i>
+                    </div>
+
+                </li>
+
+                <li>
+                    <input type="text" data-groupid="28" readonly="readonly" class="j-ipt" value="分组名称">
+
+                    <div class="logo-btn">
+                        <i class="icon iconfont edit-btn j-editBtn">󰅏</i><i class="icon iconfont delete-btn j-delBtn">󰄿</i>
+                    </div>
+
+                </li>
+
+                <li><input type="text" class="j-ipt" value="分组名称" readonly="readonly"><div class="logo-btn"><i class="icon iconfont edit-btn j-editBtn">󰅏</i><i class="icon iconfont delete-btn j-delBtn">󰄿</i></div></li></ul>
+        </div>
+        <div class="f-bfc z-gr-moveinto-contacts-right c-students-list">
+            <form action="" method="post" id="jStudentListForm">
+                <div class="m-search-box">
+                    <input type="hidden" id="J_groupId" name="groupId">
+                    <input type="hidden" id="jClassType" value="3">
+                    <input type="hidden" id="jClassId" name="classId" value="659587">
+                    <label class="title">乐号：</label>
+                    <input type="text" name="loginName" class="u-ipt u-ipt-nm">
+                    <label class="title">姓名：</label>
+                    <input type="text" name="userName" class="u-ipt u-ipt-nm">
+                    <button class="u-btn u-btn-nm u-btn-bg-turquoise" id="jStudentListSearch">查询</button>
+                    <div class="operation">
+
+                        <a class="u-btn u-btn-nm u-btn-bg-orange" href="batchAddStudents.htm?data=NjU5NTg3">添加</a>
+
+                        <a class="u-btn u-btn-nm u-btn-bg-orange" type="button" id="J_exportStudents">导出</a>
+                    </div>
+                </div>
+
+                <div class="m-setting-box">
+                    <div class="m-btns c-btns">
+                        <div class="init-btn">
+                            <a>移动到组</a><b><i></i></b>
+                        </div>
+                        <menu id="J_bodyGroups" style="width: 125px">
+                            <li>
+                                <a data-groupid="25" class="removeGroupItem" href="javascript:;">分组名称
+                                </a>
+                            </li>
+                            <li>
+                                <a data-groupid="26" class="removeGroupItem" href="javascript:;">分组名称
+                                </a>
+                            </li>
+                            <li>
+                                <a data-groupid="27" class="removeGroupItem" href="javascript:;">分组名称
+                                </a>
+                            </li>
+                            <li>
+                                <a data-groupid="28" class="removeGroupItem" href="javascript:;">分组名称
+                                </a>
+                            </li>
+                            <li>
+                                <a data-groupid="29" class="removeGroupItem" href="javascript:;">分组名称
+                                </a>
+                            </li>
+                        </menu>
+                    </div>
+                    <div class="m-btns c-btns" id="jMoveClass" style="">
+                        <div class="init-btn">
+                            <a>移动到班</a><b><i></i></b>
+                        </div>
+                        <menu id="J_bodyClazz" style="width: 125px">
+                            <li>
+                                <a data-classid="659588" class="removeClassItem" href="javascript:;">选考2班
+                                </a>
+                            </li>
+                        </menu>
+                    </div>
+                    <i id="jTip" class="iconfont icon icon-14052218" title="移动到班：只支持移动到相同学科下相同组合id的班级。" style=""></i>
+
+                    <div class="operation" style="float:right;margin-top:10px;">
+                        共<span id="jCount">16</span>人
+                    </div>
+
+                </div>
+
+                <div class="m-table">
+                    <table>
+                        <thead>
+                        <tr>
+
+                            <th width="5%"><input type="checkbox" class="J_chkAllItems" title="全选"></th>
+
+                            <th width="10%">乐号</th>
+                            <th width="15%">姓名</th>
+                            <th width="10%">行政班</th>
+
+                            <th width="10%">操作</th>
+
+                        </tr>
+                        </thead>
+                        <tbody id="jStudentListBody">
+                        <tr>
+
+                            <td><input type="checkbox" class="J_chkItem" data-user="852904"> </td>
+
+                            <td>957294</td>
+                            <td>学2.2.20</td>
+                            <td>四年级(2)班</td>
+
+                            <td class="operation"><a class="J_removeRelation" data-userid="852904" href="javascript:;">移除</a></td>
+
+                        </tr>
+                        <tr>
+
+                            <td><input type="checkbox" class="J_chkItem" data-user="852907"> </td>
+
+                            <td>957167</td>
+                            <td>学2.3.3</td>
+                            <td>四年级(3)班</td>
+
+                            <td class="operation"><a class="J_removeRelation" data-userid="852907" href="javascript:;">移除</a></td>
+
+                        </tr>
+                        <tr>
+
+                            <td><input type="checkbox" class="J_chkItem" data-user="852869"> </td>
+
+                            <td>957302</td>
+                            <td>学2.1.4</td>
+                            <td>四年级(1)班</td>
+
+                            <td class="operation"><a class="J_removeRelation" data-userid="852869" href="javascript:;">移除</a></td>
+
+                        </tr>
+                        <tr>
+
+                            <td><input type="checkbox" class="J_chkItem" data-user="852918"> </td>
+
+                            <td>953749</td>
+                            <td>学2.3.14</td>
+                            <td>四年级(3)班</td>
+
+                            <td class="operation"><a class="J_removeRelation" data-userid="852918" href="javascript:;">移除</a></td>
+
+                        </tr>
+                        <tr>
+
+                            <td><input type="checkbox" class="J_chkItem" data-user="852935"> </td>
+
+                            <td>956642</td>
+                            <td>学2.4.12</td>
+                            <td>四年级(4)班</td>
+
+                            <td class="operation"><a class="J_removeRelation" data-userid="852935" href="javascript:;">移除</a></td>
+
+                        </tr>
+                        <tr>
+
+                            <td><input type="checkbox" class="J_chkItem" data-user="852928"> </td>
+
+                            <td>954893</td>
+                            <td>学2.4.5</td>
+                            <td>四年级(4)班</td>
+
+                            <td class="operation"><a class="J_removeRelation" data-userid="852928" href="javascript:;">移除</a></td>
+
+                        </tr>
+                        <tr>
+
+                            <td><input type="checkbox" class="J_chkItem" data-user="852940"> </td>
+
+                            <td>957293</td>
+                            <td>学2.4.17</td>
+                            <td>四年级(4)班</td>
+
+                            <td class="operation"><a class="J_removeRelation" data-userid="852940" href="javascript:;">移除</a></td>
+
+                        </tr>
+                        <tr>
+
+                            <td><input type="checkbox" class="J_chkItem" data-user="852945"> </td>
+
+                            <td>957362</td>
+                            <td>学2.5.1</td>
+                            <td>四年级(5)班</td>
+
+                            <td class="operation"><a class="J_removeRelation" data-userid="852945" href="javascript:;">移除</a></td>
+
+                        </tr>
+                        <tr>
+
+                            <td><input type="checkbox" class="J_chkItem" data-user="852967"> </td>
+
+                            <td>956831</td>
+                            <td>学2.6.3</td>
+                            <td>四年级(6)班</td>
+
+                            <td class="operation"><a class="J_removeRelation" data-userid="852967" href="javascript:;">移除</a></td>
+
+                        </tr>
+                        <tr>
+
+                            <td><input type="checkbox" class="J_chkItem" data-user="852872"> </td>
+
+                            <td>955112</td>
+                            <td>学2.1.7</td>
+                            <td>四年级(1)班</td>
+
+                            <td class="operation"><a class="J_removeRelation" data-userid="852872" href="javascript:;">移除</a></td>
+
+                        </tr>
+                        <tr>
+
+                            <td><input type="checkbox" class="J_chkItem" data-user="852897"> </td>
+
+                            <td>956756</td>
+                            <td>学2.2.13</td>
+                            <td>四年级(2)班</td>
+
+                            <td class="operation"><a class="J_removeRelation" data-userid="852897" href="javascript:;">移除</a></td>
+
+                        </tr>
+                        <tr>
+
+                            <td><input type="checkbox" class="J_chkItem" data-user="852917"> </td>
+
+                            <td>955373</td>
+                            <td>学2.3.13</td>
+                            <td>四年级(3)班</td>
+
+                            <td class="operation"><a class="J_removeRelation" data-userid="852917" href="javascript:;">移除</a></td>
+
+                        </tr>
+                        <tr>
+
+                            <td><input type="checkbox" class="J_chkItem" data-user="852919"> </td>
+
+                            <td>954289</td>
+                            <td>学2.3.15</td>
+                            <td>四年级(3)班</td>
+
+                            <td class="operation"><a class="J_removeRelation" data-userid="852919" href="javascript:;">移除</a></td>
+
+                        </tr>
+                        <tr>
+
+                            <td><input type="checkbox" class="J_chkItem" data-user="852915"> </td>
+
+                            <td>957310</td>
+                            <td>学2.3.11</td>
+                            <td>四年级(3)班</td>
+
+                            <td class="operation"><a class="J_removeRelation" data-userid="852915" href="javascript:;">移除</a></td>
+
+                        </tr>
+                        <tr>
+
+                            <td><input type="checkbox" class="J_chkItem" data-user="852933"> </td>
+
+                            <td>957333</td>
+                            <td>学2.4.10</td>
+                            <td>四年级(4)班</td>
+
+                            <td class="operation"><a class="J_removeRelation" data-userid="852933" href="javascript:;">移除</a></td>
+
+                        </tr>
+                        <tr>
+
+                            <td><input type="checkbox" class="J_chkItem" data-user="852892"> </td>
+
+                            <td>956485</td>
+                            <td>学2.2.8</td>
+                            <td>四年级(2)班</td>
+
+                            <td class="operation"><a class="J_removeRelation" data-userid="852892" href="javascript:;">移除</a></td>
+
+                        </tr>
+                        </tbody>
+                    </table>
+                    <div class="m-page" style="display:none;" id="jStudentListPage"> <div class="tips f-tac"></div> <ul>	<li class="first"><a>首 页</a></li>	<li class="prev prev-disabled"><a>上一页</a></li>	<li>		<ol class="pages-num">		</ol>	</li>	<li class="next"><a>下一页</a></li>	<li class="last"><a>末 页</a></li>   <li class="total">       <span class="total-page">共 1 页,</span>       <span class="total-size">16 条记录</span>   </li>   <li class="go">   	<span>去第</span>       <div class="cover">           <input type="text" class="ipt" style="border: 1px solid rgb(227, 232, 235);">           <div class="btn-wrap" style="left: 0px;">       	    <button class="go">确定</button>               <b>页</b>           </div>       </div>   </li> </ul></div>
+                </div>
+
+                <div class="m-btns c-btns">
+                    <a id="jDeleteAll" style="" class="u-btn u-btn-nm u-btn-bg-orange">移除</a>
+                </div>
+
+            </form>
+        </div>
+
+    </div>
+</div>
+
+
+<script id="jStudentListTpl" type="x-mustache">
+	{{#dataList}}
+	<tr>
+
+		 <td><input type="checkbox" class="J_chkItem" data-user="{{userId}}" /> </td>
+
+		 <td>{{loginName}}</td>
+		 <td>{{userName}}</td>
+		 <td>{{className}}</td>
+
+		 <td class="operation">{{#isDel}}<a class="J_removeRelation" data-userid="{{userId}}" href="javascript:;">移除</a>{{/isDel}}</td>
+
+	</tr>
+	{{/dataList}}
+	</script>
+<script id="J_templateGroups" type="x-mustache">
+		{{#studentGroups}}
+     		<li>
+				<a data-groupid="{{groupId}}"
+			 		class="removeGroupItem" href="javascript:;">{{groupName}}
+				</a>
+			</li>
+		{{/studentGroups}}
+	</script>
+<script id="J_templateClazz" type="x-mustache">
+		{{#list}}
+     		<li>
+				<a data-classid="{{classId}}"
+			 		class="removeClassItem" href="javascript:;">{{className}}
+				</a>
+			</li>
+		{{/list}}
+	</script>
+<script id="jDialogTmp" type="x-mustache">
+		<div class="m-form">
+			<ul>
+				<li class="form-item">
+					<label for="" class="title"><span class="require">*</span>分层名称:</label>
+					<div class="con">
+						<input name="classId" type="hidden" value="{{classId}}" class="u-ipt u-ipt-nm">
+						<input name="className" type="text" value="{{className}}" class="u-ipt u-ipt-nm">
+					</div>
+				</li>
+			</ul>
+			<div class="submit">
+				<button type="submit" class="u-btn u-btn-nm u-btn-bg-turquoise j-submit">修改</button>
+			</div>
+		</div>
+	</script>
+
+<script type="text/javascript">
+    seajs.use('lesson/common/layering/list');
+</script>
+
+
+<div class="m-tipbox" style="top: 464.5px; left: 776.5px; display: none;"><i class="iconfont icon">󰅂 </i><div class="msg">添加成功</div></div></body></html>

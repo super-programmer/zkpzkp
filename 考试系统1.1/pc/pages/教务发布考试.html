@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>教务-发起考试</title>
+    <link rel="stylesheet" href="http://static.leke.cn/styles/common/global.css">
+    <link rel="stylesheet" href="../styles/examination/examination.css">
+</head>
+<body>
+<div class="m-bg">
+</div>
+<div class="g-bd">
+    <div class="g-mn">
+        <div class="exam-top-tit">
+            发布考试
+        </div>
+        <div class="publish-exam-box">
+            <div class="publish-item">
+                <h3 class="c-lborder-tit">
+                    考试名称：
+                </h3>
+                <div class="con">
+                    <input type="text" class="name-inpt">
+                    <span class="font-color-gray">字数<=54</span>
+                </div>
+            </div>
+            <div class="publish-item">
+                <h3 class="c-lborder-tit">
+                    考试方式：
+                </h3>
+                <div class="con">
+                    <label class="publish-label">
+                        <input type="radio" name="up">
+                        <span>线上考试</span>
+                        <span class="font-color-gray">线上考试需有终端设备进行线上作答和批阅</span>
+                    </label></div>
+                <div class="con">
+                    <label class="publish-label">
+                        <input type="radio" name="up">
+                        <span>线下考试</span>
+                        <span class="font-color-gray">线下考试为纸质作答和批阅，扫描上传收集数据</span>
+                    </label>
+                </div>
+            </div>
+            <div class="publish-item">
+                <h3 class="c-lborder-tit">
+                    作答模式：
+                </h3>
+                <div class="con">
+                    <label class="publish-label">
+                        <input type="radio" name="up">
+                        <span>开放</span>
+                        <span class="font-color-gray">开放模式在考试发起后即可作答和提交</span>
+                    </label></div>
+                <div class="con">
+                    <label class="publish-label">
+                        <input type="radio" name="up">
+                        <span>普通</span>
+                        <span class="font-color-gray">普通模式需在规定时间中作答及提交</span>
+                    </label>
+                </div>
+            </div>
+            <div class="publish-item">
+                <h3 class="c-lborder-tit">
+                    考试类型：
+                </h3>
+                <div class="con">
+                    <label class="publish-label">
+                        <input type="radio" name="type">
+                        <span>普通</span>
+                    </label>
+                    <label class="publish-label">
+                        <input type="radio" name="type">
+                        <span>月考</span>
+                    </label><label class="publish-label">
+                    <input type="radio" name="type">
+                    <span>期中</span>
+                </label><label class="publish-label">
+                    <input type="radio" name="type">
+                    <span>期末</span>
+                </label>
+                </div>
+            </div>
+            <div class="publish-item">
+                <h3 class="c-lborder-tit">
+                    考试班级：
+                </h3>
+                <div class="con">
+                    <label class="publish-label">
+                        <input type="radio" name="class">
+                        <span>行政班</span>
+                    </label>
+                    <label class="publish-label">
+                        <input type="radio" name="class">
+                        <span>选修班</span>
+                    </label>
+                    <ul class="select-item-list">
+                        <li class="select-item select-item-on">
+                            一年级
+                        </li>
+                        <li class="select-item">
+                            二年级
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="publish-item">
+                <h3 class="c-lborder-tit">
+                    考试试卷：
+                </h3>
+                <div class="con">
+                    <input type="submit" value="请选择" class="u-btn u-btn-sm u-btn-bg-turquoise">
+                    <ul class="select-item-list">
+                        <li class="select-item select-item-on">
+                            高一期中试卷
+                        </li>
+                        <li class="select-item">
+                            人教版英语测试卷
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="publish-item">
+                <h3 class="c-lborder-tit">
+                    考试学科：
+                </h3>
+                <div class="con">
+                    <h3 class="publish-con_tit">
+                        一年级
+                    </h3>
+                    <ul class="select-item-list">
+                        <li class="select-item">
+                            语文
+                        </li>
+                        <li class="select-item select-item-on">
+                            生物
+                        </li>
+                    </ul>
+                    <ul class="publish-con-list">
+                        <li class="publish-con-list_item">
+                            <h3 class="publish-con-list_title">
+                                语文
+                            </h3>
+                            <div class="publish-con-list_con">
+                                <div class="publish-con-list_top">
+                                    <label class="title">
+                                        考试开始时间:
+                                    </label>
+                                    <input  type="text" class="u-ipt u-ipt-nm c-assign-date-container Wdate" placeholder="考试开始时间">
+                                    <label class="title">
+                                        考试时长
+                                    </label>
+                                    <div class="u-custom-select">
+                                        <input type="text" class="u-ipt u-ipt-sm u-custom-ipt">
+                                        <ul class="select-list">
+                                            <li class="item item-on">
+                                                请选择1
+                                            </li>
+                                            <li class="item">
+                                                请选择2
+                                            </li>
+                                        </ul>
+                                    </div>
+                                <span>
+                                    分钟
+                                </span>
+                                </div>
+                                <div class="publish-con-list_bottom">
+                                    <label>
+                                        组卷人:
+                                    </label>
+                                    <input  type="text" class="u-ipt u-ipt-nm" placeholder="请输入老师姓名">
+                                    <label class="title">
+                                        审核人:
+                                    </label>
+                                    <input  type="text" class="u-ipt u-ipt-nm" placeholder="请输入老师姓名">
+                                    <label class="title">
+                                        阅卷人:
+                                    </label>
+                                    <input  type="text" class="u-ipt u-ipt-nm" placeholder="请输入老师姓名">
+                                </div>
+                            </div>
+                        </li>
+                        <li class="publish-con-list_item">
+                            <h3 class="publish-con-list_title">
+                                语文
+                            </h3>
+                            <div class="publish-con-list_con">
+                                <div class="publish-con-list_top">
+                                    <label class="title">
+                                        考试开始时间:
+                                    </label>
+                                    <input  type="text" class="u-ipt u-ipt-nm c-assign-date-container Wdate" placeholder="考试开始时间">
+                                    <label class="title">
+                                        考试时长
+                                    </label>
+                                    <div class="u-custom-select">
+                                        <input type="text" class="u-ipt u-ipt-sm u-custom-ipt">
+                                        <ul class="select-list">
+                                            <li class="item item-on">
+                                                请选择1
+                                            </li>
+                                            <li class="item">
+                                                请选择2
+                                            </li>
+                                        </ul>
+                                    </div>
+                                <span>
+                                    分钟
+                                </span>
+                                </div>
+                                <div class="publish-con-list_bottom">
+                                    <label>
+                                        组卷人:
+                                    </label>
+                                    <input  type="text" class="u-ipt u-ipt-nm" placeholder="请输入老师姓名">
+                                    <label class="title">
+                                        审核人:
+                                    </label>
+                                    <input  type="text" class="u-ipt u-ipt-nm" placeholder="请输入老师姓名">
+                                    <label class="title">
+                                        阅卷人:
+                                    </label>
+                                    <input  type="text" class="u-ipt u-ipt-nm" placeholder="请输入老师姓名">
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <h3 class="publish-con_tit">
+                        二年级
+                    </h3>
+                    <ul class="select-item-list">
+                        <li class="select-item">
+                            语文
+                        </li>
+                        <li class="select-item">
+                            生物
+                        </li> <li class="select-item">
+                        语文
+                    </li>
+                        <li class="select-item">
+                            生物
+                        </li> <li class="select-item">
+                        语文
+                    </li>
+                        <li class="select-item">
+                            生物
+                        </li> <li class="select-item">
+                        语文
+                    </li>
+                        <li class="select-item">
+                            生物
+                        </li> <li class="select-item">
+                        语文
+                    </li>
+                        <li class="select-item">
+                            生物
+                        </li> <li class="select-item">
+                        语文
+                    </li>
+                        <li class="select-item">
+                            生物
+                        </li> <li class="select-item">
+                        语文
+                    </li>
+                        <li class="select-item">
+                            生物
+                        </li> <li class="select-item">
+                        语文
+                    </li>
+                        <li class="select-item">
+                            生物
+                        </li> <li class="select-item">
+                        语文
+                    </li>
+                        <li class="select-item">
+                            生物
+                        </li> <li class="select-item">
+                        语文
+                    </li>
+                        <li class="select-item">
+                            生物
+                        </li> <li class="select-item">
+                        语文
+                    </li>
+                        <li class="select-item">
+                            生物
+                        </li> <li class="select-item">
+                        语文
+                    </li>
+                        <li class="select-item">
+                            生物
+                        </li>
+                    </ul>
+                    <ul class="publish-con-list">
+                        <li class="publish-con-list_item null">
+                            <div class="m-tips">
+                                <i></i>
+                                <span>
+			                        暂无学科哟~
+		                        </span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="publish-item">
+                <h3 class="c-lborder-tit">
+                    考试时间：
+                </h3>
+                <div class="con">
+                    <span class="sel-time sel-time-bg">
+                        <label>组卷截止时间：</label>
+                        <input  type="text" class="u-ipt u-ipt-nm c-assign-date-container Wdate" placeholder="组卷截止时间">
+                    </span>
+                    <span class="sel-time sel-time-bg">
+                    <label>审核截止时间：</label>
+                         <input  type="text" class="u-ipt u-ipt-nm c-assign-date-container Wdate" placeholder="审核截止时间">
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="submits">
+            <input type="submit" value="确定" class="u-btn u-btn-lg u-btn-bg-turquoise">
+            <input type="submit" value="取消" class="u-btn u-btn-lg u-btn-bg-gray">
+        </div>
+    </div>
+</div>
+</body>
+<script src="http://static.leke.cn/scripts/common/jquery-1.12.0.min.js"></script>
+<script>
+    var initSelect = function () {
+        var $dom = $('.u-custom-select');
+        function trim(val){
+            return val.replace(/[ ]/g,"");
+        }
+        $dom.each(function (item, i) {
+            var $options = $(this).find('.item'),
+                    $selectBox = $(this).find('.select-list'),
+                    $length = $options.length,
+                    $input = $(this).find('.u-ipt');
+            if ($length > 0) {
+                $input.val(trim($options.eq(0).text()))
+            }else{
+                $input.val("请选择")
+            }
+            $options.mouseover(function(){
+                $options.removeClass('item-on');
+                $(this).addClass('item-on')
+            })
+            $options.click(function(){
+                $input.val(trim($(this).text()));
+                $selectBox.hide();
+            })
+
+        });
+        $('body').click(function(e){
+            var ev= e || window.event;
+            var $selBox = $(ev.target);
+            if(!$(ev.target).hasClass('u-custom-ipt')){
+                $('.select-list').hide();
+            }else{
+                console.log($selBox.parents('.u-custom-select').find('.select-list'));
+                $selBox.parents('.u-custom-select').find('.select-list').toggle();
+            }
+        })
+    }
+    initSelect();
+</script>
+</html>

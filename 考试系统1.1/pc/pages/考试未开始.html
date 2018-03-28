@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>考试未开始</title>
+    <link rel="stylesheet" href="http://static.leke.cn/styles/common/global.css">
+    <link rel="stylesheet" href="../styles/examination/examination.css">
+</head>
+<body>
+<div class="m-bg"></div>
+<div class="g-bd">
+    <div class="m-tab m-exam-tab">
+        <button class="m-exam-tab-pre"><<</button>
+        <button class="m-exam-tab-next">>></button>
+        <ul>
+            <li class="active"><a href="##">七年级一班</a></li>
+            <li><a href="##">七年级一班</a></li>
+            <li><a href="##">七年级一班</a></li>
+            <li><a href="">七年级1班</a></li>
+            <li><a href="">七年级2班</a></li>
+            <li><a href="">七年级3班</a></li>
+            <li><a href="">七年级4班</a></li>
+            <li><a href="">七年级5班</a></li>
+            <li><a href="">七年级6班</a></li>
+            <li><a href="">七年级7班</a></li>
+            <li><a href="">七年级8班</a></li>
+            <li><a href="">七年级9班</a></li>
+            <li><a href="">七年级10班</a></li>
+            <li><a href="">七年级11班</a></li>
+            <li><a href="">七年级12班</a></li>
+        </ul>
+    </div>
+    <div class="exam-nav">
+        <div class="exam-nav-tit">
+            <div class="exam-nav-tit-operation">
+                <div class="c-handle-box">
+                    <ul class="c-handle-box-list">
+                        <li class="c-handle-box-list_item">
+                            修改时间
+                        </li>
+                        <li class="c-handle-box-list_item">
+                            删除
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="exam-nav-tit-con">
+                初一第一次周考第一次周考
+            </div>
+        </div>
+        <div class="exam-nav-subhead">
+            初三第一次月考测试卷名称考测试卷名称
+        </div>
+        <div class="exam-nav-tips">
+            <i class="c-icon-time"></i>
+            2017-11-08 21:45 — 2017-11-08 22:50
+        </div>
+        <div class="exam-nav-con">
+            <ul class="exam-nav-con-list">
+                <li class="exam-nav-con-list_item">
+                    <p class="exam-nav-con-list_item-tit">
+                        完成人数
+                    </p>
+                    <p class="exam-nav-con-list_item-con">
+                        <span class="exam-nav-con-list_item-con-num font-color-green">8</span>/10
+                    </p>
+                </li>
+                <li class="exam-nav-con-list_item">
+                    <p class="exam-nav-con-list_item-tit">
+                        待批改人数
+                    </p>
+                    <p class="exam-nav-con-list_item-con">
+                        <span class="exam-nav-con-list_item-con-num font-color-orange">8</span>
+                    </p>
+                </li>
+                <li class="exam-nav-con-list_item">
+                    <p class="exam-nav-con-list_item-tit">
+                        平均分
+                    </p>
+                    <p class="exam-nav-con-list_item-con">
+                        <span class="exam-nav-con-list_item-con-num font-color-orange">0</span>
+                    </p>
+                </li>
+                <li class="exam-nav-con-list_item">
+                    <p class="exam-nav-con-list_item-tit">
+                        公布答案
+                    </p>
+                    <p class="exam-nav-con-list_item-con">
+                         <i class="c-icon-switch c-icon-switch--on"></i>
+                    </p>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="exam-main exam-main--null">
+        <div class="exam-main-null-tips">
+            考试还未开始
+        </div>
+    </div>
+</div>
+</body>
+<script src="http://static.leke.cn/scripts/common/jquery-1.12.0.min.js"></script>
+<script>
+
+    var aveObj = {
+        init:function () {
+            initslide();
+        }
+    }
+    /*导航滑动事件*/
+    function initslide(){
+        var $dom=$('.m-exam-tab ul'),
+                btnpre=$('.m-exam-tab-pre'),
+                btnnext=$('.m-exam-tab-next'),
+                item=$('.m-exam-tab ul li'),
+                $left=0;
+        if(item.length<=7){
+            btnpre.hide();
+            btnnext.hide();
+        }else{
+            btnpre.show();
+            btnnext.show().addClass('m-exam-tab-on');
+        }
+        btnpre.click(function(){
+            if($left>=-1106){
+                $left=0;
+                $dom.animate({margin:"0 0 0 "+$left+"px"});
+                btnpre.removeClass('m-exam-tab-on');
+                btnnext.addClass('m-exam-tab-on');
+            }else{
+                $left+=1106;
+                $dom.animate({margin:"0 0 0 "+$left+"px"});
+                btnnext.addClass('m-exam-tab-on');
+            }
+        });
+        btnnext.click(function(){
+            var n=item.length%7;
+            var i=Math.floor(item.length/7);
+            if(i<=1){
+                $left=-(i*1106)
+                btnnext.removeClass('m-exam-tab-on');
+                $dom.stop().animate({margin:"0 0 0 "+$left+"px"});
+                btnpre.addClass('m-exam-tab-on');
+            }else{
+                if((($left==-(i*1106)+1106) && n==0) || ($left==-(i*1106)) && n>0){
+                    return;
+                }
+                $left-=1106;
+                $dom.stop().animate({margin:"0 0 0 "+$left+"px"});
+                btnpre.addClass('m-exam-tab-on');
+            }
+            if((($left==-(i*1106)+1106) && n==0) || ($left==-(i*1106)) && n>0){
+                btnnext.removeClass('m-exam-tab-on');
+                return;
+            }
+        })
+    }
+    aveObj.init();
+</script>
+</html>

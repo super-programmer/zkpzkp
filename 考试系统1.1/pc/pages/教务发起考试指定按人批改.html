@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>教务发起考试指定按人批改</title>
+    <link rel="stylesheet" href="http://static.leke.cn/styles/common/global.css">
+    <link rel="stylesheet" href="../styles/examination/examination.css">
+</head>
+<body>
+<div class="m-bg"></div>
+<div class="g-bd">
+    <div class="exam-main">
+        <div class="exam-main-null-tips">
+            考试还未开始
+        </div>
+        <div class="c-lookwork-con">
+            <div class="n-homework-tab">
+                <ul class="n-homework-tab-list">
+                    <li class="n-homework-tab-list_item n-homework-tab-list_item--active">
+                        <a href="##" class="n-homework-tab-list_item-con">
+                            按人批改
+                        </a>
+                    </li>
+                </ul>
+                <div class="n-homework-tab-operation">
+                    <i class="c-icon-information"></i>
+                </div>
+            </div>
+            <div class="c-lookwork-con-tit c-lookwork-con-tit--nborder">
+                <p class="c-lookwork-con-tit-check">
+                    <span class="m-sorting">提交时间<i></i></span>
+                </p>
+            </div>
+            <ul class="c-lookwork-list">
+                <li class="c-lookwork-list_item">
+                    <p class="c-lookwork-list_item-tit">
+                        <img src="../../pad/images/person.jpg" alt="">
+                            <span class="c-lookwork-list_item-tit-name">
+                                张三
+                            </span>
+                            <span class="c-lookwork-list_item-tit-tips">
+                                (迟交)
+                            </span>
+                            <span class="c-lookwork-list_item-tit-operation font-color-orange">
+                                -分
+                            </span>
+                    </p>
+                    <p class="c-lookwork-list_item-item">
+                            <span class="c-lookwork-list_item-item-tit">
+                                提交:
+                            </span>
+                            <span class="c-lookwork-list_item-item-tips">
+                                10-19 12:16
+                            </span>
+                            <span class="c-lookwork-list_item-item-operation font-color-orange c-lookwork-list_item-item-operation--time">
+                                45分钟
+                            </span>
+                    </p>
+                    <p class="c-lookwork-list_item-progress">
+                        <span class="c-lookwork-list_item-progress-bar"></span>
+                    </p>
+                </li>
+                <li class="c-lookwork-list_item">
+                    <p class="c-lookwork-list_item-tit">
+                        <img src="../../pad/images/person.jpg" alt="">
+                            <span class="c-lookwork-list_item-tit-name">
+                                张三
+                            </span>
+                            <span class="c-lookwork-list_item-tit-tips">
+                                (迟交)
+                            </span>
+                            <span class="c-lookwork-list_item-tit-operation font-color-green">
+                                100.5
+                            </span>
+                    </p>
+                    <p class="c-lookwork-list_item-item">
+                            <span class="c-lookwork-list_item-item-tit">
+                                提交:
+                            </span>
+                            <span class="c-lookwork-list_item-item-tips">
+                                10-19 12:16
+                            </span>
+                            <span class="c-lookwork-list_item-item-operation font-color-orange c-lookwork-list_item-item-operation--time">
+                                45分钟
+                            </span>
+                    </p>
+                    <p class="c-lookwork-list_item-progress">
+                        <span class="c-lookwork-list_item-progress-bar c-lookwork-list_item-progress-bar--full" style="width:100%;"></span>
+                    </p>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+</body>
+<script src="http://static.leke.cn/scripts/common/jquery-1.12.0.min.js"></script>
+<script>
+    var aveObj = {
+        init:function () {
+            initslide();
+        }
+    }
+    /*导航滑动事件*/
+    function initslide(){
+        var $dom=$('.m-exam-tab ul'),
+                btnpre=$('.m-exam-tab-pre'),
+                btnnext=$('.m-exam-tab-next'),
+                item=$('.m-exam-tab ul li'),
+                $left=0;
+        if(item.length<=7){
+            btnpre.hide();
+            btnnext.hide();
+        }else{
+            btnpre.show();
+            btnnext.show().addClass('m-exam-tab-on');
+        }
+        btnpre.click(function(){
+            if($left>=-1106){
+                $left=0;
+                $dom.animate({margin:"0 0 0 "+$left+"px"});
+                btnpre.removeClass('m-exam-tab-on');
+                btnnext.addClass('m-exam-tab-on');
+            }else{
+                $left+=1106;
+                $dom.animate({margin:"0 0 0 "+$left+"px"});
+                btnnext.addClass('m-exam-tab-on');
+            }
+        });
+        btnnext.click(function(){
+            var n=item.length%7;
+            var i=Math.floor(item.length/7);
+            if(i<=1){
+                $left=-(i*1106)
+                btnnext.removeClass('m-exam-tab-on');
+                $dom.stop().animate({margin:"0 0 0 "+$left+"px"});
+                btnpre.addClass('m-exam-tab-on');
+            }else{
+                if((($left==-(i*1106)+1106) && n==0) || ($left==-(i*1106)) && n>0){
+                    return;
+                }
+                $left-=1106;
+                $dom.stop().animate({margin:"0 0 0 "+$left+"px"});
+                btnpre.addClass('m-exam-tab-on');
+            }
+            if((($left==-(i*1106)+1106) && n==0) || ($left==-(i*1106)) && n>0){
+                btnnext.removeClass('m-exam-tab-on');
+                return;
+            }
+        })
+    }
+    aveObj.init();
+</script>
+</html>
